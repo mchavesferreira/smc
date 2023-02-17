@@ -111,3 +111,17 @@ int main()
 	}//la�o infinito
 }
 ```
+
+
+Links:
+Introdução a Linguagem C.
+https://github.com/misaelrezende/Exercicios-do-Livro-Linguagem-C-Completa-e-Descomplicada
+
+https://github.com/daniel-oliv3/Introducao-a-Programacao_500-Algoritmos-Resolvidos-Por-Lopes-Garcia
+Introducao-a-Programacao_500-Algoritmos-Resolvidos-Por-Lopes-Garcia 
+
+
+https://github.com/Franzininho/exemplos-avr-libc/tree/main/exemplos
+
+https://embarcados.com.br/franzininho-diy-contador-de-pulsos-externos/
+
