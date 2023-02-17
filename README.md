@@ -10,6 +10,9 @@ Avr Studio 7.0
 http://studio.download.atmel.com/7.0.2389/as-installer-7.0.2389-full.exe
 
 Primeiro Progama em C
+Código para o primeiro programa
+```java
+
 #define F_CPU 16000000UL // Clock frequency, needed to delay functions
 #include <avr/io.h> // Register definitions
 #include <util/delay.h> // Delay functions
@@ -24,3 +27,4 @@ int main(){
   }
 return 0;
 }
+```
