@@ -92,3 +92,26 @@ void loop() {
   // Aguarda um curto período para evitar processamento excessivo
   delay(100);
 }
+
+
+/*
+
+typedef enum é uma construção da linguagem C que permite criar um novo tipo de dado com base em um conjunto finito de valores. Com isso, é possível criar um tipo de dado com nome definido pelo usuário e que possua valores válidos pré-definidos.
+
+Por exemplo, podemos criar um tipo de dado chamado "diaSemana" para representar os dias da semana com os valores "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado" e "domingo". A sintaxe para isso seria:
+
+typedef enum {
+SEGUNDA_FEIRA,
+TERCA_FEIRA,
+QUARTA_FEIRA,
+QUINTA_FEIRA,
+SEXTA_FEIRA,
+SABADO,
+DOMINGO
+} diaSemana;
+
+Nesse exemplo, criamos o tipo de dado "diaSemana" e definimos seus valores válidos dentro do bloco enum. A partir de agora, podemos usar esse novo tipo de dado em nossos programas da mesma forma que usamos os tipos de dados nativos da linguagem C, como int, float e char.
+
+O uso de typedef enum é especialmente útil em situações em que precisamos definir constantes com valores específicos e nomear esses valores para facilitar a leitura do código.
+
+*/
