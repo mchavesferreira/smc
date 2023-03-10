@@ -133,7 +133,13 @@ int main()
 ```
 ## Display LCD
 
+
+
 ## Máquina de estados 
+
+Compreendendo a mudança de fluxo por meio da chamada de switch-case
+
+https://wokwi.com/projects/358828863218714625
 
 Este exemplo online exemplifica a aplicação da máquina de estados através de um programa para máquina de lavar.
 
