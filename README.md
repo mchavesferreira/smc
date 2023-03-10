@@ -1,15 +1,27 @@
+Sistemas Microcontrolados
 
-Aula 10/2/2023
+## Utilizando Atmega328P para a compreensão e funcionamento de microprocessadores e microcontroladores em geral utilizando a linguagem C.
+
+## Sumário
+
+- [Simulação online para microcontrolador](#Simulação-online-para-microcontrolador)
+- [Ambiente de programação](#Ambiente-de-programação)
+- [Primeiro Programa em C](#Primeiro-Programa-em-C)
+- [Utilizando Macros](#Utilizando Macros)
+
+## Simulação online para microcontrolador
+
+
 
 https://wokwi.com/projects/356295365780235265
 
+##  Ambiente de programação
 
-Aula 17/02/2023
 
 Avr Studio 7.0
 http://studio.download.atmel.com/7.0.2389/as-installer-7.0.2389-full.exe
 
-Primeiros Progamas em C
+## Primeiro-Programa-em-C
 
 Código para o primeiro programa
 ```java
@@ -30,14 +42,14 @@ return 0;
 }
 ```
 
-Utilizando macros
+## Utilizando Macros
 
 ```java
 #define F_CPU 16000000UL	//define a frequ�ncia do microcontrolador 16MHz (necess�rio para usar as rotinas de atraso)
 #include <avr/io.h> 	    //defini��es do componente especificado
 #include <util/delay.h>		//biblioteca para o uso das rotinas de _delay_ms() e _delay_us()
 
-//Defini��es de macros - empregadas para o trabalho com os bits de uma vari�vel ou registrador
+//Definicoeses de macros - empregadas para o trabalho com os bits de uma vari�vel ou registrador
 
 #define	set_bit(Y,bit_x) (Y|=(1<<bit_x))	//ativa o bit x da vari�vel Y (coloca em 1)
 #define	clr_bit(Y,bit_x) (Y&=~(1<<bit_x))	//limpa o bit x da vari�vel Y (coloca em 0) 
@@ -111,6 +123,14 @@ int main()
 	}//la�o infinito
 }
 ```
+
+
+## Máquina de estados 
+
+Este exemplo online exemplifica a aplicação da máquina de estados através de um programa para máquina de lavar.
+
+https://wokwi.com/projects/350144439208903252
+
 
 
 Links:
