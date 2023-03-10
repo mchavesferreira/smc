@@ -133,7 +133,9 @@ int main()
 ```
 ## Display LCD
 
+Exemplo de criação de caracteres especiais para LCD 16x2 
 
+Big Number:  https://wokwi.com/projects/358831286702363649
 
 ## Máquina de estados 
 
