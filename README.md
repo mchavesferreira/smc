@@ -134,7 +134,7 @@ int main()
 ## Display LCD
 
 Exemplos de utilização do LCD 16x2 disponiveis na bibliografia
-https://github.com/mchavesferreira/smc/Programas_livro/LCD_4bits/
+http://github.com/mchavesferreira/smc/ > Programas_livro > LCD_4bits
 
 Exemplo de criação de caracteres especiais para LCD 16x2 
 
