@@ -7,7 +7,11 @@ Sistemas Microcontrolados
 - [Simulação online para microcontrolador](#Simulação-online-para-microcontrolador)
 - [Ambiente de programação](#Ambiente-de-programação)
 - [Primeiro Programa em C](#Primeiro-Programa-em-C)
-- [Utilizando Macros](#Utilizando Macros)
+- [Lendo Botão](#Lendo-Botão)
+- [Utilizando Macros](#Utilizando-Macros)
+- [Display LCD](#Display-LCD)
+- [Máquina de estados](#Máquina-de-estados)
+- [Links e referências](#Links-e-referências)
 
 ## Simulação online para microcontrolador
 
@@ -22,6 +26,8 @@ Avr Studio 7.0
 http://studio.download.atmel.com/7.0.2389/as-installer-7.0.2389-full.exe
 
 ## Primeiro-Programa-em-C
+
+Este primeiro exemplo de programa com um pisca Led
 
 Código para o primeiro programa
 ```java
@@ -43,6 +49,8 @@ return 0;
 ```
 
 ## Utilizando Macros
+
+Conhecendo o recurso de Macros do compilador para simplificar o código
 
 ```java
 #define F_CPU 16000000UL	//define a frequ�ncia do microcontrolador 16MHz (necess�rio para usar as rotinas de atraso)
@@ -75,7 +83,7 @@ int main( )
 ```
 
 
-Lendo botão
+## Lendo Botão
 
 ```java
 
@@ -123,7 +131,7 @@ int main()
 	}//la�o infinito
 }
 ```
-
+## Display LCD
 
 ## Máquina de estados 
 
@@ -133,7 +141,8 @@ https://wokwi.com/projects/350144439208903252
 
 
 
-Links:
+## Links e referências
+
 Introdução a Linguagem C.
 https://github.com/misaelrezende/Exercicios-do-Livro-Linguagem-C-Completa-e-Descomplicada
 
