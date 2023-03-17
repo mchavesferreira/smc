@@ -17,8 +17,11 @@ Sistemas Microcontrolados
 Avaliação da Disciplina:
 
 17/03/2023   - Tarefa Suap - Cronometro Big Number em LCD simulado em wokwi e/ou proteus
+
 24/03/2023   - Tarefa Suap - Maquina de Lavar com delay simulado em wokwi e/ou proteus
+
 31/03/2023   - Tarefa Suap - Maquina de Lavar com Timers simulado em wokwi e/ou proteus
+
 05/05/2023  - Projeto 1: Protótipo em protoboard do projeto 1
 
 05/05/2023  - Avaliação Presencial escrita (Sorteio de um projeto em dupla)
