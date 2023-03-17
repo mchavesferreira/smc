@@ -14,6 +14,21 @@ Sistemas Microcontrolados
 - [Interrupção Externa] (#Interrupção-Externa)
 - [Links e referências](#Links-e-referências)
 
+Avaliação da Disciplina:
+
+17/03/2023   - Tarefa Suap - Cronometro Big Number em LCD simulado em wokwi e/ou proteus
+24/03/2023   - Tarefa Suap - Maquina de Lavar com delay simulado em wokwi e/ou proteus
+31/03/2023   - Tarefa Suap - Maquina de Lavar com Timers simulado em wokwi e/ou proteus
+05/05/2023  - Projeto 1: Protótipo em protoboard de um projeto baseado em LCD. Montagem em protoboar com entrega de códigos postados em tarefa suap. Projeto de automação com alteração de pelo menos 3 parametros, transições com maquina de estados, saidas e entradas digitais. Menu em LCD 16x2.
+
+05/05/2023  - Avaliação Presencial escrita (Sorteio de um projeto em dupla)
+
+
+Junho/23  - Projeto 2 - Aperfeiçoamento do projeto 1 ou uma nova propost. Acrescentar novos recursos de programação e hardware; Conversor AD externo I2C (ADS1115), comunicação serial com ESP32 (wifi), memorização de parametros em eeprom, tela OLED I2C.
+
+Junho/23  - Avaliação 2.
+
+
 ## Simulação online para microcontrolador
 
 
