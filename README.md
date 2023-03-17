@@ -19,15 +19,30 @@ Avaliação da Disciplina:
 17/03/2023   - Tarefa Suap - Cronometro Big Number em LCD simulado em wokwi e/ou proteus
 24/03/2023   - Tarefa Suap - Maquina de Lavar com delay simulado em wokwi e/ou proteus
 31/03/2023   - Tarefa Suap - Maquina de Lavar com Timers simulado em wokwi e/ou proteus
-05/05/2023  - Projeto 1: Protótipo em protoboard de um projeto baseado em LCD. Montagem em protoboar com entrega de códigos postados em tarefa suap. Projeto de automação com alteração de pelo menos 3 parametros, transições com maquina de estados, saidas e entradas digitais. Menu em LCD 16x2.
+05/05/2023  - Projeto 1: Protótipo em protoboard do projeto 1
 
 05/05/2023  - Avaliação Presencial escrita (Sorteio de um projeto em dupla)
 
 
-Junho/23  - Projeto 2 - Aperfeiçoamento do projeto 1 ou uma nova propost. Acrescentar novos recursos de programação e hardware; Conversor AD externo I2C (ADS1115), comunicação serial com ESP32 (wifi), memorização de parametros em eeprom, tela OLED I2C.
+Junho/23  - Projeto 2 - Data a ser divulgada
 
-Junho/23  - Avaliação 2.
+Junho/23  - Avaliação 2.  Data a ser divulgada
 
+Orientações para Projeto 1:
+
+Utilizando o projeto inicial da <a href=https://wokwi.com/projects/350144439208903252>maquina de lavar</a>, crie uma máquina personalizada (não será considerado máquina de lavar) que atenda os seguintes critérios:
+
+- apresente no mínimo 05 perguntas entre (sim x não) ou ajustes de valores (exemplo tempo);
+- ajustes de pelo menos 03 valores inteiros;
+- transições das etapas em máquina de estdos;
+- utilize pelo menos 03 leds como saídas;
+- as perguntas e respostas devem utilizar display LCD e botões (exemplos para botões: + - 1 2 3 Y N enter) (2,0 pontos)
+-  enviar o código e link de simulação na área trabalhos (suap), um integrante da dupla.
+- As duplas não podem ter trabalhos "clones", criatividade e dificuldades serão pontuados
+
+
+Orientações para Projeto 2:
+Aperfeiçoamento do projeto 1 ou uma nova proposta. Acrescentar novos recursos de programação e hardware; PWM, Conversor AD externo I2C (ADS1115), comunicação serial com ESP32 (wifi), memorização de parametros em eeprom, tela OLED I2C.
 
 ## Simulação online para microcontrolador
 
