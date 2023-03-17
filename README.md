@@ -157,7 +157,9 @@ https://wokwi.com/projects/350144439208903252
 
 Exemplo com interrupção externa
 
-Programas>Int0
+Programas_livro/INT0_1/ 
+
+
 https://wokwi.com/projects/359476742621416449
 
 
