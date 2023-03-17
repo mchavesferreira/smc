@@ -11,6 +11,7 @@ Sistemas Microcontrolados
 - [Utilizando Macros](#Utilizando-Macros)
 - [Display LCD](#Display-LCD)
 - [Máquina de estados](#Máquina-de-estados)
+- [Interrupção Externa] (#Interrupção-Externa)
 - [Links e referências](#Links-e-referências)
 
 ## Simulação online para microcontrolador
@@ -150,6 +151,14 @@ Este exemplo online exemplifica a aplicação da máquina de estados através de
 
 https://wokwi.com/projects/350144439208903252
 
+
+
+## Interrupção Externa
+
+Exemplo com interrupção externa
+
+Programas>Int0
+https://wokwi.com/projects/359476742621416449
 
 
 ## Links e referências
