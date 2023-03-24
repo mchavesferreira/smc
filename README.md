@@ -10,7 +10,7 @@ Sistemas Microcontrolados
 - [Lendo Botão](#Lendo-Botão)
 - [Utilizando Macros](#Utilizando-Macros)
 - [Display LCD](#Display-LCD)
-- [Máquina de estados](#Máquina-de-estados)
+- [Máquina de estados](#Maquina-de-estados)
 - [Interrupção Externa] (#Interrupção-Externa)
 - [Temporizador, interrução e PWM] (#PWM-Timer-1)
 - [Links e referências](#Links-e-referências)
@@ -175,7 +175,7 @@ Exemplo de criação de caracteres especiais para LCD 16x2
 
 Big Number:  https://wokwi.com/projects/358831286702363649
 
-## Máquina de estados 
+## Maquina de estados 
 
 Compreendendo a mudança de fluxo por meio da chamada de switch-case
 
@@ -202,6 +202,8 @@ Aula 24/03
 ## PWM Timer 1
 
 Baixe o <a href=https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/funcoes_timer.zip> interrupcao_timers/funcoes_timer.zip</a>  com simulação em proteus.
+
+Contador de eventos externos: <a href=https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/contador_eventos_TC1_C.zip>interrupcao_timers/contador_eventos_TC1_C.zip</a>
 
 ## Links e referências
 
