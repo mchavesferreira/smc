@@ -12,6 +12,7 @@ Sistemas Microcontrolados
 - [Display LCD](#Display-LCD)
 - [Máquina de estados](#Máquina-de-estados)
 - [Interrupção Externa] (#Interrupção-Externa)
+- [Temporizador, interrução e PWM] (#PWM-Timer-1)
 - [Links e referências](#Links-e-referências)
 
 Avaliação da Disciplina:
@@ -195,6 +196,12 @@ Programas_livro/INT0_1/
 
 https://wokwi.com/projects/359476742621416449
 
+
+Aula 24/03
+
+## PWM Timer 1
+
+Baixe o <a href=https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/funcoes_timer.zip> interrupcao_timers/funcoes_timer.zip</a>  com simulação em proteus.
 
 ## Links e referências
 
