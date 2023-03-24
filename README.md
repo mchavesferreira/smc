@@ -197,9 +197,11 @@ Programas_livro/INT0_1/
 https://wokwi.com/projects/359476742621416449
 
 
-Aula 24/03
+
 
 ## PWM Timer 1
+
+Aula 24/03 - Prática de interrução
 
 Baixe o <a href=https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/funcoes_timer.zip> interrupcao_timers/funcoes_timer.zip</a>  com simulação em proteus.
 
