@@ -10,19 +10,19 @@
 #include <util/delay.h>		//biblioteca para o uso das rotinas de _delay_
 #include <avr/interrupt.h>
 #include "LCD.h"
-#include "def_principais.h"			//inclusão do arquivo com as principais definições
+#include "def_principais.h"			//inclusÃ£o do arquivo com as principais definiÃ§Ãµes
 #include "USART.h"
 
 void configura_AD(){
 	// configura canal 0
-	ADMUX = (1<<REFS0) | (1<<MUX2) | (1<<MUX0);			//Tensão interna de ref (+5V), canal ADC5
+	ADMUX = (1<<REFS0) | (1<<MUX2) | (1<<MUX0);			//TensÃ£o interna de ref (+5V), canal ADC5
 	ADCSRA = (1<<ADEN) | (1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0);	//habilita o AD e define um prescaler de 128 (clk_AD = F_CPU/128), 125 kHz
 }
 
 signed int le_temp()
 {
-	set_bit(ADCSRA, ADSC);								//inicia a conversão
-	while(tst_bit(ADCSRA,ADSC));						//espera a conversão ser finalizada	
+	set_bit(ADCSRA, ADSC);								//inicia a conversÃ£o
+	while(tst_bit(ADCSRA,ADSC));						//espera a conversÃ£o ser finalizada	
 	return (ADC);
 }
 
@@ -32,7 +32,7 @@ void set_pwm_pb2(unsigned int valor)   // configura pwm pino PB2 timer 1
 	TCCR1A |= (1<<COM1B1);
 	TCCR1B = (1<< WGM13)|(1<< CS11); //T=20ms //T=20ms prescaler 64
 	TCCR1C = 0;
-	OCR1B  = valor; //inicializa PWM para saida em tensão = 0 Vcc
+	OCR1B  = valor; //inicializa PWM para saida em tensÃ£o = 0 Vcc
 	sei();
 }
 
@@ -40,12 +40,12 @@ void set_pwm_pb2(unsigned int valor)   // configura pwm pino PB2 timer 1
 
 int main()
 {
-	DDRB  = 0b00111111;					//somente pino do LED como saída
+	DDRB  = 0b00111111;					//somente pino do LED como saÃ­da
 	PORTB = 0b00000000;					//apaga LED 	
-	DDRD  = 0b00100000;						//somente pino do LED como saída
-	UCSR0B = 0x00;				//PD0 e PD1 como I/O genérico, para uso no Arduino
+	DDRD  = 0b00100000;						//somente pino do LED como saÃ­da
+	UCSR0B = 0x00;				//PD0 e PD1 como I/O genÃ©rico, para uso no Arduino
     DDRC= 0b00000000;  // entrada
-	unsigned char digitos[tam_vetor];	//declaração da variável para armazenagem dos digitos
+	unsigned char digitos[tam_vetor];	//declaraÃ§Ã£o da variÃ¡vel para armazenagem dos digitos
 	unsigned int valorbinario;
 
 	USART_Inic(MYUBRR);
