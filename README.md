@@ -216,7 +216,7 @@ Comuniação Serial
 https://github.com/mchavesferreira/smc/blob/main/serialAVR/
 
 Exemplo com menu:
-https://github.com/mchavesferreira/smc/blob/main/serialAVR/main_usart_menu.c
+https://github.com/mchavesferreira/smc/blob/main/serialAVR/main_usart_menu.c <BR>
 https://wokwi.com/projects/365174034245894145   Simulação
 
 Utilize o exemplo da maquina de lavar para mostrar mensagens no LCD interagindo com a comunicação serial.
