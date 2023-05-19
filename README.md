@@ -217,7 +217,7 @@ https://github.com/mchavesferreira/smc/blob/main/serialAVR/
 
 Exemplo com menu:
 https://github.com/mchavesferreira/smc/blob/main/serialAVR/main_usart_menu.c
-
+https://wokwi.com/projects/365174034245894145   Simulação
 
 
 ## Links e referências
