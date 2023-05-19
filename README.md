@@ -242,6 +242,10 @@ serialTransmit(' ***** \n');
 serialTransmit('  ***  \n');
 serialTransmit('   *   \n');
 ```	
+
+### Exemplo analisando uma combinação
+<BR>https://wokwi.com/projects/365183451516854273
+	
 	
 ## Links e referências
 
