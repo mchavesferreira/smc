@@ -222,7 +222,7 @@ https://wokwi.com/projects/365174034245894145   Simulação
 Utilize o exemplo da maquina de lavar para mostrar mensagens no LCD interagindo com a comunicação serial.
 https://wokwi.com/projects/350144439208903252
 
-<BR><img src=imagens/serial.jpg><BR>
+<BR><img src=https://raw.githubusercontent.com/mchavesferreira/smc/main/imagens/mensagem.jpg><BR>
 Criando graficos para exibição na uart<Br>
 ```java
 const char msg1 [] PROGMEM = " CONTROLANDO LEDs COM O COMPUTADOR\0";
