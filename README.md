@@ -13,7 +13,7 @@ Sistemas Microcontrolados
 - [Máquina de estados](#Maquina-de-estados)
 - [Interrupção Externa] (#Interrupção-Externa)
 - [Temporizador, interrução e PWM] (#PWM-Timer-1)
-- [UART] (#UART)
+- [Comunicação Serial](#UART)
 - [Links e referências](#Links-e-referências)
 
 Avaliação da Disciplina:
