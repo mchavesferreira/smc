@@ -13,6 +13,7 @@ Sistemas Microcontrolados
 - [Máquina de estados](#Maquina-de-estados)
 - [Interrupção Externa] (#Interrupção-Externa)
 - [Temporizador, interrução e PWM] (#PWM-Timer-1)
+- [UART] (#UART)
 - [Links e referências](#Links-e-referências)
 
 Avaliação da Disciplina:
@@ -208,6 +209,16 @@ Baixe o <a href=https://github.com/mchavesferreira/smc/blob/main/interrupcao_tim
 Arquivos timer 1: <a href=https://github.com/mchavesferreira/smc/tree/main/interrupcao_timers/timer1_aula24>timer1_aula24</a>
 
 Contador de eventos externos: <a href=https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/contador_eventos_TC1_C.zip>interrupcao_timers/contador_eventos_TC1_C.zip</a>
+
+## UART
+
+Comuniação Serial
+https://github.com/mchavesferreira/smc/blob/main/serialAVR/main_usart_menu.c
+
+Exemplo com menu:
+https://github.com/mchavesferreira/smc/blob/main/serialAVR/main_usart_menu.c
+
+
 
 ## Links e referências
 
