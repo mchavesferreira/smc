@@ -243,8 +243,12 @@ serialTransmit('  ***  \n');
 serialTransmit('   *   \n');
 ```	
 
-### Exemplo analisando uma combinação
+### Exemplo analisando uma combinação com iniciais "FA"
 <BR>https://wokwi.com/projects/365183451516854273
+	
+	
+### Exemplo recebe "LEDOF1"  e "LEDON1" através da porta serial e acende ou apaga um led.
+<BR>https://wokwi.com/projects/365185955727181825
 	
 	
 ## Links e referências
