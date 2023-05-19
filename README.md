@@ -213,7 +213,7 @@ Contador de eventos externos: <a href=https://github.com/mchavesferreira/smc/blo
 ## UART
 
 Comuniação Serial
-https://github.com/mchavesferreira/smc/blob/main/serialAVR/main_usart_menu.c
+https://github.com/mchavesferreira/smc/blob/main/serialAVR/
 
 Exemplo com menu:
 https://github.com/mchavesferreira/smc/blob/main/serialAVR/main_usart_menu.c
