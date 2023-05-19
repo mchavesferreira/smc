@@ -219,7 +219,19 @@ Exemplo com menu:
 https://github.com/mchavesferreira/smc/blob/main/serialAVR/main_usart_menu.c
 https://wokwi.com/projects/365174034245894145   Simulação
 
+Utilize o exemplo da maquina de lavar para mostrar mensagens no LCD interagindo com a comunicação serial.
+https://wokwi.com/projects/350144439208903252
 
+<BR><img src=imagens/serial.jpg><BR>
+Criando graficos para exibição na uart<Br>
+
+const char msg1 [] PROGMEM = " CONTROLANDO LEDs COM O COMPUTADOR\0";
+const char msg2 [] PROGMEM = " LEDS ON -> 1, 2, 3, 4, LEDS OFF -> 5, 6, 7, 8\0";
+const char msg3 [] PROGMEM = " _ _ \0";
+const char msg4 [] PROGMEM = " ---\\/--- |_| \\ / |_| ---\\/---\0";
+const char msg5 [] PROGMEM = " ---/\\--- | | \\/ | \\ ---/\\---\0";
+
+	
 ## Links e referências
 
 Introdução a Linguagem C.
