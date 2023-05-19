@@ -232,6 +232,17 @@ const char msg4 [] PROGMEM = " ---\\/--- |_| \\ / |_| ---\\/---\0";
 const char msg5 [] PROGMEM = " ---/\\--- | | \\/ | \\ ---/\\---\0";
 ```
 	
+Criando figuras:
+```java	
+serialTransmit('   *   \n');
+serialTransmit('  ***  \n');
+serialTransmit(' ***** \n');
+serialTransmit('*******\n');
+serialTransmit(' ***** \n');
+serialTransmit('  ***  \n');
+serialTransmit('   *   \n');
+```	
+	
 ## Links e referências
 
 Introdução a Linguagem C.
