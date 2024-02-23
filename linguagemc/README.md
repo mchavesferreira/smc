@@ -241,3 +241,38 @@ int main() {
 
 ```
 
+Operadores % =  e - (sinal negativo) 
+```java
+#include <stdio.h>
+
+int main() {
+    int numero = 10;
+    int divisor = 3;
+    int resultadoModulo;
+    int numeroNegativo;
+
+    // Atribuição do resultado do módulo
+    resultadoModulo = numero % divisor;
+    printf("O resto da divisão de %d por %d é %d\n", numero, divisor, resultadoModulo);
+
+    // Atribuição de um valor negativo usando o sinal negativo
+    numeroNegativo = -numero;
+    printf("O valor negativo de %d é %d\n", numero, numeroNegativo);
+
+    return 0;
+}
+
+```
+
+Operadores aritméticos de atribuição
+
+| Operador | Exemplo | Significado                                   |
+|----------|---------|-----------------------------------------------|
+| `+=`     | `op1 += op2` | Atribui a `op1` o resultado de `op1 + op2` |
+| `-=`     | `op1 -= op2` | Atribui a `op1` o resultado de `op1 - op2` |
+| `*=`     | `op1 *= op2` | Atribui a `op1` o resultado de `op1 * op2` |
+| `/=`     | `op1 /= op2` | Atribui a `op1` o resultado de `op1 / op2` |
+| `%=`     | `op1 %= op2` | Atribui a `op1` o resultado de `op1 % op2` |
+
+
+
