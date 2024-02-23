@@ -118,4 +118,126 @@ int main() {
 }
 ```
 
+Modificadores 
+
+Modificadores em C são usados para alterar os limites de armazenamento ou a precisão dos tipos de dados. Eles incluem signed, unsigned, short, long, e long long. Esses modificadores ajudam a otimizar o uso de memória e a adequar o código às necessidades específicas da aplicação, especialmente em sistemas embarcados e microcontroladores, onde o espaço de memória é limitado.
+
+Exemplo com signed e unsigned
+```java
+#include <stdio.h>
+
+int main() {
+    unsigned int positivo = 4294967295; // Máximo para um unsigned int de 32 bits
+    signed int negativo = -2147483648; // Mínimo para um signed int de 32 bits
+
+    printf("Valor máximo (unsigned int): %u\n", positivo);
+    printf("Valor mínimo (signed int): %d\n", negativo);
+
+    return 0;
+}
+```
+
+Exemplo com short e long
+```java
+#include <stdio.h>
+
+int main() {
+    short int curto = 32767; // Máximo para um short int
+    long int longo = 2147483647; // Máximo para um long int de 32 bits
+    long long int muitoLongo = 9223372036854775807; // Máximo para um long long int de 64 bits
+
+    printf("Valor máximo (short int): %d\n", curto);
+    printf("Valor máximo (long int): %ld\n", longo);
+    printf("Valor máximo (long long int): %lld\n", muitoLongo);
+
+    return 0;
+}
+```
+
+Exemplo com unsigned long long
+```java
+#include <stdio.h>
+
+int main() {
+    unsigned long long int extremamenteLongo = 18446744073709551615ULL; // Máximo para um unsigned long long int
+
+    printf("Valor máximo (unsigned long long int): %llu\n", extremamenteLongo);
+
+    return 0;
+}
+```
+
+Dados Lógicos e Booleanos
+
+Em C, os dados lógicos, ou valores booleanos, são representados usando o tipo int, onde 0 representa false (falso) e qualquer outro valor representa true (verdadeiro). A linguagem C, em sua forma padrão, não inclui um tipo específico para valores booleanos. No entanto, a partir do padrão C99, foi introduzido um tipo específico _Bool para representar valores booleanos. Além disso, a biblioteca padrão <stdbool.h> define bool como um alias para _Bool e define as constantes true e false.
+
+```java
+#include <stdio.h>
+#include <stdbool.h> // Necessário para usar bool, true e false
+
+int main() {
+    // Declaração de variáveis booleanas
+    bool estaChovendo = true;
+    bool estaSol = false;
+
+    // Verificação e impressão dos valores booleanos
+    if (estaChovendo) {
+        printf("Está chovendo.\n");
+    } else {
+        printf("Não está chovendo.\n");
+    }
+
+    if (estaSol) {
+        printf("Está sol.\n");
+    } else {
+        printf("Não está sol.\n");
+    }
+
+    return 0;
+}
+```
+Exercício: Modifique o exemplo anterior sem a biblioteca <stbool.h>, utilizando int para as variáveis.
+
+Operadores
+A linguagem C se destaca por sua ampla gama de operadores, simbolizados por um ou vários caracteres, empregados para interagir com dados, seja na forma de constantes ou variáveis. É possível que, dentre as linguagens de programação, C ofereça a maior diversidade de operadores. No entanto, ela pode ser considerada limitada no que tange à variedade de símbolos, visto que o mesmo símbolo pode ser utilizado para representar operadores distintos.
+
+Operador	Significado
++	Soma
+-	Subtração
+*	Multiplicação
+/	Divisão
+%	Módulo ou resto da divisão
+=	Atribuição
+- (em uso como -variavel)	Menos unário – sinal negativo
+
+
+Uso dos operadores aritméticos básicos: adição (+), subtração (-), multiplicação (*) e divisão (/). 
+
+```java
+#include <stdio.h>
+
+int main() {
+    int num1 = 10;
+    int num2 = 5;
+
+    // Adição
+    int soma = num1 + num2;
+    printf("%d + %d = %d\n", num1, num2, soma);
+
+    // Subtração
+    int diferenca = num1 - num2;
+    printf("%d - %d = %d\n", num1, num2, diferenca);
+
+    // Multiplicação
+    int produto = num1 * num2;
+    printf("%d * %d = %d\n", num1, num2, produto);
+
+    // Divisão
+    int quociente = num1 / num2;
+    printf("%d / %d = %d\n", num1, num2, quociente);
+
+    return 0;
+}
+
+```
 
