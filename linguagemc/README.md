@@ -130,11 +130,11 @@ int main() {
 }
 ```
 
-Modificadores 
+# Modificadores 
 
 Modificadores em C são usados para alterar os limites de armazenamento ou a precisão dos tipos de dados. Eles incluem signed, unsigned, short, long, e long long. Esses modificadores ajudam a otimizar o uso de memória e a adequar o código às necessidades específicas da aplicação, especialmente em sistemas embarcados e microcontroladores, onde o espaço de memória é limitado.
 
-Exemplo com signed e unsigned
+## Exemplo com signed e unsigned
 ```java
 #include <stdio.h>
 
@@ -149,7 +149,7 @@ int main() {
 }
 ```
 
-Exemplo com short e long
+## Exemplo com short e long
 ```java
 #include <stdio.h>
 
@@ -166,7 +166,7 @@ int main() {
 }
 ```
 
-Exemplo com unsigned long long
+## Exemplo com unsigned long long
 ```java
 #include <stdio.h>
 
@@ -179,7 +179,7 @@ int main() {
 }
 ```
 
-Dados Lógicos e Booleanos
+# Dados Lógicos e Booleanos
 
 Em C, os dados lógicos, ou valores booleanos, são representados usando o tipo int, onde 0 representa false (falso) e qualquer outro valor representa true (verdadeiro). A linguagem C, em sua forma padrão, não inclui um tipo específico para valores booleanos. No entanto, a partir do padrão C99, foi introduzido um tipo específico _Bool para representar valores booleanos. Além disso, a biblioteca padrão <stdbool.h> define bool como um alias para _Bool e define as constantes true e false.
 
@@ -208,9 +208,9 @@ int main() {
     return 0;
 }
 ```
-Exercício: Modifique o exemplo anterior sem a biblioteca <stbool.h>, utilizando int para as variáveis.
+Exercício: Modifique o exemplo anterior porém sem ultilizar a biblioteca <stbool.h>. Utilize variaveis declaradas como char.
 
-Operadores
+# Operadores
 A linguagem C se destaca por sua ampla gama de operadores, simbolizados por um ou vários caracteres, empregados para interagir com dados, seja na forma de constantes ou variáveis. É possível que, dentre as linguagens de programação, C ofereça a maior diversidade de operadores. No entanto, ela pode ser considerada limitada no que tange à variedade de símbolos, visto que o mesmo símbolo pode ser utilizado para representar operadores distintos.
 
 | Operador                  | Significado                      |
@@ -225,7 +225,7 @@ A linguagem C se destaca por sua ampla gama de operadores, simbolizados por um o
 
 
 
-Uso dos operadores aritméticos básicos: adição (+), subtração (-), multiplicação (*) e divisão (/). 
+## Uso dos operadores aritméticos básicos: adição (+), subtração (-), multiplicação (*) e divisão (/). 
 
 ```java
 #include <stdio.h>
@@ -255,7 +255,7 @@ int main() {
 
 ```
 
-Operadores % =  e - (sinal negativo) 
+## Operadores % =  e - (sinal negativo) 
 ```java
 #include <stdio.h>
 
@@ -278,7 +278,7 @@ int main() {
 
 ```
 
-Operadores aritméticos de atribuição
+## Operadores aritméticos de atribuição
 
 | Operador | Exemplo | Significado                                   |
 |----------|---------|-----------------------------------------------|
@@ -290,14 +290,14 @@ Operadores aritméticos de atribuição
 
 
 
-Operadores de incremento e decremento
+## Operadores de incremento e decremento
 | Operador | Significado         |
 |----------|---------------------|
 | `++`     | Incremento de um    |
 | `--`     | Decremento de um    |
 
 
-Operadores binários (Bit a bit)
+## Operadores binários (Bit a bit)
 o uso dos operadores de bit: & (e binário), | (ou binário), ~ (não binário), >> (deslocamento para a direita) e << (deslocamento para a esquerda). 
 
 | Operador | Significado                |
@@ -340,7 +340,7 @@ int main() {
 }
 ```
 
-Diretivas
+# Diretivas
 
 As diretivas de pré-processamento #if, #else, #elif, e #endif em C são utilizadas para incluir ou excluir partes do código antes da compilação, baseando-se em condições definidas. Essas diretivas são muito úteis para lidar com diferentes ambientes de compilação, plataformas de hardware, ou para incluir código de debug.
 
@@ -367,7 +367,7 @@ int main() {
 }
 
 ```
-Exemplo para compilar  diferentes partes do código com base no modelo de um processador. 
+# Exemplo para compilar  diferentes partes do código com base no modelo de um processador. 
 ```java
 #include <stdio.h>
 
