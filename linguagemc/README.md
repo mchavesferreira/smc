@@ -19,6 +19,7 @@ int main() {
 
 Exemplo de Variável do Tipo int
 
+```java
 #include <stdio.h>
 
 int main() {
