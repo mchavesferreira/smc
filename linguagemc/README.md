@@ -106,9 +106,7 @@ Este exemplo utiliza uma constante (PI) para calcular a área de um círculo dad
 int main() {
     float raio = 10.0;
     float area = PI * raio * raio;
-
     printf("A área de um círculo com raio %.2f é %.2f\n", raio, area);
-
     return 0;
 }
 ```
@@ -340,8 +338,55 @@ int main() {
 
     return 0;
 }
+```
 
+Diretivas
 
+As diretivas de pré-processamento #if, #else, #elif, e #endif em C são utilizadas para incluir ou excluir partes do código antes da compilação, baseando-se em condições definidas. Essas diretivas são muito úteis para lidar com diferentes ambientes de compilação, plataformas de hardware, ou para incluir código de debug.
+
+```java
+#include <stdio.h>
+
+// Definição de uma macro para controle da compilação
+#define DEBUG_MODE
+
+int main() {
+    printf("Iniciando o programa.\n");
+
+    #if defined(DEBUG_MODE)
+    printf("Modo DEBUG ativado: Executando tarefas de debug.\n");
+    // Código específico de debug pode ser colocado aqui
+    #else
+    printf("Modo DEBUG desativado: Executando tarefas normais.\n");
+    // Código para execução normal
+    #endif
+
+    printf("Finalizando o programa.\n");
+
+    return 0;
+}
+
+```
+Exemplo para compilar  diferentes partes do código com base no modelo de um processador. 
+```java
+#include <stdio.h>
+
+// Defina o modelo do processador antes da função main
+#define PROCESSADOR_A
+
+ #if defined(PROCESSADOR_A)
+   #define GANHO 2
+#elif defined(PROCESSADOR_B)
+   #define GANHO 5
+#else
+    #define GANHO 7
+#endif
+int main() {
+    float entrada = 10.0;
+    float saida = GANHO * entrada;
+    printf("saida= %.2f \n", saida);
+    return 0;
+}
 ```
 
 
