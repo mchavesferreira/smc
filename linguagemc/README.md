@@ -201,14 +201,16 @@ Exercício: Modifique o exemplo anterior sem a biblioteca <stbool.h>, utilizando
 Operadores
 A linguagem C se destaca por sua ampla gama de operadores, simbolizados por um ou vários caracteres, empregados para interagir com dados, seja na forma de constantes ou variáveis. É possível que, dentre as linguagens de programação, C ofereça a maior diversidade de operadores. No entanto, ela pode ser considerada limitada no que tange à variedade de símbolos, visto que o mesmo símbolo pode ser utilizado para representar operadores distintos.
 
-Operador	Significado
-+	Soma
--	Subtração
-*	Multiplicação
-/	Divisão
-%	Módulo ou resto da divisão
-=	Atribuição
-- (em uso como -variavel)	Menos unário – sinal negativo
+| Operador                  | Significado                      |
+|---------------------------|----------------------------------|
+| `+`                       | Soma                             |
+| `-`                       | Subtração                        |
+| `*`                       | Multiplicação                    |
+| `/`                       | Divisão                          |
+| `%`                       | Módulo ou resto da divisão       |
+| `=`                       | Atribuição                       |
+| `-` (em uso como `-variavel`) | Menos unário – sinal negativo  |
+
 
 
 Uso dos operadores aritméticos básicos: adição (+), subtração (-), multiplicação (*) e divisão (/). 
@@ -273,6 +275,62 @@ Operadores aritméticos de atribuição
 | `*=`     | `op1 *= op2` | Atribui a `op1` o resultado de `op1 * op2` |
 | `/=`     | `op1 /= op2` | Atribui a `op1` o resultado de `op1 / op2` |
 | `%=`     | `op1 %= op2` | Atribui a `op1` o resultado de `op1 % op2` |
+
+
+
+Operadores de incremento e decremento
+| Operador | Significado         |
+|----------|---------------------|
+| `++`     | Incremento de um    |
+| `--`     | Decremento de um    |
+
+
+Operadores binários (Bit a bit)
+o uso dos operadores de bit: & (e binário), | (ou binário), ~ (não binário), >> (deslocamento para a direita) e << (deslocamento para a esquerda). 
+
+| Operador | Significado                |
+|----------|----------------------------|
+| `&`      | "e" binário                |
+| `|`      | "ou" binário               |
+| `~`      | "não" binário              |
+| `>>`     | Deslocamento para direita  |
+| `<<`     | Deslocamento para esquerda |
+
+```java
+#include <stdio.h>
+
+int main() {
+    unsigned int a = 60; // 0011 1100 em binário
+    unsigned int b = 13; // 0000 1101 em binário
+    int resultado;
+
+    // E binário
+    resultado = a & b; // 0000 1100
+    printf("Resultado de a & b: %d\n", resultado);
+
+    // OU binário
+    resultado = a | b; // 0011 1101
+    printf("Resultado de a | b: %d\n", resultado);
+
+    // NÃO binário
+    resultado = ~a; // 1100 0011 (em uma arquitetura de 32 bits, isto se torna 1111 1111 1111 1111 1111 1111 1100 0011)
+    printf("Resultado de ~a: %u\n", resultado);
+
+    // Deslocamento para a direita
+    resultado = a >> 2; // 0000 1111
+    printf("a deslocado 2 bits para a direita: %d\n", resultado);
+
+    // Deslocamento para a esquerda
+    resultado = a << 2; // 1111 0000
+    printf("a deslocado 2 bits para a esquerda: %d\n", resultado);
+
+    return 0;
+}
+
+
+```
+
+
 
 
 
