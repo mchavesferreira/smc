@@ -5,6 +5,7 @@ Para começar com o aprendizado da linguagem C, especialmente com foco na aplica
 OBS: Ao trabalhar com microcontroladores, a função printf() pode não estar disponível ou ser prática, dependendo do ambiente de desenvolvimento e do hardware. Em muitos casos, você pode usar funções específicas do microcontrolador para enviar dados para um terminal ou display.
 
 Exemplo de Variável do Tipo char
+
 #include <stdio.h>
 
 int main() {
@@ -14,6 +15,7 @@ int main() {
 }
 
 Exemplo de Variável do Tipo int
+
 #include <stdio.h>
 
 int main() {
@@ -34,6 +36,7 @@ int main() {
 }
 
 Exemplo de Variável do Tipo double
+
 #include <stdio.h>
 
 int main() {
@@ -44,10 +47,10 @@ int main() {
 
 Observações Importantes
 
-    O tipo char é frequentemente utilizado para armazenar caracteres individuais, como letras ou símbolos.
-    O tipo int é usado para números inteiros, ou seja, sem casas decimais.
-    O tipo float e double são usados para números reais (com casas decimais). A diferença principal entre eles é a precisão e o alcance; double tem o dobro da precisão de um float, sendo preferível quando se necessita de uma maior precisão numérica.
-    Em microcontroladores e outras aplicações de sistemas embarcados, a escolha entre float e double pode ser influenciada pelo espaço de armazenamento disponível e pela capacidade de processamento do dispositivo, já que operações com double podem consumir mais recursos.
+-O tipo char é frequentemente utilizado para armazenar caracteres individuais, como letras ou símbolos.
+-O tipo int é usado para números inteiros, ou seja, sem casas decimais.
+-O tipo float e double são usados para números reais (com casas decimais). A diferença principal entre eles é a precisão e o alcance; double tem o dobro da precisão de um float, sendo preferível quando se necessita de uma maior precisão numérica.
+Em microcontroladores e outras aplicações de sistemas embarcados, a escolha entre float e double pode ser influenciada pelo espaço de armazenamento disponível e pela capacidade de processamento do dispositivo, já que operações com double podem consumir mais recursos.
 
 1. Combinação de Variáveis e Uso de printf()
 
