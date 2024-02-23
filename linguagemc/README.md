@@ -6,6 +6,8 @@ OBS: Ao trabalhar com microcontroladores, a função printf() pode não estar di
 
 Exemplo de Variável do Tipo char
 
+
+```java
 #include <stdio.h>
 
 int main() {
@@ -13,6 +15,7 @@ int main() {
     printf("Caractere: %c\n", letra);
     return 0;
 }
+```
 
 Exemplo de Variável do Tipo int
 
@@ -23,10 +26,12 @@ int main() {
     printf("Idade: %d anos\n", idade);
     return 0;
 }
+```
 
 
 Exemplo de Variável do Tipo float
 
+```java
 #include <stdio.h>
 
 int main() {
@@ -34,9 +39,11 @@ int main() {
     printf("Altura: %.2f metros\n", altura);
     return 0;
 }
+```
 
 Exemplo de Variável do Tipo double
 
+```java
 #include <stdio.h>
 
 int main() {
@@ -44,6 +51,7 @@ int main() {
     printf("Distância: %.4f quilômetros\n", distancia);
     return 0;
 }
+```
 
 Observações Importantes
 
@@ -54,6 +62,7 @@ Em microcontroladores e outras aplicações de sistemas embarcados, a escolha en
 
 1. Combinação de Variáveis e Uso de printf()
 
+```java
 #include <stdio.h>
 
 int main() {
@@ -69,10 +78,12 @@ int main() {
 
     return 0;
 }
+```
 
 2. Exemplo de Uso de Constantes
 Este exemplo utiliza uma constante (PI) para calcular a área de um círculo dado um raio. A constante é definida usando #define.
 
+```java
 #include <stdio.h>
 
 #define PI 3.14159
@@ -85,10 +96,12 @@ int main() {
 
     return 0;
 }
+```
 
 3. Exemplo Combinando Variáveis e Constantes
 Este exemplo combina o uso de variáveis e constantes para calcular os anos restantes até a aposentadoria, baseando-se em uma idade máxima definida.
 
+```java
 #include <stdio.h>
 
 #define MAX_IDADE 65
@@ -102,4 +115,6 @@ int main() {
 
     return 0;
 }
+```
+
 
