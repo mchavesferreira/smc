@@ -103,7 +103,20 @@ Aperfeiçoamento do projeto 1 ou uma nova proposta. Acrescentar novos recursos d
 
     CircuitJS - Este é um simulador de circuitos eletrônicos baseado em JavaScript que roda diretamente no navegador. Embora seu foco principal não seja microcontroladores, ele pode ser útil para ensinar os princípios básicos de eletrônica que são relevantes para a engenharia de automação.
 
+Simuladores para linguagem C
 
+Para focar especificamente no aprendizado da linguagem C, sem a necessidade de simulação de hardware, você pode utilizar ambientes de desenvolvimento e compiladores online que suportam C. Essas plataformas permitem que os usuários escrevam, compilem e executem código C diretamente no navegador, facilitando a prática e o aprendizado da linguagem. Aqui estão algumas opções populares:
+
+    Repl.it (replit.com) - Uma plataforma de codificação online que suporta várias linguagens de programação, incluindo C. Ela oferece um ambiente de desenvolvimento integrado (IDE) online completo, permitindo que os usuários escrevam, executem e compartilhem seus códigos facilmente.
+
+    JDoodle - Um compilador online simples e fácil de usar para várias linguagens, incluindo C. O JDoodle permite compilar e executar programas C rapidamente, tornando-o uma ótima ferramenta para testar snippets de código ou pequenos programas.
+
+    OnlineGDB - Um compilador e depurador online que suporta C, entre outras linguagens. OnlineGDB oferece recursos avançados, como depuração passo a passo, que podem ser muito úteis para ensinar conceitos de programação mais complexos.
+
+    Programiz - Oferece um compilador C online simples que é bom para iniciantes. Ele permite compilar e executar código C rapidamente, facilitando a experimentação com a linguagem.
+
+    TutorialsPoint CodingGround - Uma plataforma que suporta várias linguagens de programação, incluindo C. Ela oferece um ambiente onde os usuários podem escrever, compilar e executar seus programas em C, tornando-a útil para exercícios de programação e projetos.
+    
 
 ##  Ambiente de programação
 
