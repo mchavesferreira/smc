@@ -4,7 +4,52 @@ Introdução a linguagem C
 Para começar com o aprendizado da linguagem C, especialmente com foco na aplicação em microcontroladores, é fundamental compreender como declarar variáveis, definir constantes e usar instruções de saída como printf(). Abaixo, estão alguns exemplos que cobrem esses conceitos básicos. Estes exemplos ajudarão a construir uma base sólida antes de avançar para conceitos mais complexos, como controle de fluxo, funções e manipulação de hardware específico de microcontroladores.
 OBS: Ao trabalhar com microcontroladores, a função printf() pode não estar disponível ou ser prática, dependendo do ambiente de desenvolvimento e do hardware. Em muitos casos, você pode usar funções específicas do microcontrolador para enviar dados para um terminal ou display.
 
-1. Exemplo de Declaração de Variáveis e Uso de printf()
+Exemplo de Variável do Tipo char
+#include <stdio.h>
+
+int main() {
+    char letra = 'A';
+    printf("Caractere: %c\n", letra);
+    return 0;
+}
+
+Exemplo de Variável do Tipo int
+#include <stdio.h>
+
+int main() {
+    int idade = 25;
+    printf("Idade: %d anos\n", idade);
+    return 0;
+}
+
+
+Exemplo de Variável do Tipo float
+
+#include <stdio.h>
+
+int main() {
+    float altura = 1.75;
+    printf("Altura: %.2f metros\n", altura);
+    return 0;
+}
+
+Exemplo de Variável do Tipo double
+#include <stdio.h>
+
+int main() {
+    double distancia = 12345.6789;
+    printf("Distância: %.4f quilômetros\n", distancia);
+    return 0;
+}
+
+Observações Importantes
+
+    O tipo char é frequentemente utilizado para armazenar caracteres individuais, como letras ou símbolos.
+    O tipo int é usado para números inteiros, ou seja, sem casas decimais.
+    O tipo float e double são usados para números reais (com casas decimais). A diferença principal entre eles é a precisão e o alcance; double tem o dobro da precisão de um float, sendo preferível quando se necessita de uma maior precisão numérica.
+    Em microcontroladores e outras aplicações de sistemas embarcados, a escolha entre float e double pode ser influenciada pelo espaço de armazenamento disponível e pela capacidade de processamento do dispositivo, já que operações com double podem consumir mais recursos.
+
+1. Combinação de Variáveis e Uso de printf()
 
 #include <stdio.h>
 
