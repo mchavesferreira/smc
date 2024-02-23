@@ -1,5 +1,13 @@
 Introdução a linguagem C
 
+Simuladores online para aprendizado:
+
+https://www.tutorialspoint.com/compile_c_online.php
+
+https://www.mycompiler.io/pt/new/cpp
+
+https://www.online-cpp.com/online_c_compiler
+
 
 Para começar com o aprendizado da linguagem C, especialmente com foco na aplicação em microcontroladores, é fundamental compreender como declarar variáveis, definir constantes e usar instruções de saída como printf(). Abaixo, estão alguns exemplos que cobrem esses conceitos básicos. Estes exemplos ajudarão a construir uma base sólida antes de avançar para conceitos mais complexos, como controle de fluxo, funções e manipulação de hardware específico de microcontroladores.
 OBS: Ao trabalhar com microcontroladores, a função printf() pode não estar disponível ou ser prática, dependendo do ambiente de desenvolvimento e do hardware. Em muitos casos, você pode usar funções específicas do microcontrolador para enviar dados para um terminal ou display.
