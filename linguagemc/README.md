@@ -256,7 +256,7 @@ A linguagem C se destaca por sua ampla gama de operadores, simbolizados por um o
 | `!` | negação lógica |
 | `==` | igualdade |
 | `!=` | desigualdade |
-| `?` |  |
+| `?` | ...  |
 | `||` | or lógico |
 | `&&` | and lógico |
 
@@ -538,9 +538,10 @@ int mat[2] [3] = {{51, 52, 53},
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/310bf071-61c4-4181-afbc-aab09a1f64ba)
 
 ## Macro para I/0
-Livro
+Livro p. 96
 
 ## Primeiro código C
+Livro p. 112
 
 ```java
 //------------------------------------------------------------------------------------- //
@@ -574,4 +575,4 @@ int main( )
     }
 }
 //--------------------------------------------------------------------------------------
-```java
+```
