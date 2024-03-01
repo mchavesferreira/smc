@@ -76,7 +76,7 @@ int main() {
 ```
 
 
-<mark> Observações Importantes </mark>
+! Observações Importantes 
 
 -O tipo char é frequentemente utilizado para armazenar caracteres individuais, como letras ou símbolos.
 -O tipo int é usado para números inteiros, ou seja, sem casas decimais.
@@ -219,7 +219,9 @@ int main() {
 Exercício: Modifique o exemplo anterior porém sem ultilizar a biblioteca <stbool.h>. Utilize variaveis declaradas como char.
 
 ___
+
 ## Operadores
+
 A linguagem C se destaca por sua ampla gama de operadores, simbolizados por um ou vários caracteres, empregados para interagir com dados, seja na forma de constantes ou variáveis. É possível que, dentre as linguagens de programação, C ofereça a maior diversidade de operadores. No entanto, ela pode ser considerada limitada no que tange à variedade de símbolos, visto que o mesmo símbolo pode ser utilizado para representar operadores distintos.
 
 | Operador                  | Significado                      |
