@@ -1,6 +1,6 @@
-Introdução a linguagem C
+# Introdução a linguagem C
 
-Simuladores online para aprendizado:
+- Simuladores online para aprendizado:
 
 https://www.tutorialspoint.com/compile_c_online.php
 
@@ -8,6 +8,13 @@ https://www.mycompiler.io/pt/new/cpp
 
 https://www.online-cpp.com/online_c_compiler
 
+- Comentários, edentação
+- Variáveis
+- Operadores
+- Diretivas
+
+
+## Comentários, edentação
 
 Para começar com o aprendizado da linguagem C, especialmente com foco na aplicação em microcontroladores, é fundamental compreender como declarar variáveis, definir constantes e usar instruções de saída como printf(). Abaixo, estão alguns exemplos que cobrem esses conceitos básicos. Estes exemplos ajudarão a construir uma base sólida antes de avançar para conceitos mais complexos, como controle de fluxo, funções e manipulação de hardware específico de microcontroladores.
 OBS: Ao trabalhar com microcontroladores, a função printf() pode não estar disponível ou ser prática, dependendo do ambiente de desenvolvimento e do hardware. Em muitos casos, você pode usar funções específicas do microcontrolador para enviar dados para um terminal ou display.
@@ -15,10 +22,10 @@ OBS: Ao trabalhar com microcontroladores, a função printf() pode não estar di
 - Edentação
 - caixa Alta
 
+___
+## Variáveis
 
-Variáveis
-
-Exemplo de Variável do Tipo char
+### Exemplo de Variável do Tipo char
 
 
 ```java
@@ -31,7 +38,7 @@ int main() {
 }
 ```
 
-Exemplo de Variável do Tipo int
+### Exemplo de Variável do Tipo int
 
 ```java
 #include <stdio.h>
@@ -44,7 +51,7 @@ int main() {
 ```
 
 
-Exemplo de Variável do Tipo float
+### Exemplo de Variável do Tipo float
 
 ```java
 #include <stdio.h>
@@ -56,7 +63,7 @@ int main() {
 }
 ```
 
-Exemplo de Variável do Tipo double
+### Exemplo de Variável do Tipo double
 
 ```java
 #include <stdio.h>
@@ -68,14 +75,15 @@ int main() {
 }
 ```
 
-Observações Importantes
+
+<mark> Observações Importantes </mark>
 
 -O tipo char é frequentemente utilizado para armazenar caracteres individuais, como letras ou símbolos.
 -O tipo int é usado para números inteiros, ou seja, sem casas decimais.
 -O tipo float e double são usados para números reais (com casas decimais). A diferença principal entre eles é a precisão e o alcance; double tem o dobro da precisão de um float, sendo preferível quando se necessita de uma maior precisão numérica.
 Em microcontroladores e outras aplicações de sistemas embarcados, a escolha entre float e double pode ser influenciada pelo espaço de armazenamento disponível e pela capacidade de processamento do dispositivo, já que operações com double podem consumir mais recursos.
 
-1. Combinação de Variáveis e Uso de printf()
+### 1. Combinação de Variáveis e Uso de printf()
 
 ```java
 #include <stdio.h>
@@ -95,7 +103,7 @@ int main() {
 }
 ```
 
-2. Exemplo de Uso de Constantes
+### 2. Exemplo de Uso de Constantes
 Este exemplo utiliza uma constante (PI) para calcular a área de um círculo dado um raio. A constante é definida usando #define.
 
 ```java
@@ -130,11 +138,11 @@ int main() {
 }
 ```
 
-# Modificadores 
+## Modificadores 
 
 Modificadores em C são usados para alterar os limites de armazenamento ou a precisão dos tipos de dados. Eles incluem signed, unsigned, short, long, e long long. Esses modificadores ajudam a otimizar o uso de memória e a adequar o código às necessidades específicas da aplicação, especialmente em sistemas embarcados e microcontroladores, onde o espaço de memória é limitado.
 
-## Exemplo com signed e unsigned
+### Exemplo com signed e unsigned
 ```java
 #include <stdio.h>
 
@@ -149,7 +157,7 @@ int main() {
 }
 ```
 
-## Exemplo com short e long
+### Exemplo com short e long
 ```java
 #include <stdio.h>
 
@@ -166,7 +174,7 @@ int main() {
 }
 ```
 
-## Exemplo com unsigned long long
+### Exemplo com unsigned long long
 ```java
 #include <stdio.h>
 
@@ -179,7 +187,7 @@ int main() {
 }
 ```
 
-# Dados Lógicos e Booleanos
+## Dados Lógicos e Booleanos
 
 Em C, os dados lógicos, ou valores booleanos, são representados usando o tipo int, onde 0 representa false (falso) e qualquer outro valor representa true (verdadeiro). A linguagem C, em sua forma padrão, não inclui um tipo específico para valores booleanos. No entanto, a partir do padrão C99, foi introduzido um tipo específico _Bool para representar valores booleanos. Além disso, a biblioteca padrão <stdbool.h> define bool como um alias para _Bool e define as constantes true e false.
 
@@ -210,7 +218,8 @@ int main() {
 ```
 Exercício: Modifique o exemplo anterior porém sem ultilizar a biblioteca <stbool.h>. Utilize variaveis declaradas como char.
 
-# Operadores
+___
+## Operadores
 A linguagem C se destaca por sua ampla gama de operadores, simbolizados por um ou vários caracteres, empregados para interagir com dados, seja na forma de constantes ou variáveis. É possível que, dentre as linguagens de programação, C ofereça a maior diversidade de operadores. No entanto, ela pode ser considerada limitada no que tange à variedade de símbolos, visto que o mesmo símbolo pode ser utilizado para representar operadores distintos.
 
 | Operador                  | Significado                      |
@@ -225,7 +234,7 @@ A linguagem C se destaca por sua ampla gama de operadores, simbolizados por um o
 
 
 
-## Uso dos operadores aritméticos básicos: adição (+), subtração (-), multiplicação (*) e divisão (/). 
+### Uso dos operadores aritméticos básicos: adição (+), subtração (-), multiplicação (*) e divisão (/). 
 
 ```java
 #include <stdio.h>
@@ -255,7 +264,8 @@ int main() {
 
 ```
 
-## Operadores % =  e - (sinal negativo) 
+### Operadores % =  e - (sinal negativo) 
+
 ```java
 #include <stdio.h>
 
@@ -278,7 +288,7 @@ int main() {
 
 ```
 
-## Operadores aritméticos de atribuição
+### Operadores aritméticos de atribuição
 
 | Operador | Exemplo | Significado                                   |
 |----------|---------|-----------------------------------------------|
@@ -290,14 +300,15 @@ int main() {
 
 
 
-## Operadores de incremento e decremento
+### Operadores de incremento e decremento
+
 | Operador | Significado         |
 |----------|---------------------|
 | `++`     | Incremento de um    |
 | `--`     | Decremento de um    |
 
 
-## Operadores binários (Bit a bit)
+### Operadores binários (Bit a bit)
 o uso dos operadores de bit: & (e binário), | (ou binário), ~ (não binário), >> (deslocamento para a direita) e << (deslocamento para a esquerda). 
 
 | Operador | Significado                |
@@ -339,8 +350,8 @@ int main() {
     return 0;
 }
 ```
-
-# Diretivas
+___
+## Diretivas
 
 As diretivas de pré-processamento #if, #else, #elif, e #endif em C são utilizadas para incluir ou excluir partes do código antes da compilação, baseando-se em condições definidas. Essas diretivas são muito úteis para lidar com diferentes ambientes de compilação, plataformas de hardware, ou para incluir código de debug.
 
@@ -367,7 +378,7 @@ int main() {
 }
 
 ```
-# Exemplo para compilar  diferentes partes do código com base no modelo de um processador. 
+### Exemplo para compilar  diferentes partes do código com base no modelo de um processador. 
 ```java
 #include <stdio.h>
 
