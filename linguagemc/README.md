@@ -513,7 +513,7 @@ num[2] = 30;
 int num[5] = {10, 20, 30, 40, 50};
 
 // Vetor String
-char msg [] - "Bom dia"; //msg possui tamanho 8
+char msg [] = "Bom dia"; //msg possui tamanho 8
 
 ```
 
@@ -531,7 +531,7 @@ int mat[2] [3] = {51, 52, 53, 54, 55, 56};
 //inicialização por linhas 
 int mat[2] [3] = {{51, 52, 53}, {54, 55, 56}}; 
 //inicialização por linhas e com quebra de linha 
-int mat[2] [3] - {{51, 52, 53}, 
+int mat[2] [3] = {{51, 52, 53}, 
 {54, 55, 56}};
 ```
 
