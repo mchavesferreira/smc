@@ -21,10 +21,9 @@ Avaliação da Disciplina:
 
 Pinagem
 Atmega328P
-https://github.com/mchavesferreira/mcr/blob/main/imagens/pinout_atmega328P.png
+<img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/pinout_atmega328P.png>
 
-![image](https://github.com/mchavesferreira/smc/assets/63993080/9310c6ec-f83e-40e3-968e-5a459110fd48)
-
+<img src=https://github.com/mchavesferreira/smc/assets/63993080/9310c6ec-f83e-40e3-968e-5a459110fd48)>
 
 
 17/03/2023   - Tarefa Suap - Cronometro Big Number em LCD simulado em wokwi e/ou proteus
