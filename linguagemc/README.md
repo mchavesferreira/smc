@@ -10,6 +10,16 @@ A etapa de linkagem consiste em combinar todos os arquivos intermediários criad
 
 A assemblagem, por sua vez, é o processo final que converte o código de assembly intermediário para linguagem de máquina, ajustando referências relativas para posições fixas na memória, culminando na produção do arquivo binário. Dependendo do compilador, pode ser gerado um arquivo com extensão .s19, que, apesar de conter o código de máquina, está em formato de texto para facilitar a transmissão para dispositivos de gravação, incluindo verificações para assegurar a integridade dos dados.
 [Almeida, Maximiano, 2016]. 
+
+## Organização dos programas em C
+ - Comentários
+ - Diretivas de compilação
+ - Definições globais
+ - Protótipos de funções
+ - Definições de funções
+
+ Para o aprendizado da linguagem C utilizaremos alguns destes simuladores online:
+ 
 - Simuladores online para aprendizado:
 
 https://www.tutorialspoint.com/compile_c_online.php
@@ -428,7 +438,14 @@ int main() {
 }
 ```
 
+### Inclusão de arquivos
+A diretiva de inclusão **** #include *** , possibilita ao desenvolvedor incorporar em seu código funções previamente desenvolvidas, armazenadas em diferentes arquivos, seja por ele ou por terceiros. A compilação dessas funções em um único arquivo, visando sua utilização posterior, é conhecida como criação de uma biblioteca.
 
+Os arquivos com a extensão .H são conhecidos como arquivos de cabeçalho ("Header files") e tipicamente contêm apenas os protótipos das funções ou definições de tipos de variáveis que a biblioteca oferece.
+```java
+#include <nome_arquivo.h> / arquivo do path do compilador 
+#include "nome_arquivo.h" // arquivo no mesmo diretório
+```
 
 
 
