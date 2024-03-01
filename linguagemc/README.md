@@ -464,6 +464,8 @@ Cria uma estrutura similar a função com algumas limitações, como não criar 
 ```java
 #define Media(a, b, c) ((a+c+b)/3)
 ```
+
+Obs: ver criação da masca de bits e macros (Livro AVR Arduino Técnicas de projeto, p. 96)
 ### #pragma
 
 A diretiva #pragma se distingue significativamente das demais diretivas de pré-compilação. Ao invés de modificar o código-fonte, ela emite comandos especiais ao compilador que influenciam o procedimento de compilação ou definem especificações que vão além do código.
