@@ -482,10 +482,52 @@ Essa diretiva também pode ser utilizada para ajustar registros específicos do 
 
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/aa3801cc-0e56-444e-becb-2d30bd5b907e)
 Essa	declaração	indica	ao	compilador	que	ele	deve	reservar	espaço suficiente	na	memória	para	armazenar	10	elementos	do	tipo	inteiro. Além	do	espaço	de	cada	um	dos	elementos,	o	compilador	também reserva	espaço	para	um	ponteiro	que	apontará	para	o	primeiro	elemento do	vetor.
+
+
+![image](https://github.com/mchavesferreira/smc/assets/63993080/cf7b3fb1-6dc1-4cd1-8944-bdba437b9f50)
+
+
 ```java
  int num[S]; 
  char codigo[S];
 ```
 
-![image](https://github.com/mchavesferreira/smc/assets/63993080/cf7b3fb1-6dc1-4cd1-8944-bdba437b9f50)
+Posicionamento destes vetores
+
+
+![image](https://github.com/mchavesferreira/smc/assets/63993080/e34a9799-e6e8-410d-96b6-b3bd20abd932)
+
+nomeVetor[posicao] - novoValor;
+
+```java
+num[8] = 10; 
+num[l] = 20; 
+num[2] = 30;
+// 
+int num[5] = {10, 20, 30, 40, 50};
+
+// Vetor String
+char msg [] - "Bom dia"; //msg possui tamanho 8
+
+```
+
+#### Matrizes
+
+```java
+int a[2] [6];
+```
+
+![image](https://github.com/mchavesferreira/smc/assets/63993080/36ded4f7-cbb5-475e-8337-7f4f5615ec7c)
+
+```java
+//inicialização por lista contínua 
+int mat[2] [3] = {51, 52, 53, 54, 55, 56}; 
+//inicialização por linhas 
+int mat[2] [3] = {{51, 52, 53}, {54, 55, 56}}; 
+//inicialização por linhas e com quebra de linha 
+int mat[2] [3] - {{51, 52, 53}, 
+{54, 55, 56}};
+```
+
+![image](https://github.com/mchavesferreira/smc/assets/63993080/310bf071-61c4-4181-afbc-aab09a1f64ba)
 
