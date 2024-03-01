@@ -352,6 +352,22 @@ int main() {
     return 0;
 }
 ```
+![image](https://github.com/mchavesferreira/smc/assets/63993080/50a1bd87-b20e-4ac2-b230-0bbd4b74edd8)
+
+
+
+### Operadores binários (Bit a bit)
+o uso dos operadores de bit: & (e binário), | (ou binário), ~ (não binário), >> (deslocamento para a direita) e << (deslocamento para a esquerda). 
+
+| Operador | Significado                |
+|----------|----------------------------|
+| `&`      | "e" binário                |
+| `|`      | "ou" binário               |
+| `~`      | "não" binário              |
+| `>>`     | Deslocamento para direita  |
+| `<<`     | Deslocamento para esquerda |
+
+
 ___
 ## Diretivas
 
