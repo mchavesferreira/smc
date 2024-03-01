@@ -290,15 +290,15 @@ int main() {
 
 ```
 
-### Operadores aritméticos de atribuição
+### Operadores aritméticos forma compacta
 
-| Operador | Exemplo | Significado                                   |
+| operador | forma compacta | Significado                                   |
 |----------|---------|-----------------------------------------------|
-| `+=`     | `op1 += op2` | Atribui a `op1` o resultado de `op1 + op2` |
-| `-=`     | `op1 -= op2` | Atribui a `op1` o resultado de `op1 - op2` |
-| `*=`     | `op1 *= op2` | Atribui a `op1` o resultado de `op1 * op2` |
-| `/=`     | `op1 /= op2` | Atribui a `op1` o resultado de `op1 / op2` |
-| `%=`     | `op1 %= op2` | Atribui a `op1` o resultado de `op1 % op2` |
+| `+=`     | `a += b` |  `a = a + b` |
+| `-=`     | `a -= b` |  `a = a - b` |
+| `*=`     | `a *= b` |  `a = a * b` |
+| `/=`     | `a /= b` |  `a = a / b` |
+| `%=`     | `a %= b` |  `a = a %/ b` |
 
 
 
