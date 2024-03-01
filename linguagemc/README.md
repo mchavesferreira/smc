@@ -253,8 +253,12 @@ A linguagem C se destaca por sua ampla gama de operadores, simbolizados por um o
 | `%`                       | Módulo ou resto da divisão       |
 | `=`                       | Atribuição                       |
 | `-` (em uso como `-variavel`) | Menos unário – sinal negativo  |
-
-
+| `!` | negação lógica |
+| `==` | igualdade |
+| `!=` | desigualdade |
+| `?` |  |
+| `||` | or lógico |
+| `&&` | and lógico |
 
 ### Uso dos operadores aritméticos básicos: adição (+), subtração (-), multiplicação (*) e divisão (/). 
 
