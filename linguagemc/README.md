@@ -1,5 +1,15 @@
 # Introdução a linguagem C
 
+O procedimento de compilação se desdobra em quatro fases principais que normalmente ocorrem de maneira sequencial: pré-processamento, compilação propriamente dita, montagem e ligação, como ilustrado na figura: 
+![image](https://github.com/mchavesferreira/smc/assets/63993080/c53ea8f9-4223-4a0b-9a33-9b591eb832c8) Fonte: [Almeida, Maximiano, 2016]
+
+A fase de pré-compilação trata da leitura do código fonte, executando substituições e configurações através de comandos específicos, como #define e #include, e remoção de comentários, gerando arquivos temporários com as modificações. A compilação converte o código C em assembly, uma linguagem de baixo nível mais próxima da máquina, mas ainda não em binário ou alocada na memória. Esta fase inclui a otimização do código, visando equilibrar a redução do tamanho do arquivo com a eficiência de execução, o que pode ser desafiador em ambientes embarcados devido a suposições do compilador que podem não se aplicar. Cada arquivo .C resulta em um arquivo intermediário em assembly após essa etapa.
+GPT
+
+A etapa de linkagem consiste em combinar todos os arquivos intermediários criados durante a compilação em um único arquivo, assegurando que todas as referências sejam resolvidas e integrando bibliotecas pré-compiladas, como as da linguagem C, diretamente no programa. A linkagem dinâmica é raramente empregada em sistemas embarcados devido à natureza singular dos programas e à inexistência de necessidade de compartilhamento dinâmico de bibliotecas.
+
+A assemblagem, por sua vez, é o processo final que converte o código de assembly intermediário para linguagem de máquina, ajustando referências relativas para posições fixas na memória, culminando na produção do arquivo binário. Dependendo do compilador, pode ser gerado um arquivo com extensão .s19, que, apesar de conter o código de máquina, está em formato de texto para facilitar a transmissão para dispositivos de gravação, incluindo verificações para assegurar a integridade dos dados.
+[Almeida, Maximiano, 2016]. 
 - Simuladores online para aprendizado:
 
 https://www.tutorialspoint.com/compile_c_online.php
