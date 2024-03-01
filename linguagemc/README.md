@@ -541,6 +541,33 @@ int mat[2] [3] = {{51, 52, 53},
 Livro p. 96
 
 ## Primeiro código C
+
+Pisca pisca
+![image](https://github.com/mchavesferreira/smc/assets/63993080/52c180fe-9a10-4930-b13b-6d5ccbabac9a)
+
+https://wokwi.com/projects/363128065545249793
+
+
+```java
+#define F_CPU 16000000UL // Clock frequency, needed to delay functions
+#include <avr/io.h> // Register definitions
+#include <util/delay.h> // Delay functions
+
+int main()
+{
+  DDRB = 0b00100000;  // |= (1<<PB5); // Define PORTB5 as an output
+  while(true){ // Infinite loop
+  PORTB = 0b00100000; // |= (1<<PB5); // Turn led on
+ _delay_ms(1000); // Wait 1 second
+   PORTB = 0b00000000; //&= ~(1<<PB5); // Turn led off
+  _delay_ms(1000); // Wait another second
+  }
+return 0;
+}
+```java
+
+
+Utilizando as macros
 Livro p. 112
 
 ```java
