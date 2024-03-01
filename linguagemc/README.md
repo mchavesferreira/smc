@@ -543,6 +543,7 @@ Livro p. 96
 ## Primeiro código C
 
 Pisca pisca
+
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/52c180fe-9a10-4930-b13b-6d5ccbabac9a)
 
 https://wokwi.com/projects/363128065545249793
@@ -564,10 +565,10 @@ int main()
   }
 return 0;
 }
-```java
+```
 
 
-Utilizando as macros
+Utilizando as macros para trabalhar com I/O
 Livro p. 112
 
 ```java
