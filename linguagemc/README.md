@@ -446,6 +446,46 @@ Os arquivos com a extensão .H são conhecidos como arquivos de cabeçalho ("Hea
 #include <nome_arquivo.h> / arquivo do path do compilador 
 #include "nome_arquivo.h" // arquivo no mesmo diretório
 ```
+### Definição e exanssão de macros
+
+Uma tarefa no processo de pré-compilação é realizar substituições de símbolos, valores ou textos antes da compilação do arquivo. Essas alterações são possíveis por meio da criação de macros, utilizando a diretiva #define.
+
+```java
+#define SEGUNDOS  60
+```
+### macros
+Cria uma estrutura similar a função com algumas limitações, como não criar variáveis locais e não realizar recursão.
 
 
+```java
+#define Media(a, b, c) ((a+c+b)/3)
+```
+### #pragma
+
+A diretiva #pragma se distingue significativamente das demais diretivas de pré-compilação. Ao invés de modificar o código-fonte, ela emite comandos especiais ao compilador que influenciam o procedimento de compilação ou definem especificações que vão além do código.
+
+```java
+#pragma CODE_SEG _NEAR_SEG NON_BANKED 
+//a variável abaixo será armazenada em memória não paginável
+int variável_nao_paginável; 
+#pragma CODE_SEG DEFAULT 
+//a variável abaixo está armazenada na região padrão 
+//da memória, podendo não estar mapeada caso haja uma 
+//troca de banco de memória 
+int variável_paginável;
+```
+Essa diretiva também pode ser utilizada para ajustar registros específicos do microcontrolador. Normalmente, esses registros gerenciam as configurações fundamentais do processador, como a frequência de operação, capacidades de depuração e outras opções relevantes.
+
+
+# Vetores e matrizes
+
+
+![image](https://github.com/mchavesferreira/smc/assets/63993080/aa3801cc-0e56-444e-becb-2d30bd5b907e)
+Essa	declaração	indica	ao	compilador	que	ele	deve	reservar	espaço suficiente	na	memória	para	armazenar	10	elementos	do	tipo	inteiro. Além	do	espaço	de	cada	um	dos	elementos,	o	compilador	também reserva	espaço	para	um	ponteiro	que	apontará	para	o	primeiro	elemento do	vetor.
+```java
+ int num[S]; 
+ char codigo[S];
+```
+
+![image](https://github.com/mchavesferreira/smc/assets/63993080/cf7b3fb1-6dc1-4cd1-8944-bdba437b9f50)
 
