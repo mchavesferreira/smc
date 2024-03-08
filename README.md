@@ -178,14 +178,14 @@ int main()
 	<Br>
 <details><summary>Ilustrando o primeiro programa (clique)</summary>
 <p>
-<br><img src=../mcr/imagens/oprojeto.jpg>
-<br><img src=../mcr/imagens/configuracaopinos.jpg>
-<br><img src=../mcr/imagens/inicio.jpg>
-<br><img src=../mcr/imagens/principal.jpg>
-<br><img src=../mcr/imagens/encher.jpg>
-<br><img src=../mcr/imagens/misturar.jpg>
-<br><img src=../mcr/imagens/esvaziar.jpg>
-<br><img src=../mcr/imagens/atraso.jpg>
+<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/oprojeto.jpg>
+<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/configuracaopinos.jpg>
+<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/inicio.jpg>
+<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/principal.jpg>
+<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/encher.jpg>
+<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/misturar.jpg>
+<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/esvaziar.jpg>
+<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/atraso.jpg>
 </p>
 </details>
 	
