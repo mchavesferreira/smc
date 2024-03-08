@@ -26,77 +26,6 @@ Atmega328P
 <img src=https://github.com/mchavesferreira/smc/assets/63993080/9310c6ec-f83e-40e3-968e-5a459110fd48)>
 
 
-17/03/2023   - Tarefa Suap - Cronometro Big Number em LCD simulado em wokwi e/ou proteus
-
-24/03/2023   - Tarefa Suap - Maquina de Lavar com delay simulado em wokwi e/ou proteus
-
-31/03/2023   - Tarefa Suap - Maquina de Lavar com Timers simulado em wokwi e/ou proteus
-
-05/05/2023  - Projeto 1: Protótipo em protoboard do projeto 1
-
-05/05/2023  - Avaliação Presencial escrita (Sorteio de um projeto em dupla)
-
-
-Junho/23  - Projeto 2 - 23/6/2023.
-
-Junho/23  - Avaliação 2.  30/6/2023
-
-## ESP32 e suas aplicações IOT
-
-https://github.com/mchavesferreira/mcr/blob/main/ESP32.md
-
-## Oled
-## Display
- 
-<BR>Displays LCD, Oled, comunicação I2C
-### LCD 16x2
-  <BR>01 -<a href=https://wokwi.com/projects/342202939017790036> Exemplo LCD 16x2 paralelo</a>
-  <BR>02 -<a href=https://wokwi.com/projects/342199886273315410> Exemplo LCD 16x2 I2C</a>
-  
-### Display Oled   
-  <BR>03 -<a href=https://wokwi.com/projects/342195248670179922> Exemplo Oled U8g2lib</a>
-  <BR>04 -<a href=https://wokwi.com/projects/342195418005766739> Exemplo Adafruit_SSD1306</a>
-  <Br> <img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/oled.png width=400 height=225><BR>
-<details><summary>Exemplo Oled</summary>
-<p>
-
-```ruby  
-*/
-#include <U8g2lib.h>
-#include <Wire.h>
-U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
-
-void setup() {
-  u8g2.begin();
-}
-
-void loop() {
-  u8g2.clearBuffer();	// limpa memoria interna
-  u8g2.setFont(u8g2_font_ncenB08_tr);	// escolha da fonte
-  u8g2.drawStr(15, 10, "IFSP Catanduva");	// escrevendo na memoria interna
-  u8g2.sendBuffer(); // transferindo da memoria interna para display
-  delay(1000);
-}  
-```
-</p>
-</details> 
-
-Orientações para Projeto 1:
-
-Utilizando o projeto inicial da <a href=https://wokwi.com/projects/350144439208903252>maquina de lavar</a>, crie uma máquina personalizada (não será considerado máquina de lavar) que atenda os seguintes critérios:
-
-- apresente no mínimo 05 perguntas entre (sim x não) ou ajustes de valores (exemplo tempo);
-- ajustes de pelo menos 03 valores inteiros;
-- transições das etapas em máquina de estdos;
-- utilize pelo menos 03 leds como saídas;
-- as perguntas e respostas devem utilizar display LCD e botões (exemplos para botões: + - 1 2 3 Y N enter) (2,0 pontos)
--  enviar o código e link de simulação na área trabalhos (suap), um integrante da dupla.
-- As duplas não podem ter trabalhos "clones", criatividade e dificuldades serão pontuados
-
-
-Orientações para Projeto 2:
-Aperfeiçoamento do projeto 1 ou uma nova proposta. Acrescentar novos recursos de programação e hardware; PWM, Conversor AD externo I2C (ADS1115), comunicação serial com ESP32 (wifi), memorização de parametros em eeprom, tela OLED I2C.
-
 ## Simulação online para microcontrolador
 
     Wokwi - Um simulador online muito popular para Arduino e outros microcontroladores. Ele suporta uma variedade de placas Arduino (que são baseadas em microcontroladores de 8 bits) e permite simular circuitos eletrônicos junto com o código. É uma ótima ferramenta para ensinar os conceitos de programação em C junto com a eletrônica básica.
@@ -126,7 +55,11 @@ http://studio.download.atmel.com/7.0.2389/as-installer-7.0.2389-full.exe
 
 ## Primeiro-Programa-em-C
 
+### Pisca Led
 Este primeiro exemplo de programa com um pisca Led
+
+Simulador para o programa
+https://wokwi.com/projects/363128065545249793
 
 Código para o primeiro programa
 ```java
@@ -187,49 +120,50 @@ int main( )
 ```java
 
 //=====================================================================================	//
-//    LIGANDO E DESLIGANDO UM LED QUANDO UM BOT�O � PRESSIONADO							//
+//    LIGANDO E DESLIGANDO UM LED QUANDO UM BOTaO e PRESSIONADO							//
 //===================================================================================== //
 #define F_CPU 16000000UL	/*define a frequ�ncia do microcontrolador 16MHz (necess�rio
 							para usar as rotinas de atraso)*/
-#include <avr/io.h> 	    //defini��es do componente especificado
+#include <avr/io.h> 	    //definicoes do componente especificado
 #include <util/delay.h>		//biblioteca para as rotinas de _delay_ms() e delay_us()
 
-//Defini��es de macros - para o trabalho com os bits de uma vari�vel
+//Definicoes de macros - para o trabalho com os bits de uma variavel
 
-#define set_bit(Y,bit_x)(Y|=(1<<bit_x))		//ativa o bit x da vari�vel Y (coloca em 1)
-#define clr_bit(Y,bit_x)(Y&=~(1<<bit_x))	//limpa o bit x da vari�vel Y (coloca em 0) 
-#define cpl_bit(Y,bit_x)(Y^=(1<<bit_x))		//troca o estado do bit x da vari�vel Y 
-#define tst_bit(Y,bit_x)(Y&(1<<bit_x))  	//testa o bit x da vari�vel Y (retorna 0 ou 1)
+#define set_bit(Y,bit_x)(Y|=(1<<bit_x))		//ativa o bit x da variavel Y (coloca em 1)
+#define clr_bit(Y,bit_x)(Y&=~(1<<bit_x))	//limpa o bit x da variavel Y (coloca em 0) 
+#define cpl_bit(Y,bit_x)(Y^=(1<<bit_x))		//troca o estado do bit x da variavel Y 
+#define tst_bit(Y,bit_x)(Y&(1<<bit_x))  	//testa o bit x da variavel Y (retorna 0 ou 1)
 
-#define LED   PD2   //LED � o substituto de PD2 na programa��o 
-#define BOTAO PD7   //BOTAO � o substituto de PD7 na programa��o     	
+#define LED   PD2   //LED e o substituto de PD2 na programacao 
+#define BOTAO PD7   //BOTAO e o substituto de PD7 na programacao     	
 //-------------------------------------------------------------------------------------
 int main()
 {
-	DDRD = 0b00000100;	//configura o PORTD, PD2 sa�da, os demais pinos entradas
-	PORTD= 0b11111111;	/*habilita o pull-up para o bot�o e apaga o LED (todas as 
+	DDRD = 0b00000100;	//configura o PORTD, PD2 saida, os demais pinos entradas
+	PORTD= 0b11111111;	/*habilita o pull-up para o botao e apaga o LED (todas as 
 						entradas com pull-ups habilitados)*/
 	
-	while(1)								//la�o infinito
+	while(1)								//laco infinito
 	{
-		if(!tst_bit(PIND,BOTAO))			//se o bot�o for pressionado executa o if
+		if(!tst_bit(PIND,BOTAO))			//se o botao for pressionado executa o if
 		{					
-			while(!tst_bit(PIND,BOTAO));	//fica preso at� soltar o bot�o
+			while(!tst_bit(PIND,BOTAO));	//fica preso ate soltar o botao
 
-			_delay_ms(10);					//atraso de 10 ms para eliminar o ru�do do bot�o
+			_delay_ms(10);					//atraso de 10 ms para eliminar o ruido do botao
 
 			if(tst_bit(PORTD,LED))			//se o LED estiver apagado, liga o LED
 				clr_bit(PORTD,LED);			
-			else							//se n�o apaga o LED
+			else							//se nao apaga o LED
 				set_bit(PORTD,LED);	
 
-			//o comando cpl_bit(PORTD,LED) pode substituir este la�o if-else
+			//o comando cpl_bit(PORTD,LED) pode substituir este laco if-else
 		
-		}//if do bot�o pressionado
+		}//if do botao pressionado
 	
-	}//la�o infinito
+	}//laco infinito
 }
 ```
+
 ## Display LCD
 
 Exemplos de utilização do LCD 16x2 disponiveis na bibliografia
@@ -312,7 +246,79 @@ serialTransmit('   *   \n');
 	
 ### Exemplo recebe "LEDOF1"  e "LEDON1" através da porta serial e acende ou apaga um led.
 <BR>https://wokwi.com/projects/365185955727181825
-	
+
+
+
+17/03/2023   - Tarefa Suap - Cronometro Big Number em LCD simulado em wokwi e/ou proteus
+
+24/03/2023   - Tarefa Suap - Maquina de Lavar com delay simulado em wokwi e/ou proteus
+
+31/03/2023   - Tarefa Suap - Maquina de Lavar com Timers simulado em wokwi e/ou proteus
+
+05/05/2023  - Projeto 1: Protótipo em protoboard do projeto 1
+
+05/05/2023  - Avaliação Presencial escrita (Sorteio de um projeto em dupla)
+
+
+Junho/23  - Projeto 2 - 23/6/2023.
+
+Junho/23  - Avaliação 2.  30/6/2023
+
+## ESP32 e suas aplicações IOT
+
+https://github.com/mchavesferreira/mcr/blob/main/ESP32.md
+
+## Oled
+## Display
+ 
+<BR>Displays LCD, Oled, comunicação I2C
+### LCD 16x2
+  <BR>01 -<a href=https://wokwi.com/projects/342202939017790036> Exemplo LCD 16x2 paralelo</a>
+  <BR>02 -<a href=https://wokwi.com/projects/342199886273315410> Exemplo LCD 16x2 I2C</a>
+  
+### Display Oled   
+  <BR>03 -<a href=https://wokwi.com/projects/342195248670179922> Exemplo Oled U8g2lib</a>
+  <BR>04 -<a href=https://wokwi.com/projects/342195418005766739> Exemplo Adafruit_SSD1306</a>
+  <Br> <img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/oled.png width=400 height=225><BR>
+<details><summary>Exemplo Oled</summary>
+<p>
+
+```ruby  
+*/
+#include <U8g2lib.h>
+#include <Wire.h>
+U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
+
+void setup() {
+  u8g2.begin();
+}
+
+void loop() {
+  u8g2.clearBuffer();	// limpa memoria interna
+  u8g2.setFont(u8g2_font_ncenB08_tr);	// escolha da fonte
+  u8g2.drawStr(15, 10, "IFSP Catanduva");	// escrevendo na memoria interna
+  u8g2.sendBuffer(); // transferindo da memoria interna para display
+  delay(1000);
+}  
+```
+</p>
+</details> 
+
+Orientações para Projeto 1:
+
+Utilizando o projeto inicial da <a href=https://wokwi.com/projects/350144439208903252>maquina de lavar</a>, crie uma máquina personalizada (não será considerado máquina de lavar) que atenda os seguintes critérios:
+
+- apresente no mínimo 05 perguntas entre (sim x não) ou ajustes de valores (exemplo tempo);
+- ajustes de pelo menos 03 valores inteiros;
+- transições das etapas em máquina de estdos;
+- utilize pelo menos 03 leds como saídas;
+- as perguntas e respostas devem utilizar display LCD e botões (exemplos para botões: + - 1 2 3 Y N enter) (2,0 pontos)
+-  enviar o código e link de simulação na área trabalhos (suap), um integrante da dupla.
+- As duplas não podem ter trabalhos "clones", criatividade e dificuldades serão pontuados
+
+
+Orientações para Projeto 2:
+Aperfeiçoamento do projeto 1 ou uma nova proposta. Acrescentar novos recursos de programação e hardware; PWM, Conversor AD externo I2C (ADS1115), comunicação serial com ESP32 (wifi), memorização de parametros em eeprom, tela OLED I2C.
 	
 ## Links e referências
 
