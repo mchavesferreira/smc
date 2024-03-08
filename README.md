@@ -122,6 +122,10 @@ int main( )
 
 ## Lendo Botão
 
+A técnica de debounce, ou "debouncing", é utilizada para mitigar o efeito de "rebote" que ocorre quando um botão (ou chave) é pressionado ou liberado.
+
+<img src=imagens/ruido.png>
+
 <img src=imagens/ledbotao.png>
 
 ```java
