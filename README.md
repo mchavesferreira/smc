@@ -170,6 +170,81 @@ int main()
 	}//laco infinito
 }
 ```
+### Exemplo de um programa para controle de uma caixa d'agua.
+
+<BR>Defina pinos de entrada e saída. As entradas com push button aterradas e  pull up ativos. O Programa aguarda “Start” ser pressionado, que liga a  Valvula 1 até que sensor cheio seja acionado. O misturador é acionado  por2 segundos. Esvazia-se o tanque até o sensor vazio ser acionado, retornando ao estado inicial. Considere clock 16Mhz.
+<br><BR>Solução:
+<br>Para que servem e quais são os registradores de I/O de um AVR Atmega?  Os registradores de IO  funcionam para configurar, ler e escrever cada  pino das portas  do microcontrolador, cada bit representa um pino:  DDRx  quando em 0=entrada e 1=saída. PINx para a leitura do pino quando este é  definido com entrada; PORTx escreve na saída se o pino é definido como  saída ou ativa pull-up se o pino é definido como entrada.
+	<Br>
+<details><summary>Ilustrando o primeiro programa (clique)</summary>
+<p>
+<br><img src=../mcr/imagens/oprojeto.jpg>
+<br><img src=../mcr/imagens/configuracaopinos.jpg>
+<br><img src=../mcr/imagens/inicio.jpg>
+<br><img src=../mcr/imagens/principal.jpg>
+<br><img src=../mcr/imagens/encher.jpg>
+<br><img src=../mcr/imagens/misturar.jpg>
+<br><img src=../mcr/imagens/esvaziar.jpg>
+<br><img src=../mcr/imagens/atraso.jpg>
+</p>
+</details>
+	
+Código para o primeiro programa
+```java
+//--------------------------------------------------------------------------- //
+// EXEMPLO 					  //	
+//--------------------------------------------------------------------------- //
+
+
+.ORG 0x000				
+
+INICIO:
+     LDI R19, 0b00000111	//carrega R19 
+     OUT DDRB,R19		//configura todos os pinos
+     LDI R19, 0b00111000
+     OUT PORTB, R19
+; aguarda botao start
+PRINCIPAL:      
+     SBIC PINB,5		
+     RJMP Principal
+     RJMP ENCHER
+
+; Liga válvula aguarda sensor cheio
+ENCHER:
+    SBI PORTB,0
+    SBIC PINB,3
+    RJMP ENCHER
+    RJMP MISTURAR
+
+; desliga V1, liga misturador por 2 seg. 
+MISTURAR:
+    CBI PORTB,0
+    SBI PORTB,2
+    RCALL ATRASO 
+    RCALL ATRASO 
+    CBI PORTB, 2
+    RJMP ESVAZIAR
+
+; Liga válvula 2 aguarda sensor vazio
+ESVAZIAR:
+    SBI PORTB,1
+    SBIC PINB,4
+    RJMP ESVAZIAR
+    CBI PORTB,1
+    RJMP PRINCIPAL
+; .  .    .   .    .    .    .    .   .     .   
+; rotina de atraso 1 segundo. 
+ATRASO:	
+      LDI R19,80	
+volta:		
+      DEC  R17	
+      BRNE volta
+      DEC  R18	
+      BRNE volta
+      DEC  R19
+      BRNE volta
+      RET
+```
 
 ## Display LCD
 
