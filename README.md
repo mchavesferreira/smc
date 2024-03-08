@@ -47,6 +47,10 @@ https://www.mycompiler.io/pt/new/cpp
 
 https://www.online-cpp.com/online_c_compiler
 
+## Introdução a linguagem C
+https://github.com/mchavesferreira/smc/tree/main/linguagemc
+
+
 ##  Ambiente de programação
 
 
@@ -57,6 +61,7 @@ http://studio.download.atmel.com/7.0.2389/as-installer-7.0.2389-full.exe
 
 ### Pisca Led
 Este primeiro exemplo de programa com um pisca Led
+<img src=imagens/piscaled.png>
 
 Simulador para o programa
 https://wokwi.com/projects/363128065545249793
@@ -116,6 +121,8 @@ int main( )
 
 
 ## Lendo Botão
+
+<img src=imagens/ledbotao.png>
 
 ```java
 
