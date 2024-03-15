@@ -9,8 +9,9 @@ Sistemas Microcontrolados
 - [Primeiro Programa em C](#Primeiro-Programa-em-C)
 - [Lendo Botão](#Lendo-Botão)
 - [Utilizando Macros](#Utilizando-Macros)
-- [Display LCD](#Display-LCD)
 - [Máquina de estados](#Maquina-de-estados)
+- [Display de 7 segmentos](#Display-de-7-Segmentos)
+- [Display LCD](#Display-LCD)
 - [Interrupção Externa] (#Interrupção-Externa)
 - [Temporizador, interrução e PWM] (#PWM-Timer-1)
 - [Comunicação Serial](#UART)
@@ -167,6 +168,40 @@ int main()
 	}//laco infinito
 }
 ```
+
+## Maquina de estados 
+
+Compreendendo a mudança de fluxo por meio da chamada de switch-case
+
+https://wokwi.com/projects/358828863218714625
+
+## Display de 7 Segmentos
+
+
+<details><summary>Mapeia os valores hexadecimais para os pinos correspondentes no portD</summary>
+<p>
+
+```ruby 
+const unsigned char seg7_hex[] = {0b1111001, // 0
+                                         0b0110110, // 1
+                                         0b1101101, // 2
+                                         0b1111011, // 3
+                                         0b0110111, // 4
+                                         0b1101111, // 5
+                                         0b1111111, // 6
+                                         0b0111111, // 7
+                                         0b1111011, // 8
+                                         0b1101101, // 9
+                                         0b1110111, // A
+                                         0b1111110, // B
+                                         0b0111111, // C
+                                         0b1110111, // D
+                                         0b1100111, // E
+                                         0b1110111}; // F
+```
+</p>
+</details> 
+					 
 ### Exemplo de um programa para controle de uma caixa d'agua.
 
 <BR>Defina pinos de entrada e saída. As entradas com push button aterradas e  pull up ativos. O Programa aguarda “Start” ser pressionado, que liga a  Valvula 1 até que sensor cheio seja acionado. O misturador é acionado  por2 segundos. Esvazia-se o tanque até o sensor vazio ser acionado, retornando ao estado inicial. Considere clock 16Mhz.
@@ -238,13 +273,11 @@ Exemplo de criação de caracteres especiais para LCD 16x2
 
 Big Number:  https://wokwi.com/projects/358831286702363649
 
-## Maquina de estados 
 
-Compreendendo a mudança de fluxo por meio da chamada de switch-case
 
-https://wokwi.com/projects/358828863218714625
+## Maquina de Lavar 
 
-Este exemplo online exemplifica a aplicação da máquina de estados através de um programa para máquina de lavar.
+Este exemplo online exemplifica a aplicação da máquina de estados e uso do LCD através de um programa para máquina de lavar.
 
 https://wokwi.com/projects/350144439208903252
 
