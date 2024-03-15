@@ -262,6 +262,8 @@ const unsigned char seg7_hex[] = {       0b1111001, // 0
 <img src=https://github.com/mchavesferreira/smc/blob/main/imagens/4511dsp.gif>
 
 - Multiplexação de displays
+<BR><img src=https://github.com/mchavesferreira/smc/blob/main/imagens/7-display-multiplexing.jpg><BR><BR>
+Em muitos casos é necessário a exibição em mais um display de 7 segmentos, porém não pinos disponíveis, então utiliza-se a técnica de multiplexação de displays
 
 <img src=https://github.com/mchavesferreira/smc/blob/main/imagens/multiplexing.gif>
 
