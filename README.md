@@ -211,10 +211,10 @@ Display Catodo comum
 ** Mapeamento de valores para exibição no Display **
 Antes do envio para a porta do microcntrolador, a mesagem precisa ser codificada para o display utilizado
 
-https://github.com/mchavesferreira/smc/blob/main/imagens/numeros_display.png
+<img src=https://github.com/mchavesferreira/smc/blob/main/imagens/numeros_display.png>
 
 Exemplo de tabela de conversão:
-https://github.com/mchavesferreira/smc/blob/main/imagens/tabela_anodo_catodo_display.png
+<img src=https://github.com/mchavesferreira/smc/blob/main/imagens/tabela_anodo_catodo_display.png>
 
 Montagem do Display 7 segmentos na porta D do Atmega 328P
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/0ff59182-d118-4795-92c8-6a0e59dcaec7)
@@ -248,13 +248,13 @@ const unsigned char seg7_hex[] = {       0b1111001, // 0
 </details> 
 
 - Circuitos integrados conversores
-https://github.com/mchavesferreira/smc/blob/main/imagens/4511dsp.gif
+<img src=https://github.com/mchavesferreira/smc/blob/main/imagens/4511dsp.gif>
 
 - Multiplexação de displays
 
-https://github.com/mchavesferreira/smc/blob/main/imagens/multiplexing.gif
+<img src=https://github.com/mchavesferreira/smc/blob/main/imagens/multiplexing.gif>
 
-https://github.com/mchavesferreira/smc/blob/main/imagens/ligacao-multiplexing.jpg
+<img src=https://github.com/mchavesferreira/smc/blob/main/imagens/ligacao-multiplexing.jpg>
      
 ### Exemplo de um programa para controle de uma caixa d'agua.
 
