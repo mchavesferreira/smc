@@ -170,8 +170,31 @@ int main()
 ```
 
 ## Maquina de estados 
+![image](https://github.com/mchavesferreira/smc/assets/63993080/3765f170-1abe-4377-89a2-41d980c8b771)
 
-Compreendendo a mudança de fluxo por meio da chamada de switch-case
+### Switch-case
+
+A estrutura switch-case é uma técnica eficaz para implementar máquinas de estados em programação de microcontroladores, facilitando o controle de fluxo do programa com base nos valores de uma variável. Aqui está um exemplo simplificado utilizando em uma função:
+```java
+// Exemplo de máquina de estados usando switch-case
+void stateMachineExample(int state) {
+    switch(state) {
+        case 1:
+            // Ação para o estado 1
+            break;
+        case 2:
+            // Ação para o estado 2
+            break;
+        // Adicione mais estados conforme necessário
+        default:
+            // Ação padrão se nenhum estado anterior corresponder
+            break;
+    }
+}
+```
+Este exemplo demonstra a base de uma máquina de estados, onde state determina o fluxo de execução. Cada case representa um estado único, permitindo ações específicas para cada um, e o default oferece uma ação padrão para estados não especificados. Esta abordagem organiza logicamente o código, tornando-o mais legível e fácil de manter.
+
+Compreendendo a mudança de fluxo por meio da chamada de switch-case em um programa principal:
 
 https://wokwi.com/projects/358828863218714625
 
