@@ -235,22 +235,23 @@ Exemplo de tabela de conversão:<BR>
 
 ```ruby
 // utilizando no codigo principal:   ex:  PORTD = seg7_hex[3];
-const unsigned char seg7_hex[] = {       0b1111001, // 0
-                                         0b0110110, // 1
-                                         0b1101101, // 2
-                                         0b1111011, // 3
-                                         0b0110111, // 4
-                                         0b1101111, // 5
-                                         0b1111111, // 6
-                                         0b0111111, // 7
-                                         0b1111011, // 8
-                                         0b1101101, // 9
-                                         0b1110111, // A
-                                         0b1111110, // B
-                                         0b0111111, // C
-                                         0b1110111, // D
-                                         0b1100111, // E
-                                         0b1110111}; // F
+const unsigned char seg7_hex[] = {  0x40,
+                                     0x79,
+                                     0x24,
+                                     0x30,
+ 0x19,
+0x12,
+0x02,
+ 0x78,
+ 0x00,
+0x18,
+0x08,
+0x03,
+0x46,
+0x21,
+0x06,
+0x0E};
+
 ```
 </p>
 </details> 
