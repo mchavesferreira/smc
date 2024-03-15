@@ -182,8 +182,8 @@ https://wokwi.com/projects/358828863218714625
 <p>
 
 ```ruby
-// utilizando no codigo principal:   ex:  PORTD = seg7_hex[0];
-const unsigned char seg7_hex[] = {0b1111001, // 0
+// utilizando no codigo principal:   ex:  PORTD = seg7_hex[3];
+const unsigned char seg7_hex[] = {       0b1111001, // 0
                                          0b0110110, // 1
                                          0b1101101, // 2
                                          0b1111011, // 3
