@@ -153,24 +153,18 @@ int main()
 	DDRD = 0b00000100;	//configura o PORTD, PD2 saida, os demais pinos entradas
 	PORTD= 0b11111111;	/*habilita o pull-up para o botao e apaga o LED (todas as 
 						entradas com pull-ups habilitados)*/
-	
 	while(1)								//laco infinito
 	{
 		if(!tst_bit(PIND,BOTAO))			//se o botao for pressionado executa o if
 		{					
 			while(!tst_bit(PIND,BOTAO));	//fica preso ate soltar o botao
-
 			_delay_ms(10);					//atraso de 10 ms para eliminar o ruido do botao
-
 			if(tst_bit(PORTD,LED))			//se o LED estiver apagado, liga o LED
 				clr_bit(PORTD,LED);			
 			else							//se nao apaga o LED
 				set_bit(PORTD,LED);	
-
-			//o comando cpl_bit(PORTD,LED) pode substituir este laco if-else
-		
+			//o comando cpl_bit(PORTD,LED) pode substituir este laco if-else	
 		}//if do botao pressionado
-	
 	}//laco infinito
 }
 ```
@@ -180,17 +174,9 @@ int main()
 <br><BR>Solução:
 <br>Para que servem e quais são os registradores de I/O de um AVR Atmega?  Os registradores de IO  funcionam para configurar, ler e escrever cada  pino das portas  do microcontrolador, cada bit representa um pino:  DDRx  quando em 0=entrada e 1=saída. PINx para a leitura do pino quando este é  definido com entrada; PORTx escreve na saída se o pino é definido como  saída ou ativa pull-up se o pino é definido como entrada.
 	<Br>
-
-	
-<details><summary>Código para o programa controle de caixa d´agua em assembly</summary>
-```java
-//--------------------------------------------------------------------------- //
-// EXEMPLO 					  //	
-//--------------------------------------------------------------------------- //
-
+<details><summary>Exemplo: Código para o programa controle de caixa d´agua em assembly</summary>
 
 .ORG 0x000				
-
 INICIO:
      LDI R19, 0b00000111	//carrega R19 
      OUT DDRB,R19		//configura todos os pinos
@@ -201,7 +187,6 @@ PRINCIPAL:
      SBIC PINB,5		
      RJMP Principal
      RJMP ENCHER
-
 ; Liga válvula aguarda sensor cheio
 ENCHER:
     SBI PORTB,0
@@ -237,7 +222,7 @@ volta:
       DEC  R19
       BRNE volta
       RET
-```
+
 </details>
 
 ## Display LCD
