@@ -28,18 +28,18 @@ Atmega328P
 
 ## Simulação online para microcontrolador
 
-    Wokwi - Um simulador online muito popular para Arduino e outros microcontroladores. Ele suporta uma variedade de placas Arduino (que são baseadas em microcontroladores de 8 bits) e permite simular circuitos eletrônicos junto com o código. É uma ótima ferramenta para ensinar os conceitos de programação em C junto com a eletrônica básica.
+-Wokwi - Um simulador online muito popular para Arduino e outros microcontroladores. Ele suporta uma variedade de placas Arduino (que são baseadas em microcontroladores de 8 bits) e permite simular circuitos eletrônicos junto com o código. É uma ótima ferramenta para ensinar os conceitos de programação em C junto com a eletrônica básica.
     https://wokwi.com/projects/356295365780235265
+    
+-Tinkercad Circuits - Tinkercad, da Autodesk, oferece um simulador de Arduino que funciona diretamente no navegador. Ele permite aos usuários montar circuitos e escrever código para eles, tudo em uma interface gráfica amigável. É particularmente bom para iniciantes.
 
-    Tinkercad Circuits - Tinkercad, da Autodesk, oferece um simulador de Arduino que funciona diretamente no navegador. Ele permite aos usuários montar circuitos e escrever código para eles, tudo em uma interface gráfica amigável. É particularmente bom para iniciantes.
+-Proteus - Embora não seja totalmente online, o Proteus Design Suite oferece recursos de simulação poderosos para uma ampla gama de microcontroladores. Seus estudantes podem escrever código em C, simular o funcionamento do microcontrolador e testar circuitos eletrônicos em um ambiente virtual.
 
-    Proteus - Embora não seja totalmente online, o Proteus Design Suite oferece recursos de simulação poderosos para uma ampla gama de microcontroladores. Seus estudantes podem escrever código em C, simular o funcionamento do microcontrolador e testar circuitos eletrônicos em um ambiente virtual.
+-EasyEDA - Outra ferramenta que, embora seja mais focada no design de circuitos eletrônicos, também oferece suporte à simulação de microcontroladores, incluindo a escrita e teste de códigos em C.
 
-    EasyEDA - Outra ferramenta que, embora seja mais focada no design de circuitos eletrônicos, também oferece suporte à simulação de microcontroladores, incluindo a escrita e teste de códigos em C.
+-CircuitJS - Este é um simulador de circuitos eletrônicos baseado em JavaScript que roda diretamente no navegador. Embora seu foco principal não seja microcontroladores, ele pode ser útil para ensinar os princípios básicos de eletrônica que são relevantes para a engenharia de automação.
 
-    CircuitJS - Este é um simulador de circuitos eletrônicos baseado em JavaScript que roda diretamente no navegador. Embora seu foco principal não seja microcontroladores, ele pode ser útil para ensinar os princípios básicos de eletrônica que são relevantes para a engenharia de automação.
-
-Simuladores para linguagem C
+## Simuladores para linguagem C
 
 https://www.tutorialspoint.com/compile_c_online.php
 
@@ -52,7 +52,6 @@ https://github.com/mchavesferreira/smc/tree/main/linguagemc
 
 
 ##  Ambiente de programação
-
 
 Avr Studio 7.0
 http://studio.download.atmel.com/7.0.2389/as-installer-7.0.2389-full.exe
@@ -171,11 +170,11 @@ int main()
 ### Exemplo de um programa para controle de uma caixa d'agua.
 
 <BR>Defina pinos de entrada e saída. As entradas com push button aterradas e  pull up ativos. O Programa aguarda “Start” ser pressionado, que liga a  Valvula 1 até que sensor cheio seja acionado. O misturador é acionado  por2 segundos. Esvazia-se o tanque até o sensor vazio ser acionado, retornando ao estado inicial. Considere clock 16Mhz.
-<br><BR>Solução:
+<br><BR>**Solução:**
 <br>Para que servem e quais são os registradores de I/O de um AVR Atmega?  Os registradores de IO  funcionam para configurar, ler e escrever cada  pino das portas  do microcontrolador, cada bit representa um pino:  DDRx  quando em 0=entrada e 1=saída. PINx para a leitura do pino quando este é  definido com entrada; PORTx escreve na saída se o pino é definido como  saída ou ativa pull-up se o pino é definido como entrada.
 	<Br>
 <details><summary>Exemplo: Código para o programa controle de caixa d´agua em assembly</summary>
-
+```java
 .ORG 0x000				
 INICIO:
      LDI R19, 0b00000111	//carrega R19 
@@ -222,7 +221,7 @@ volta:
       DEC  R19
       BRNE volta
       RET
-
+```
 </details>
 
 ## Display LCD
