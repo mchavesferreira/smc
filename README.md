@@ -258,7 +258,7 @@ const unsigned char seg7_hex[] = {       0b1111001, // 0
 
 ### Montagem do Display 7 segmentos na porta D do Atmega 328P
 <BR>
-![image](https://github.com/mchavesferreira/smc/assets/63993080/0ff59182-d118-4795-92c8-6a0e59dcaec7)
+<img src=https://github.com/mchavesferreira/smc/assets/63993080/0ff59182-d118-4795-92c8-6a0e59dcaec7><BR>
 
 <a href=https://github.com/mchavesferreira/smc/blob/main/imagens/montando%20display%207%20segmentos.pdf> Manual</a>
 
