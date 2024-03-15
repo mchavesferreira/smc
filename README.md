@@ -199,7 +199,10 @@ Compreendendo a mudança de fluxo por meio da chamada de switch-case em um progr
 https://wokwi.com/projects/358828863218714625
 
 ## Display de 7 Segmentos
+![image](https://github.com/mchavesferreira/smc/assets/63993080/bc143a19-708e-40a5-90df-d26952f0ade5)
 
+O display de 7 segmentos é amplamente utilizado em projetos de automação e microcontroladores para exibir informações numéricas de forma simples e direta. Consistindo de sete LEDs arranjados em um padrão específico, permite a representação de dígitos de 0 a 9 e algumas letras, acendendo combinações específicas de segmentos.
+Ao integrá-lo a microcontroladores, desenvolvedores podem facilmente criar interfaces de usuário para mostrar leituras de sensores, contadores, horas e outras métricas vitais em dispositivos automatizados. Sua simplicidade, eficiência energética e baixo custo fazem dele uma escolha popular para projetos que exigem uma saída numérica clara, como relógios, termômetros e contadores.
 
 <details><summary>Mapeia os valores hexadecimais para os pinos correspondentes no portD</summary>
 <p>
