@@ -180,20 +180,9 @@ int main()
 <br><BR>Solução:
 <br>Para que servem e quais são os registradores de I/O de um AVR Atmega?  Os registradores de IO  funcionam para configurar, ler e escrever cada  pino das portas  do microcontrolador, cada bit representa um pino:  DDRx  quando em 0=entrada e 1=saída. PINx para a leitura do pino quando este é  definido com entrada; PORTx escreve na saída se o pino é definido como  saída ou ativa pull-up se o pino é definido como entrada.
 	<Br>
-<details><summary>Este exemplo o programa está em assembly, modifique para a linguagem C(clique)</summary>
-<p>
-<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/oprojeto.jpg>
-<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/configuracaopinos.jpg>
-<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/inicio.jpg>
-<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/principal.jpg>
-<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/encher.jpg>
-<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/misturar.jpg>
-<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/esvaziar.jpg>
-<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/atraso.jpg>
-</p>
-</details>
+
 	
-Código para o programa controle de caixa d´agua em assembly
+<details><summary>Código para o programa controle de caixa d´agua em assembly</summary>
 ```java
 //--------------------------------------------------------------------------- //
 // EXEMPLO 					  //	
@@ -249,6 +238,7 @@ volta:
       BRNE volta
       RET
 ```
+</details>
 
 ## Display LCD
 
