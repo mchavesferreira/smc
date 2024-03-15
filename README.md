@@ -100,14 +100,14 @@ Conhecendo o recurso de Macros do compilador para simplificar o código
 #define tst_bit(Y,bit_x) (Y&(1<<bit_x))  	//testa o bit x da vari�vel Y (retorna 0 ou 1)
 #define cpl_bit(Y,bit_x) (Y^=(1<<bit_x))	//troca o estado do bit x da vari�vel Y (complementa)
 
-#define LED PB5				//LED � o substituto de PB5 na programa��o     	
+#define LED PB5				//LED é o substituto de PB5 na programação     	
 
 //--------------------------------------------------------------------------------------
 int main( )
 {
     DDRB = 0xFF;			//configura todos os pinos do PORTB como sa�das
 	
-	while(1)				//la�o infinito
+	while(1)				//laço infinito
     {
         set_bit(PORTB,LED);	//liga LED
 		_delay_ms(200);		//atraso de 200 ms
@@ -173,8 +173,11 @@ int main()
 <br><BR>**Solução:**
 <br>Para que servem e quais são os registradores de I/O de um AVR Atmega?  Os registradores de IO  funcionam para configurar, ler e escrever cada  pino das portas  do microcontrolador, cada bit representa um pino:  DDRx  quando em 0=entrada e 1=saída. PINx para a leitura do pino quando este é  definido com entrada; PORTx escreve na saída se o pino é definido como  saída ou ativa pull-up se o pino é definido como entrada.
 	<Br>
-<details><summary>Exemplo: Código para o programa controle de caixa d´agua em assembly</summary>
-```java
+
+<details><summary>Exemplo em assembly</summary>
+<p>
+
+```ruby  
 .ORG 0x000				
 INICIO:
      LDI R19, 0b00000111	//carrega R19 
@@ -222,7 +225,9 @@ volta:
       BRNE volta
       RET
 ```
-</details>
+</p>
+</details> 
+
 
 ## Display LCD
 
