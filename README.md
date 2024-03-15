@@ -181,7 +181,8 @@ https://wokwi.com/projects/358828863218714625
 <details><summary>Mapeia os valores hexadecimais para os pinos correspondentes no portD</summary>
 <p>
 
-```ruby 
+```ruby
+// utilizando no codigo principal:   ex:  PORTD = seg7_hex[0];
 const unsigned char seg7_hex[] = {0b1111001, // 0
                                          0b0110110, // 1
                                          0b1101101, // 2
