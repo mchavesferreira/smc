@@ -11,7 +11,7 @@ Sistemas Microcontrolados
 - [Utilizando Macros](#Utilizando-Macros)
 - [Máquina de estados](#Maquina-de-estados),
 - <a href=https://github.com/mchavesferreira/smc/blob/main/display7segmentos.md>Display de 7 segmentos</a>
-- [Display LCD](#Display-LCD)
+- <a href=https://github.com/mchavesferreira/smc/blob/main/displaylcd.md>Display LCD</a>
 - [Interrupção Externa] (#Interrupção-Externa)
 - [Temporizador, interrução e PWM] (#PWM-Timer-1)
 - [Comunicação Serial](#UART)
@@ -262,14 +262,6 @@ volta:
 </details> 
 
 
-## Display LCD
-
-Exemplos de utilização do LCD 16x2 disponiveis na bibliografia
-http://github.com/mchavesferreira/smc/ > Programas_livro > LCD_4bits
-
-Exemplo de criação de caracteres especiais para LCD 16x2 
-
-Big Number:  https://wokwi.com/projects/358831286702363649
 
 
 
