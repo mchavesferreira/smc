@@ -39,10 +39,19 @@ ident_num(cont,digitos);
 			cmd_LCD(digitos[0],1);
 ```
 
+## Criando caracteres especiais
+
 Exemplo de criação de caracteres especiais para LCD 16x2 
+![image](https://github.com/mchavesferreira/smc/assets/63993080/0bf58c8b-4126-4f6b-a3d7-40db9c972c1a)
 
 
 ## Big Number: 
+
+Caracteres criados para se poder escrever números grandes num LCD 16 × 2
+![image](https://github.com/mchavesferreira/smc/assets/63993080/3c963de3-dbdf-4141-a236-0c8caf4c24a8)
+
+![image](https://github.com/mchavesferreira/smc/assets/63993080/77b556f2-f0cb-4066-a86b-6979abfa988f)
+
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/1da979b4-b02a-457e-ac1d-33fe1b420ae1)
 
 https://wokwi.com/projects/358831286702363649
