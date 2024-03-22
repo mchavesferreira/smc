@@ -45,6 +45,13 @@ escreve_LCD("  INTERFACE DE");	//string armazenada na RAM
 PROGMEM const char mensagem[] = " DADOS DE 4BITS!\0"; //mensagem armazenada na memória flash
 escreve_LCD_Flash(mensagem);	//string armazenada na flash
 ```
+### Código Impressão de mensagens
+
+![image](https://github.com/mchavesferreira/smc/assets/63993080/6a78c2ac-b812-420b-ba2a-50b0d7c25f71)
+
+https://wokwi.com/projects/393019671977442305
+
+### Código Impressão de mensagens
 
 Exemplo de impressão de números, primeiro é necessário separar as casas posicionais
 ```java
@@ -55,12 +62,15 @@ ident_num(cont,digitos);
 			cmd_LCD(digitos[0],1);
 ```
 
+https://wokwi.com/projects/393020197185073153
+
 ## Criando caracteres especiais
 
 Exemplo de criação de caracteres especiais para LCD 16x2 
 
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/0bf58c8b-4126-4f6b-a3d7-40db9c972c1a)
 
+https://wokwi.com/projects/393020384831960065
 
 ## Big Number: 
 
