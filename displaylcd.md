@@ -3,7 +3,7 @@
 
 Exemplos de utilização do LCD 16x2 disponiveis na bibliografia
 
-http://github.com/mchavesferreira/smc/Programas_livro >> LCD_4bits
+<a href=https://github.com/mchavesferreira/smc/tree/main/Programas_livro/LCD_4bits> Programas exemplos com LCD 4 bits
 
 Posição do caractere através do endereço no display LCD 16x2
 
