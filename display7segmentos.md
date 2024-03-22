@@ -1,5 +1,5 @@
 
-<center>[<a href=[Readme.md](https://github.com/mchavesferreira/smc/blob/main/README.md)https://github.com/mchavesferreira/smc/blob/main/README.md>Sumario</a>]</center>
+<center>[<a href=https://github.com/mchavesferreira/smc/blob/main/README.md>Sumario</a>]</center>
 
 # Display de 7 Segmentos
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/bc143a19-708e-40a5-90df-d26952f0ade5)
@@ -137,4 +137,5 @@ Em muitos casos é necessário a exibição em mais um display de 7 segmentos, p
 
 <img src=https://github.com/mchavesferreira/smc/blob/main/imagens/ligacao-multiplexing.jpg>
 
-[<a href=[Readme.md](https://github.com/mchavesferreira/smc/blob/main/README.md)https://github.com/mchavesferreira/smc/blob/main/README.md>Sumario</a>]
+
+<center>[<a href=https://github.com/mchavesferreira/smc/blob/main/README.md>Sumario</a>]</center>
