@@ -1,6 +1,9 @@
 
 # Display LCD
-DISPLAY DE CRISTAL LÍQUIDO 16 x 2 - CONTROLADOR HD44780+
+DISPLAY DE CRISTAL LÍQUIDO 16 x 2 - CONTROLADOR HD44780
+
+![image](https://github.com/mchavesferreira/smc/assets/63993080/bc972f23-29e1-47d5-83d6-9131fdbffa40)
+
 
 ## Pinagem
 
