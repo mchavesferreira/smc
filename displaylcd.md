@@ -76,7 +76,7 @@ Circuito de programação
 
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/1da979b4-b02a-457e-ac1d-33fe1b420ae1)
 
-https://wokwi.com/projects/358831286702363649[
+https://wokwi.com/projects/358831286702363649
 
 
 - Fonte: AVR Técnicas de projetos
