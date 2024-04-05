@@ -9,9 +9,11 @@ Sistemas Microcontrolados
 - [Primeiro Programa em C](#Primeiro-Programa-em-C)
 - [Lendo Botão](#Lendo-Botão)
 - [Utilizando Macros](#Utilizando-Macros)
-- [Máquina de estados](#Maquina-de-estados),
+- [Máquina de estados](#Maquina-de-estados)
 - <a href=https://github.com/mchavesferreira/smc/blob/main/display7segmentos.md>Display de 7 segmentos</a>
 - <a href=https://github.com/mchavesferreira/smc/blob/main/displaylcd.md>Display LCD</a>
+- [Exemplo Maquina de Lavar ](#Exemplo-Maquina-de-Lavar )
+- [Trabalhos-Turma-2024](#Trabalhos-Turma-2024)
 - [Interrupção Externa] (#Interrupção-Externa)
 - [Temporizador, interrução e PWM] (#PWM-Timer-1)
 - [Comunicação Serial](#UART)
@@ -265,7 +267,7 @@ volta:
 
 
 
-## Maquina de Lavar 
+## Exemplo Maquina de Lavar 
 
 Este exemplo online exemplifica a aplicação da máquina de estados e uso do LCD através de um programa para máquina de lavar.
 
@@ -337,20 +339,6 @@ serialTransmit('   *   \n');
 
 
 
-17/03/2023   - Tarefa Suap - Cronometro Big Number em LCD simulado em wokwi e/ou proteus
-
-24/03/2023   - Tarefa Suap - Maquina de Lavar com delay simulado em wokwi e/ou proteus
-
-31/03/2023   - Tarefa Suap - Maquina de Lavar com Timers simulado em wokwi e/ou proteus
-
-05/05/2023  - Projeto 1: Protótipo em protoboard do projeto 1
-
-05/05/2023  - Avaliação Presencial escrita (Sorteio de um projeto em dupla)
-
-
-Junho/23  - Projeto 2 - 23/6/2023.
-
-Junho/23  - Avaliação 2.  30/6/2023
 
 ## ESP32 e suas aplicações IOT
 
@@ -392,20 +380,21 @@ void loop() {
 </p>
 </details> 
 
-Orientações para Projeto 1:
+# Trabalhos Turma 2024
+## Orientações para Projeto 1:
 
 Utilizando o projeto inicial da <a href=https://wokwi.com/projects/350144439208903252>maquina de lavar</a>, crie uma máquina personalizada (não será considerado máquina de lavar) que atenda os seguintes critérios:
 
 - apresente no mínimo 05 perguntas entre (sim x não) ou ajustes de valores (exemplo tempo);
 - ajustes de pelo menos 03 valores inteiros;
-- transições das etapas em máquina de estdos;
+- transições das etapas em máquina de estados;
 - utilize pelo menos 03 leds como saídas;
-- as perguntas e respostas devem utilizar display LCD e botões (exemplos para botões: + - 1 2 3 Y N enter) (2,0 pontos)
--  enviar o código e link de simulação na área trabalhos (suap), um integrante da dupla.
+- as perguntas e respostas devem utilizar display LCD e botões (exemplos para botões: + - 1 2 3 Y N enter) 
+-  enviar o código e link de simulação na área trabalhos (suap), um integrante da dupla. Lembre-se colocar "Lock" em seu projeto 
 - As duplas não podem ter trabalhos "clones", criatividade e dificuldades serão pontuados
 
 
-Orientações para Projeto 2:
+## Orientações para Projeto 2:
 Aperfeiçoamento do projeto 1 ou uma nova proposta. Acrescentar novos recursos de programação e hardware; PWM, Conversor AD externo I2C (ADS1115), comunicação serial com ESP32 (wifi), memorização de parametros em eeprom, tela OLED I2C.
 	
 ## Links e referências
@@ -421,3 +410,19 @@ https://github.com/Franzininho/exemplos-avr-libc/tree/main/exemplos
 
 https://embarcados.com.br/franzininho-diy-contador-de-pulsos-externos/
 
+
+## Turma 2023
+   - Tarefa Suap - Cronometro Big Number em LCD simulado em wokwi e/ou proteus
+
+  - Tarefa Suap - Maquina de Lavar com delay simulado em wokwi e/ou proteus
+
+   - Tarefa Suap - Maquina de Lavar com Timers simulado em wokwi e/ou proteus
+
+- Projeto 1: Protótipo em protoboard do projeto 1
+
+ - Avaliação Presencial escrita (Sorteio de um projeto em dupla)
+
+
+  - Projeto 2 - 23/6/2023.
+
+  - Avaliação 2.  30/6/2023
