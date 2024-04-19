@@ -275,14 +275,7 @@ https://wokwi.com/projects/350144439208903252
 
 
 
-## Interrupção Externa
 
-Exemplo com interrupção externa
-
-Programas_livro/INT0_1/ 
-
-
-https://wokwi.com/projects/359476742621416449
 
 
 
