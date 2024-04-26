@@ -56,6 +56,15 @@ Simulação Proteus e Avr Studio:  https://github.com/mchavesferreira/smc/blob/m
 
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/fb163981-45bb-4f8f-93fd-5db121c46d01)
 
+### Restradores de confiuração
+
+![tccr0b](https://github.com/mchavesferreira/smc/assets/63993080/ed84f7c6-b025-4db3-8af1-99b55cd0291c)
+
+![prescaler](https://github.com/mchavesferreira/smc/assets/63993080/5f65b55f-abdd-41ee-b954-58f20d7b0d47)
+
+![tabelamodos](https://github.com/mchavesferreira/smc/assets/63993080/38752d83-09b6-4912-af42-d5ffa4aa8a4d)
+
+![modo0cab](https://github.com/mchavesferreira/smc/assets/63993080/e89889e4-c70d-4715-86ee-db7647a1f6f5)
 
 
 
@@ -72,6 +81,27 @@ Contador de Eventos:  https://github.com/mchavesferreira/smc/blob/main/interrupc
 
 ## Timer 2
 (8 bits)
+
+
+## Modos PWM
+
+Modo Normal
+
+![modonormal](https://github.com/mchavesferreira/smc/assets/63993080/d2244ba8-da0e-4057-9cdf-629743ba23ae)
+
+Modo CTC
+![modoCTC](https://github.com/mchavesferreira/smc/assets/63993080/e1d9e035-3905-4009-aa11-afec8ed4d2e6)
+
+
+Modo Fase Corrigida
+
+![modofasecorrigida](https://github.com/mchavesferreira/smc/assets/63993080/cd23c178-0296-4996-a6b5-9852a468bf89)
+
+
+Modo PWM Rapido
+
+![modopwmrapido](https://github.com/mchavesferreira/smc/assets/63993080/5c54a05c-1c7d-40cb-89d8-361ba99ca0ec)
+
 
 
 
