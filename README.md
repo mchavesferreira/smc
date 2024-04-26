@@ -14,7 +14,7 @@ Sistemas Microcontrolados
 - <a href=https://github.com/mchavesferreira/smc/blob/main/displaylcd.md>Display LCD</a>
 - [Exemplo Maquina de Lavar ](#Exemplo-Maquina-de-Lavar )
 - [Trabalhos-Turma-2024](#Trabalhos-Turma-2024)
-- [Interrupções] (#Interrupções)
+- <a href=https://github.com/mchavesferreira/smc/tree/main/interrupcao_timers#readme>Interrupções</a>
 - [Comunicação Serial](#UART)
 - [Links e referências](#Links-e-referências)
 
