@@ -21,7 +21,8 @@ Comportamento das interruções
 <img src=https://github.com/mchavesferreira/mice/blob/main/interrupcao/imagens/quadro_interrupcoes.png>
 
 Endereços (interrupt vector) das interrupções para Atmega 328P
-<img src=https://github.com/mchavesferreira/mice/blob/main/interrupcao/imagens/enderecoes_interrupcao.png
+
+<img src=https://github.com/mchavesferreira/mice/blob/main/interrupcao/imagens/enderecoes_interrupcao.png>
 
 
 
@@ -35,8 +36,14 @@ Exemplo de um circuito para exemplificar a interrupção externa, esquema do liv
 
 <img src=https://github.com/mchavesferreira/mice/blob/main/interrupcao/imagens/int0_livro.png>
 
+Simulação:
+
 <a href=https://wokwi.com/projects/346138374477709906><img src=https://raw.githubusercontent.com/mchavesferreira/mice/main/interrupcao/imagens/esquemasimula.png></a>
 
 ## Timer 0
 
+Capítulo Livro: https://github.com/mchavesferreira/smc/blob/main/Timer_0_Livro.pdf
 
+## Timer 1
+
+Capítulo Livro:  https://github.com/mchavesferreira/smc/blob/main/Timer_1_Livro.pdf
