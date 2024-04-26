@@ -14,8 +14,7 @@ Sistemas Microcontrolados
 - <a href=https://github.com/mchavesferreira/smc/blob/main/displaylcd.md>Display LCD</a>
 - [Exemplo Maquina de Lavar ](#Exemplo-Maquina-de-Lavar )
 - [Trabalhos-Turma-2024](#Trabalhos-Turma-2024)
-- [Interrupção Externa] (#Interrupção-Externa)
-- [Temporizador, interrução e PWM] (#PWM-Timer-1)
+- [Interrupções] (#Interrupções)
 - [Comunicação Serial](#UART)
 - [Links e referências](#Links-e-referências)
 
@@ -280,15 +279,9 @@ https://wokwi.com/projects/350144439208903252
 
 
 
-## PWM Timer 1
+## Interrupções
 
-Aula 24/03 - Prática de interrução
-
-Baixe o <a href=https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/funcoes_timer.zip> interrupcao_timers/funcoes_timer.zip</a>  com simulação em proteus.
-
-Arquivos timer 1: <a href=https://github.com/mchavesferreira/smc/tree/main/interrupcao_timers/timer1_aula24>timer1_aula24</a>
-
-Contador de eventos externos: <a href=https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/contador_eventos_TC1_C.zip>interrupcao_timers/contador_eventos_TC1_C.zip</a>
+Saima mais sobre Interrupções: https://github.com/mchavesferreira/smc/tree/main/interrupcao_timers
 
 ## UART
 
