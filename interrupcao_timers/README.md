@@ -6,9 +6,9 @@ Slide Interrupção:  https://github.com/mchavesferreira/smc/blob/main/aula_inte
 
 - [Interrupção](#Interrupção)
         - [Interrupção Externa](#Interrupção-Externa)
-        - [Timer 0](#Interrupção-Externa)
-        - [Timer 1](#Interrupção-Externa)
-        - [Timer 2](#Interrupção-Externa)
+        - [Timer 0](#Timer-0)
+        - [Timer 1](#Timer-1)
+        - [Timer 2](#Timer-2)
 
 
 
@@ -43,7 +43,7 @@ Simulação:
 <a href=https://wokwi.com/projects/359476742621416449><img src=https://raw.githubusercontent.com/mchavesferreira/mice/main/interrupcao/imagens/esquemasimula.png></a>
 
 ## Timer 0
-
+(8 bits)
 Capítulo Livro: https://github.com/mchavesferreira/smc/blob/main/Timer_0_Livro.pdf
 
 Código base: https://github.com/mchavesferreira/smc/blob/main/codigo_basico_timer0.pdf
@@ -55,7 +55,7 @@ Simulação Proteus e Avr Studio:  https://github.com/mchavesferreira/smc/blob/m
 
 
 ## Timer 1
-
+(16 bits)
 Capítulo Livro:  https://github.com/mchavesferreira/smc/blob/main/Timer_1_Livro.pdf
 
 Exemplo de programação com Timer 1: 
@@ -64,4 +64,9 @@ https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/Exemplo%20Pr
 https://github.com/mchavesferreira/smc/blob/main/exemplo_Timer_1_funcoes_pwm_rapido_funcoes.c
 
 Contador de Eventos:  https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/contador_eventos_TC1_C.zip
+
+## Timer 2
+(8 bits)
+
+
 
