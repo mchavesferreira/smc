@@ -54,6 +54,9 @@ Utilizando comparadores OCR:  https://github.com/mchavesferreira/smc/blob/main/e
 
 Simulação Proteus e Avr Studio:  https://github.com/mchavesferreira/smc/blob/main/timer%200%20Normal%20pulsos%20quadrados.rar
 
+![image](https://github.com/mchavesferreira/smc/assets/63993080/fb163981-45bb-4f8f-93fd-5db121c46d01)
+
+
 
 
 ## Timer 1
