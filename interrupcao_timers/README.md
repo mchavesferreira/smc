@@ -15,7 +15,7 @@
 ## Interrupção
 
 Comportamento das interruções
-<img src=https://github.com/mchavesferreira/mice/blob/main/interrupcao/imagens/comportamento_interrupcao.png>
+<img src=https://raw.githubusercontent.com/mchavesferreira/mice/main/interrupcao/imagens/comportamento_interrupcao.png>
 
 Flags da interrupção
 <img src=https://github.com/mchavesferreira/mice/blob/main/interrupcao/imagens/quadro_interrupcoes.png>
