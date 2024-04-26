@@ -2,7 +2,7 @@
 
 ## Conhecendo Interrupções, Temporizadores e interrupções externas para Atmega 328P
 
-https://files.oaiusercontent.com/file-2k3zTKmjnBbkRlxISHaQyrMx?se=2024-04-26T14%3A41%3A26Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Db6331b57-0163-46f6-857a-6c52abdc18a8.webp&sig=MDtWDvwKCJNtr71Xf4O7%2BfoLQr6/8fV2uo6%2BHYQtC0s%3D
+<img src=https://files.oaiusercontent.com/file-2k3zTKmjnBbkRlxISHaQyrMx?se=2024-04-26T14%3A41%3A26Z&sp=r&sv=2021-08-06&sr=b&rscc=max-age%3D31536000%2C%20immutable&rscd=attachment%3B%20filename%3Db6331b57-0163-46f6-857a-6c52abdc18a8.webp&sig=MDtWDvwKCJNtr71Xf4O7%2BfoLQr6/8fV2uo6%2BHYQtC0s%3D width=300 height=300>
 
 Slide Interrupção:  https://github.com/mchavesferreira/smc/blob/main/aula_interrupcao_Marcos_Chaves_V2021_2.pptx
 
