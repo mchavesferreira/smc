@@ -81,6 +81,34 @@ Contador de Eventos:  https://github.com/mchavesferreira/smc/blob/main/interrupc
 
 #### Registradores Timer 1
 
+TCCR1A
+<img src=https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/imgtimer1/tccr1a.png>
+
+
+TCCR1B
+<img src=https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/imgtimer1/tccr1b.png>
+
+
+TCCR1C
+<img src=https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/imgtimer1/tccr1c.png>
+
+<img src=https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/imgtimer1/tabelamodotimer1.png>
+
+Configuração dos pinos:
+
+<img src=https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/imgtimer1/tabelatimer1naopwm.png>
+
+<img src=https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/imgtimer1/timer1pwmrapido.png>
+
+Prescaler: 
+<img src=https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/imgtimer1/tabelaprescaler.png>
+
+TIMSK1:
+<img src=https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/imgtimer1/timsk1.png>
+
+TIFR2
+<img src=https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/imgtimer1/tifr2.png>
+
 
 ## Timer 2
 (8 bits)
