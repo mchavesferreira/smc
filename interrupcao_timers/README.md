@@ -79,6 +79,9 @@ https://github.com/mchavesferreira/smc/blob/main/exemplo_Timer_1_funcoes_pwm_rap
 
 Contador de Eventos:  https://github.com/mchavesferreira/smc/blob/main/interrupcao_timers/contador_eventos_TC1_C.zip
 
+#### Registradores Timer 1
+
+
 ## Timer 2
 (8 bits)
 
