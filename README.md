@@ -298,6 +298,18 @@ https://wokwi.com/projects/365174034245894145   Simulação
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/9b5c31a2-7060-45b2-ad95-73ccb14e9c3c)
 Blocos do UAR
 
+Registradores:
+
+UBRRn - A taxa de transmissão (baud rate) é calculada com base na frequência do clock 
+
+UDR0 – USART I/O Data Register
+
+UCSR0A 
+
+UCSR0B 
+
+UCSR0C 
+
 Bibliotecas:
 
 <details><summary>UARTC.c</summary>
