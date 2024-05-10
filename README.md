@@ -288,6 +288,9 @@ Saima mais sobre Interrupções: https://github.com/mchavesferreira/smc/tree/mai
 Comuniação Serial
 https://github.com/mchavesferreira/smc/blob/main/serialAVR/
 
+Comunicação Serial (ESP32)
+https://github.com/mchavesferreira/mcr/blob/main/esp32/serialprint.md
+
 Exemplo com menu:
 https://github.com/mchavesferreira/smc/blob/main/serialAVR/main_usart_menu.c <BR>
 https://wokwi.com/projects/365174034245894145   Simulação
