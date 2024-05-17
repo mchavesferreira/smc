@@ -16,6 +16,7 @@ Sistemas Microcontrolados
 - [Trabalhos-Turma-2024](#Trabalhos-Turma-2024)
 - <a href=https://github.com/mchavesferreira/smc/tree/main/interrupcao_timers#readme>Interrupções</a>
 - [Comunicação Serial](#UART)
+- <a href=https://github.com/mchavesferreira/smc/tree/main/conversorADavr>Conversor AD</a>
 - [Links e referências](#Links-e-referências)
 
 
@@ -433,8 +434,29 @@ serialTransmit('   *   \n');
 ### Exemplo recebe "LEDOF1"  e "LEDON1" através da porta serial e acende ou apaga um led.
 <BR>https://wokwi.com/projects/365185955727181825
 
+### Cocatenar variáveis e frases (stream)
 
+No C, um "stream" é uma sequência de dados que pode ser lida ou escrita de forma contínua. Quando falamos de streams no contexto de microcontroladores, estamos frequentemente nos referindo ao uso de buffers e funções para manipulação de strings para formar mensagens que podem ser exibidas em um LCD ou enviadas via comunicação serial.
 
+#### Concatenando Variáveis e Frases
+
+Para concatenar variáveis e frases, usamos principalmente funções da biblioteca <stdio.h> e <string.h>.
+Funções Comuns para Manipulação de Strings
+
+    sprintf: Formata uma string e armazena o resultado em um buffer.
+    strcat: Concatena duas strings.
+    strcpy: Copia uma string para outra
+    
+#### Exemplo com sprintf
+Aqui está um exemplo de como usar sprintf para formatar uma mensagem que inclui variáveis e strings fixas, e então enviar essa mensagem via comunicação serial.
+
+```java	
+char serial_buffer[20];
+sprintf(serial_buffer,"* Opção %c selecionada ",option);  //%d  %f formatos das variáveis
+escreve_USART(serial_buffer);
+```
+
+Exemplo:  https://wokwi.com/projects/365174034245894145
 
 ## ESP32 e suas aplicações IOT
 
