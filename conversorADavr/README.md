@@ -64,6 +64,10 @@ Bits do ADCSRA
         110: Divisor de 64.
         111: Divisor de 128.
 
+#### ADSC – ADC Start Conversion
+
+No modo de conversão simples, ADSC=1 irá iniciar uma conversão. No modo de conversão contínuo, ADSC=1 irá iniciar a primeira conversão. ADSC ficará em 1
+durante todo o processo de conversão e será zerado automaticamente ao seu término.
  
 
 ### ADCL/ADCH – ADC Data Register
