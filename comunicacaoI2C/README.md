@@ -251,6 +251,8 @@ void loop() {
   Serial.println(adc0);
   delay(1000);
 }
+
+```
 </details>
 
 - <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/ads1112/ads1112.pdf>Datasheet ADS1112</a>
