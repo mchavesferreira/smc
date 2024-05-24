@@ -25,13 +25,13 @@ O protocolo I2C (Inter-Integrated Circuit) é um protocolo de comunicação seri
 2. **Endereçamento**:
    - Cada dispositivo no barramento possui um endereço único, geralmente de 7 bits, permitindo até 128 dispositivos (ou até 1024 com endereçamento de 10 bits).
 
-3. **Topologia Mestre-Escravo**:
-   - Um dispositivo mestre controla a comunicação, enquanto os dispositivos escravos respondem às solicitações do mestre.
+3. **Topologia Master-Slave**:
+   - Um dispositivo Master controla a comunicação, enquanto os dispositivos Slaves respondem às solicitações do Master.
 
 ![diagrama](https://github.com/mchavesferreira/mcr/assets/63993080/2f5eafa2-350e-40cc-9596-3b0ce3398b90)
 
 4. **Comunicação Bidirecional**:
-   - Permite tanto leitura quanto escrita de dados entre o mestre e os escravos.
+   - Permite tanto leitura quanto escrita de dados entre o Master e os Slaves.
 
 5. **Velocidades de Operação**:
    - Standard Mode: Até 100 kbps.
@@ -42,19 +42,19 @@ O protocolo I2C (Inter-Integrated Circuit) é um protocolo de comunicação seri
 ## Funcionamento Básico
 
 1. **Início da Comunicação**:
-   - O mestre inicia a comunicação gerando uma condição de START (um nível alto para baixo na linha SDA enquanto SCL está alto).
+   - O Master inicia a comunicação gerando uma condição de START (um nível alto para baixo na linha SDA enquanto SCL está alto).
      
 ![start_stop](https://github.com/mchavesferreira/mcr/assets/63993080/c349b904-6a36-45e0-892b-27a4afb6e458)
 
 2. **Endereçamento**:
-   - O mestre envia o endereço do dispositivo escravo com o qual deseja comunicar-se seguido por um bit de leitura/escrita (0 para escrita e 1 para leitura).
+   - O Master envia o endereço do dispositivo Slave com o qual deseja comunicar-se seguido por um bit de leitura/escrita (0 para escrita e 1 para leitura).
 
 3. **Acknowledge (ACK) e Not Acknowledge (NACK)**:
-   - O escravo reconhece o recebimento do endereço enviando um bit ACK (linha SDA é puxada para baixo).
-   - Se o escravo não estiver presente ou não reconhecer o endereço, ele envia um bit NACK (linha SDA permanece alta).
+   - O Slave reconhece o recebimento do endereço enviando um bit ACK (linha SDA é puxada para baixo).
+   - Se o Slave não estiver presente ou não reconhecer o endereço, ele envia um bit NACK (linha SDA permanece alta).
 
 4. **Transferência de Dados**:
-   - Dados são transferidos em bytes, com o mestre gerando o clock e determinando o ritmo da comunicação.
+   - Dados são transferidos em bytes, com o Master gerando o clock e determinando o ritmo da comunicação.
    - Após cada byte, o receptor deve enviar um bit ACK para confirmar a recepção correta do dado.
 
 5. **Fim da Comunicação**:
@@ -79,11 +79,7 @@ Uma aplicação comum do I2C é a leitura de sensores. Por exemplo, um sensor de
 
 Para uma implementação detalhada, consulte a documentação específica do microcontrolador e os datasheets dos dispositivos I2C utilizados. O livro "AVR e Arduino Técnicas de Projeto" contém um capítulo dedicado ao TWI (I2C) que detalha a implementação do protocolo em microcontroladores AVR, incluindo exemplos práticos e código fonte.
 
-
-
-
-<BR>Displays LCD, Oled, comunicação I2C
-### LCD 16x2
+# LCD 16x2 I2C
 
 O módulo adaptador I2C para LCD 16x2 através do CI PCF8574T permite que você use um display de LCD 16x2 com apenas 2 fios de dados, através da comunicação I2C. Isto permite uma economia de pelo menos 4 pinos do seu microcontrolador ou utilizar apenas o barramento I2C para liberar demais pinos I/O de seu projeto.
 
@@ -187,7 +183,7 @@ Existem várias bibliotecas disponíveis que facilitam o uso do display SSD1306,
 
 <a href=https://github.com/efthymios-ks/AVR-SSD1306>Biblioteca GCC AVR-SSD1306</a>
 
-# Conversor ADS1115
+# Conversor AD externo 16bits I2C ADS1115
 
 
 - <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/ads1112/ads1112.pdf>Datasheet ADS1112</a>
@@ -197,7 +193,12 @@ Existem várias bibliotecas disponíveis que facilitam o uso do display SSD1306,
 - <a href=https://github.com/adafruit/Adafruit_ADS1X15>Library ADS1115 Adrafuit</a>
 
 
-# Relógio ADS1307
+## Exemplos de projeto 
+
+- <a href=https://github.com/mchavesferreira/smc/tree/main/comunicacaoI2C/MedicaocorrentecomADS1115>Conversor corrente utilizando ADS1115</a>
+
+
+# RTC- Relógio ADS1307
 
 ADS1307 é um Relógio de tempo real ou RTC (real time clock), sendo um componente que tem como função específica efetuar a contagem de tempo de maneira precisa. Geralmente requer seu próprio cristal para ficar independente do sistema principal.  Possui baixo coeficiente de atraso/adiantamento e pode conter, além do relógio, um calendário
 
@@ -206,12 +207,8 @@ ADS1307 é um Relógio de tempo real ou RTC (real time clock), sendo um componen
 - <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/ds1307/DS1307.pdf>Datasheet ADS1307</a>
 
 
-# Exemplos I2C 
 
-- <a href=https://github.com/mchavesferreira/smc/tree/main/comunicacaoI2C/MedicaocorrentecomADS1115>Conversor corrente utilizando ADS1115</a>
-
-
-## Exemplo de Código com Arduino e I2C
+# Exemplo de Código com Arduino e I2C
 
 ### Display Oled
 
