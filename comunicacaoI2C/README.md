@@ -84,7 +84,19 @@ Para uma implementação detalhada, consulte a documentação específica do mic
 
 <BR>Displays LCD, Oled, comunicação I2C
 ### LCD 16x2
+
+O módulo adaptador I2C para LCD 16x2 através do CI PCF8574T permite que você use um display de LCD 16x2 com apenas 2 fios de dados, através da comunicação I2C. Isto permite uma economia de pelo menos 4 pinos do seu microcontrolador ou utilizar apenas o barramento I2C para liberar demais pinos I/O de seu projeto.
+
+![modulo-i2c-serial](https://github.com/mchavesferreira/smc/assets/63993080/bbccfddf-6e8e-4c51-9a6f-798872c3b835)
+
+
+![62ca4db5-b2f0-49bd-9458-45246ef4f662](https://github.com/mchavesferreira/smc/assets/63993080/660770e7-b50e-4dc3-aa4e-6d7b674b6819)
+
+![3a6e391a-ae87-41f3-a13f-a08cb1540051](https://github.com/mchavesferreira/smc/assets/63993080/0746748e-39d0-4932-bfa3-c2981c3f151f)
+
+
   <BR>01 -<a href=https://wokwi.com/projects/342202939017790036> Exemplo LCD 16x2 paralelo</a>
+  
   <BR>02 -<a href=https://wokwi.com/projects/342199886273315410> Exemplo LCD 16x2 I2C</a>
   
 ### Display Oled  + ESP32
@@ -200,8 +212,6 @@ Existem várias bibliotecas disponíveis que facilitam o uso do display SSD1306,
 # Relógio ADS1307
 
 ADS1307 é um Relógio de tempo real ou RTC (real time clock), sendo um componente que tem como função específica efetuar a contagem de tempo de maneira precisa. Geralmente requer seu próprio cristal para ficar independente do sistema principal.  Possui baixo coeficiente de atraso/adiantamento e pode conter, além do relógio, um calendário
-
-![image](https://github.com/mchavesferreira/smc/assets/63993080/9430ea78-c85a-44ac-9a4e-c844ebe8e72c)
 
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/4ceea541-b2af-40a9-ad6d-4e5cbffb6a2b)
 
