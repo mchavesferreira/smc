@@ -185,6 +185,73 @@ Existem várias bibliotecas disponíveis que facilitam o uso do display SSD1306,
 
 # Conversor AD externo 16bits I2C ADS1115
 
+# ADS1115 - Conversor Analógico-Digital de 16 Bits
+
+O ADS1115 é um conversor analógico-digital (ADC) de 16 bits fabricado pela Texas Instruments, conhecido por sua precisão e eficiência em aplicações de baixa potência.
+
+## Características Principais
+- **Alta Resolução e Precisão**: Possui uma resolução de 16 bits, permitindo medições muito precisas.
+- **Pequeno Consumo de Corrente**:
+  - Modo contínuo: Apenas 150 µA.
+  - Modo de disparo único: Auto-desligamento após a conversão.
+- **Faixa de Alimentação**: Opera com uma tensão de 2.0V a 5.5V.
+- **Taxa de Amostragem Programável**: Pode ser configurada de 8 SPS (Samples per Second) até 860 SPS.
+- **Referência de Tensão Interna**: Inclui uma referência de tensão de baixo desvio.
+- **Oscilador Interno**: Facilita a implementação e uso do ADC.
+- **Interface I2C**: Permite a comunicação com outros dispositivos via protocolo I2C com endereços selecionáveis por pino.
+- **Entradas Diferenciais e Simples**: Suporta quatro entradas simples ou duas diferenciais.
+- **Amplificador de Ganho Programável (PGA)**: Oferece ganhos ajustáveis que permitem a medição de sinais de diferentes amplitudes com alta resolução.
+- **Comparador Programável**: Inclui um comparador programável que pode ser configurado para gerar alertas.
+
+## Estrutura Interna e Operação
+O ADS1115 utiliza um modulador delta-sigma (ΔΣ) seguido por um filtro digital para converter sinais analógicos em dados digitais precisos. Ele oferece dois modos de operação:
+- **Modo Contínuo**: Realiza conversões contínuas e armazena os resultados em um registro interno.
+- **Modo de Disparo Único**: Realiza uma única conversão e entra em modo de desligamento para economizar energia até que uma nova conversão seja solicitada.
+  
+![ads1115b](https://github.com/mchavesferreira/smc/assets/63993080/d31598b3-1115-4e46-8c4a-892360797c6d)
+
+## Multiplexador de Entrada (MUX)
+O ADS1115 possui um multiplexador que permite selecionar entre diferentes entradas analógicas. Isto é útil para aplicações que requerem a medição de múltiplos sinais.
+
+![ads1115_mux](https://github.com/mchavesferreira/smc/assets/63993080/759086b1-0ff5-448e-bc70-3e1d1d2709fd)
+
+
+## Esquema de Conexão Básica
+Para utilizar o ADS1115 em um projeto, é necessário conectá-lo ao microcontrolador via barramento I2C. A configuração básica envolve a conexão dos pinos de alimentação (VDD e GND), linhas I2C (SDA e SCL), e pinos de entrada analógica (AIN0 a AIN3).
+
+
+
+![ads1115_add](https://github.com/mchavesferreira/smc/assets/63993080/1045a045-684f-4f95-b2ff-acca3c0a24b6)
+
+![ads1115c](https://github.com/mchavesferreira/smc/assets/63993080/9280adf8-574b-46d0-a6d4-9922747fccc8)
+
+
+## Exemplo de Código para Arduino
+A seguir, um exemplo de código para leitura de um sinal analógico utilizando o ADS1115 com Arduino:
+
+<details><summary>Exemplo ADS115 IDE Arduino</summary>
+<p>
+
+
+```cpp
+#include <Wire.h>
+#include <Adafruit_ADS1015.h>
+
+Adafruit_ADS1115 ads;  // Cria uma instância do objeto ADS1115
+
+void setup() {
+  Serial.begin(115200);
+  ads.begin();  // Inicializa o ADS1115
+}
+
+void loop() {
+  int16_t adc0;
+  adc0 = ads.readADC_SingleEnded(0);  // Lê o valor do canal 0
+  Serial.print("ADC Reading: "); 
+  Serial.println(adc0);
+  delay(1000);
+}
+</details>
 
 - <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/ads1112/ads1112.pdf>Datasheet ADS1112</a>
 
