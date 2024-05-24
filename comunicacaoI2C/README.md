@@ -185,10 +185,17 @@ Existem várias bibliotecas disponíveis que facilitam o uso do display SSD1306,
 - **U8g2**: Biblioteca universal para displays gráficos, suporta uma ampla gama de displays, incluindo o SSD1306.
 - **ESP8266/ESP32 SSD1306**: Biblioteca otimizada para microcontroladores ESP8266 e ESP32.
 
+<a href=https://github.com/efthymios-ks/AVR-SSD1306>Biblioteca GCC AVR-SSD1306</a>
 
 # Conversor ADS1115
 
+
 - <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/ads1112/ads1112.pdf>Datasheet ADS1112</a>
+
+- <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/ads1115/ads1115.pdf>Datasheet ADS1115</a>
+
+- <a href=https://github.com/adafruit/Adafruit_ADS1X15>Library ADS1115 Adrafuit</a>
+
 
 # Relógio ADS1307
 
