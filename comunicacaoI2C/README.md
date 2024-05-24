@@ -423,8 +423,11 @@ float getI(){
   <BR>-<a href=https://wokwi.com/projects/342195248670179922> Exemplo Oled U8g2lib</a>
   
   <BR>-<a href=https://wokwi.com/projects/342195418005766739> Exemplo Adafruit_SSD1306</a>
+
+ <BR>-<a href=https://wokwi.com/projects/383954708982140929> Exemplo Oled select</a>
   
   <Br> <img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/oled.png width=400 height=325><BR>
+
 <details><summary>Exemplo Oled</summary>
 <p>
 
