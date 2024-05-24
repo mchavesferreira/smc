@@ -94,6 +94,13 @@ O módulo adaptador I2C para LCD 16x2 através do CI PCF8574T permite que você 
 
 ![3a6e391a-ae87-41f3-a13f-a08cb1540051](https://github.com/mchavesferreira/smc/assets/63993080/0746748e-39d0-4932-bfa3-c2981c3f151f)
 
+Configuração de endereços 0x20h até 0x27h
+
+![endereco2](https://github.com/mchavesferreira/smc/assets/63993080/a6b9052e-0b34-4f69-abdf-9e2f701bd2da)
+
+- <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/displayi2c/Datasheet_PCF8574_PCF8574A.pdf>Datasheet CI PCF8574T </a>
+
+- <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/displayi2c/LCD2004-i2c.pdf>Manual LCD 16x2 I2C </a>
 
   <BR>01 -<a href=https://wokwi.com/projects/342202939017790036> Exemplo LCD 16x2 paralelo</a>
   
