@@ -199,6 +199,12 @@ Existem várias bibliotecas disponíveis que facilitam o uso do display SSD1306,
 
 # Relógio ADS1307
 
+ADS1307 é um Relógio de tempo real ou RTC (real time clock), sendo um componente que tem como função específica efetuar a contagem de tempo de maneira precisa. Geralmente requer seu próprio cristal para ficar independente do sistema principal.  Possui baixo coeficiente de atraso/adiantamento e pode conter, além do relógio, um calendário
+
+![image](https://github.com/mchavesferreira/smc/assets/63993080/9430ea78-c85a-44ac-9a4e-c844ebe8e72c)
+
+![image](https://github.com/mchavesferreira/smc/assets/63993080/4ceea541-b2af-40a9-ad6d-4e5cbffb6a2b)
+
 - <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/ds1307/DS1307.pdf>Datasheet ADS1307</a>
 
 
