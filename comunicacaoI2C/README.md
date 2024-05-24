@@ -10,6 +10,7 @@
 # Protocolo I2C
 
 <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/Livro-%20TWI%20I2C.pdf>Capítulo do livro</a>
+
 <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/i2c_bus_specification_1995.pdf>Especificações protocolo</a>
 
 O protocolo I2C (Inter-Integrated Circuit) é um protocolo de comunicação serial que permite a conexão de múltiplos dispositivos em um único barramento de dados. É amplamente utilizado em sistemas embarcados devido à sua simplicidade e eficiência na comunicação entre microcontroladores e periféricos, como sensores, displays e outros componentes integrados.
