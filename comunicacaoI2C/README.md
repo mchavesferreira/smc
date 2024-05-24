@@ -4,9 +4,13 @@
 - Display 16x2 I2C
 - Display Oled
 - Conversor ADS1115
+- Exemplos de projetos
   
 
 # Protocolo I2C
+
+<a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/Livro-%20TWI%20I2C.pdf>Capítulo do livro</a>
+<a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/i2c_bus_specification_1995.pdf>Especificações protocolo</a>
 
 O protocolo I2C (Inter-Integrated Circuit) é um protocolo de comunicação serial que permite a conexão de múltiplos dispositivos em um único barramento de dados. É amplamente utilizado em sistemas embarcados devido à sua simplicidade e eficiência na comunicação entre microcontroladores e periféricos, como sensores, displays e outros componentes integrados.
 
@@ -187,7 +191,27 @@ Existem várias bibliotecas disponíveis que facilitam o uso do display SSD1306,
 - **U8g2**: Biblioteca universal para displays gráficos, suporta uma ampla gama de displays, incluindo o SSD1306.
 - **ESP8266/ESP32 SSD1306**: Biblioteca otimizada para microcontroladores ESP8266 e ESP32.
 
+
+# Conversor ADS1115
+
+- <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/ads1112/ads1112.pdf>Datasheet ADS1112</a>
+
+# Relógio ADS1307
+
+- <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/ds1307/DS1307.pdf>Datasheet ADS1307</a>
+
+
+# Exemplos I2C 
+
+- <a href=https://github.com/mchavesferreira/smc/tree/main/comunicacaoI2C/MedicaocorrentecomADS1115>Conversor corrente utilizando ADS1115</a>
+
+
 ## Exemplo de Código com Arduino e I2C
+
+### Display Oled
+
+
+<details><summary>Código IDE Arduino Display Oled (clique)</summary>
 
 ```cpp
 #include <Wire.h>
@@ -225,9 +249,76 @@ void loop() {
   // Nada a fazer no loop
 }
 
+```
+</details>
+
+### ADS1115
+
+<details><summary>Código IDE Arduino ADS1115 (clique)</summary>
+
+#include <Wire.h>
+#include <Adafruit_ADS1015.h>
+#include <LiquidCrystal.h>
+
+/*config LCD */
+#define LCD_RS 8                                  // definição dos pinos do LCD
+#define LCD_E 9
+#define LCD_D4 4
+#define LCD_D5 5
+#define LCD_D6 6
+#define LCD_D7 7
+LiquidCrystal lcd(LCD_RS, LCD_E, LCD_D4, LCD_D5, LCD_D6, LCD_D7);
+
+/*config ADS1115*/
+#define ADC_16BIT_MAX 65536                      //ADC_COUNTS? possibilidades/niveis de acordo com a resoluçaõ                             // define a tensão RMS da rede(valor lido com multimetro)
+Adafruit_ADS1115 ads;                            //cria instancia do conversor analogico digital ADC
+
+const float fator = 100;                         //100A/50mV
+const float multiplicador = 0.125F;                    
+
+void setup() {
+ Serial.begin(9600);
+ lcd.begin(16, 2);                               // configura LCD 16 colunas x 2 linhas
+ lcd.clear();                                    // limpa tela do LCD
+  
+ ads.setGain (GAIN_ONE);                         // 1x gain   +/- 4.096V  1 bit = 2mV      0.125mV
+ ads.begin();                        
+  
+ lcd.setCursor(0,0);                              // seleciona coluna 0, linha 0
+ lcd.print("Irms(A)=");                           // mostra texto
+} 
+ 
+void loop() { 
+  float Irms = getI();
+   
+  lcd.setCursor(9,0);                                    // seleciona coluna 9, linha 0
+  lcd.print(Irms);                                       // mostra valor da corrente  
+  Serial.print("Differential: "); Serial.println(Irms);
+  delay(1000);                                           // atraso de 1 segundo
+}
+
+float getI(){
+  double tensao;
+  double corrente;
+  double sum = 0.0;
+  long tempo = millis();
+  int counter = 0;
+ 
+  while((millis()-tempo) <1000){
+    tensao = (ads.readADC_Differential_0_1())*multiplicador;
+    corrente = tensao*fator;
+    corrente /=1000.0;
+
+    sum+= sq(corrente);
+    counter = counter+1;
+  }
+  corrente = (sqrt(sum/counter));
+  return corrente;  
+}
 
 ```
 
+</details>
 
 ### Simuladores
 
