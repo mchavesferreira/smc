@@ -354,6 +354,8 @@ void loop() {
 
 <details><summary>Código IDE Arduino ADS1115 (clique)</summary>
 
+
+```cpp
 #include <Wire.h>
 #include <Adafruit_ADS1015.h>
 #include <LiquidCrystal.h>
