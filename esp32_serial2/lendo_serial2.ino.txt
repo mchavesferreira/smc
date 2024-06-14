@@ -1,0 +1,17 @@
+#include <HardwareSerial.h>
+
+HardwareSerial Serial2(2);
+
+void setup() {
+  // Inicializa UART2 com 115200 baud rate
+  Serial2.begin(115200, SERIAL_8N1, 16, 17);
+  Serial2.println("UART2 initialized");
+}
+
+void loop() {
+  if (Serial2.available()) {
+    int data = Serial2.read();
+    Serial2.print("Received: ");
+    Serial2.println(data);
+  }
+}
