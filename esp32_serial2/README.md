@@ -113,4 +113,13 @@ void loop() {
   }
 ```
 
+![esp32_ligacao](https://github.com/mchavesferreira/smc/assets/63993080/ca737840-d948-4b4c-94e3-9a2036756f26)
+
+
+
+### Projeto 2 
+
+Exemplos para trabalho:
+
+
  
