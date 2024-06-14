@@ -12,7 +12,7 @@
 ## Webserver
 <BR>01- Criando um web server para controle e exibição de dados (Dashboard)<BR>
 	
- <BR> <img src=https://github.com/mchavesferreira/mcr/edit/main/esp32_iot/imagens/webserver.png>
+ <BR> <img src=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/imagens/webserver.png>
 	
 <BR>Um servidor Web é um programa que usa HTTP (Hypertext Transfer Protocol) para servir os arquivos que formam páginas da Web aos usuários, em resposta às suas solicitações (métodos GET ou POST), que são encaminhadas pelos clientes HTTP de seus computadores ou smartphones.
 <BR>Para implementar uma pagina web no Esp32, existem duas maneiras de fazer: 
