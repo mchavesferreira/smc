@@ -121,5 +121,8 @@ void loop() {
 
 Exemplos para trabalho:
 
+https://github.com/mchavesferreira/smc/blob/main/esp32_serial2/
+
+
 
  
