@@ -2,6 +2,8 @@ Sistemas Microcontrolados
 
 ## Utilizando Atmega328P para a compreensão e funcionamento de microprocessadores e microcontroladores em geral utilizando a linguagem C.
 
+ChatGPT:   https://chatgpt.com/g/g-TFvuISQH5-professor-dos-embarcados
+
 ## Sumário
 
 - [Simulação online para microcontrolador](#Simulação-online-para-microcontrolador)
