@@ -7,25 +7,12 @@
 	- [Acess-Point](#Acess-Point)
 	- [Oled](#display-oled)
 - [Residencial e IOT](#Residencial-e-IOT)
-- [Thingspeak](#Residencial-e-IOT)
-- [MQTT](#MQTT)
-- [Integração com Alexa](#Integração-com-Alexa)
-- [Explorando recursos da comunicação WIFI](#Explorando-recursos-com-a-comunicação-WIFI)
-- [Frameworks](#Frameworks)
-- [FreeRtos](#FreeRtos)
-- [Cloud para desenvolvimento](#Cloud-para-desenvolvimento)
-- [ESP32-Cam](#ESP32-Cam)
-- Dashboard
-- [Links interessantes](#Links-interessantes)
-
-https://www.youtube.com/watch?v=KndZoTMCRsA
-Aveiro Tech City Living Lab
 
 	
 ## Webserver
 <BR>01- Criando um web server para controle e exibição de dados (Dashboard)<BR>
 	
- <BR> <img src=imagens/webserver.png>
+ <BR> <img src=https://github.com/mchavesferreira/mcr/edit/main/esp32_iot/imagens/webserver.png>
 	
 <BR>Um servidor Web é um programa que usa HTTP (Hypertext Transfer Protocol) para servir os arquivos que formam páginas da Web aos usuários, em resposta às suas solicitações (métodos GET ou POST), que são encaminhadas pelos clientes HTTP de seus computadores ou smartphones.
 <BR>Para implementar uma pagina web no Esp32, existem duas maneiras de fazer: 
@@ -94,3 +81,36 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
 
 <BR>
  O valores são substituidos nos "ID" a cada intervalo de tempo, buscando a String de uma url no próprio microcontrolador.
+
+
+ ## ESP32 2 portas seriais
+
+A porta serial 2 (UART2) do ESP32 pode ser configurada para usar vários pinos diferentes, já que os pinos UART são mapeáveis. Isso oferece flexibilidade para o design de hardware. Os pinos padrão para UART2 são:
+
+    TX: GPIO17
+    RX: GPIO16
+
+No entanto, você pode remapear esses pinos para qualquer GPIO que seja capaz de suportar as funções UART.
+
+Aqui está um exemplo de como configurar a porta serial 2 (UART2) usando a biblioteca HardwareSerial no Arduino IDE:
+
+
+ #include <HardwareSerial.h>
+```ruby
+HardwareSerial Serial2(2);
+
+void setup() {
+  // Inicializa UART2 com 115200 baud rate
+  Serial2.begin(115200, SERIAL_8N1, 16, 17);
+  Serial2.println("UART2 initialized");
+}
+
+void loop() {
+  if (Serial2.available()) {
+    int data = Serial2.read();
+    Serial2.print("Received: ");
+    Serial2.println(data);
+  }
+```
+
+ 
