@@ -94,9 +94,9 @@ No entanto, você pode remapear esses pinos para qualquer GPIO que seja capaz de
 
 Aqui está um exemplo de como configurar a porta serial 2 (UART2) usando a biblioteca HardwareSerial no Arduino IDE:
 
-
- #include <HardwareSerial.h>
 ```ruby
+ #include <HardwareSerial.h>
+
 HardwareSerial Serial2(2);
 
 void setup() {
