@@ -237,7 +237,11 @@ void loop() {
 
 ### Exemplo web com ajax
 
+Faça download destes arquivos na mesma pasta para gravar no ESP32  (fazerpedido.ino e index.h)
+
 https://github.com/mchavesferreira/smc/blob/main/esp32_serial2/fazerpedido.ino
+
+https://github.com/mchavesferreira/smc/blob/main/esp32_serial2/index.h
 
 
 
