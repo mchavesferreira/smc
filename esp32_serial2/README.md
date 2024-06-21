@@ -117,11 +117,127 @@ void loop() {
 
 
 
-### Projeto 2 
+## Projeto 2 
 
-Exemplos para trabalho:
+### Exemplos para trabalho:
 
 https://github.com/mchavesferreira/smc/blob/main/esp32_serial2/
+
+
+### Exemplo Pagina web e envio para porta serial
+
+
+```ruby
+#include <WiFi.h>
+#include <WiFiClient.h>
+#include <WebServer.h>
+
+// Defina suas credenciais de Wi-Fi
+const char* ssid = "ifsp-ibge-1";
+const char* password = "ifspcatanduva";
+
+const int serialDataTimeout = 1000;  // Tempo de espera para receber dados via serial (1 segundo)
+
+
+// Crie uma instância do servidor web na porta 80
+WebServer server(80);
+
+// Função para enviar a página HTML
+void handleRoot() {
+  server.send(200, "text/html", R"rawliteral(
+    <!DOCTYPE HTML><html>
+    <head>
+      <title>ESP32 Web Form</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="UTF-8">
+    </head>
+    <body>
+      <h1>Formulário ESP32</h1>
+      <form action="/submit" method="get">
+        <label for="options">Escolha uma opção:</label>
+        <select name="option" id="option">
+          <option value="1">Opção 1</option>
+          <option value="2">Opção 2</option>
+          <option value="3">Opção 3</option>
+        </select>
+        <br><br>
+        <input type="submit" value="Enviar">
+      </form>
+    </body>
+    </html>
+  )rawliteral");
+}
+
+// Função para lidar com a submissão do formulário
+void handleSubmit() {
+  String option = server.arg("option");
+  Serial.print("Opção selecionada: ");
+  Serial.println(option);
+  // enviar para serial 2 as escolhas
+   Serial2.print("S");
+  Serial2.println(option);
+  server.send(200, "text/html",  R"rawliteral(
+  <html><head>
+      <title>ESP32 Web Form</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="UTF-8">
+    </head>
+  <body><h1>Opção enviada com sucesso!</h1>
+  <P>[<a href="/">Voltar</a>]
+  </body></html>
+    )rawliteral");
+
+}
+
+void setup() {
+  // Inicialize a porta serial
+  Serial.begin(115200);
+  Serial.setTimeout(serialDataTimeout);
+  Serial2.begin(9600);
+  Serial.println("Booting Sketch...");
+
+  // Conecte-se à rede Wi-Fi
+  WiFi.mode(WIFI_STA); // Connect to your wifi
+  WiFi.begin(ssid, password);
+
+  Serial.println("Conectado ao WiFi");
+  Serial.print(ssid);
+
+  // Wait for WiFi to connect
+  while(WiFi.waitForConnectResult() != WL_CONNECTED) {
+  delay(10);
+    Serial.print(".");
+    
+  }
+
+
+  // If connection successful, show IP address in serial monitor
+  Serial.println("");
+  Serial.print("Conectado em SSID: ");
+  Serial.println(ssid);
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP());  // IP address assigned to your ESP
+
+  // Inicialize o servidor e defina os manipuladores de URL que receberao o formulario
+  server.on("/", handleRoot);
+  server.on("/submit", handleSubmit);
+
+  // Comece o servidor
+  server.begin();
+  Serial.println("Servidor iniciado");
+}
+
+void loop() {
+  // Handle client requests
+  server.handleClient();
+}
+
+
+```
+
+### Exemplo web com ajax
+
+https://github.com/mchavesferreira/smc/blob/main/esp32_serial2/fazerpedido.ino
 
 
 
