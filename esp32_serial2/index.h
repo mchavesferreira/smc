@@ -1,6 +1,11 @@
 const char MAIN_page[] PROGMEM = R"=====(
 <!DOCTYPE html>
 <html>
+    <head>
+      <title>ESP32 Web Form</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta charset="UTF-8">
+    </head>
 <style>
 body {
     background-image: url('https://th.bing.com/th/id/OIG.MbP81HSn3hqRMeZV8ZpD?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn');
@@ -92,7 +97,7 @@ function fazerPedido() {
             
         }
     };
-    xhttp.open("GET", "/fazerpedido?sabor=" + sabor + "&tamanho=" + tamanho + "&calda=" + calda, true);
+    xhttp.open("GET", "/fazerpedido?a=1&b=2&c=3&sabor=" + sabor + "&tamanho=" + tamanho + "&calda=" + calda, true);
     xhttp.send();
 }
 
