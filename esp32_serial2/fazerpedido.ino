@@ -45,14 +45,41 @@ void handleRoot() {
   server.send(200, "text/html", s); // Send web page
 }
 
+String sabor = "";
+String tamanho = "";
+String calda = "";
+
+
 void handleFazerPedido() {
+  sabor = server.arg("sabor");
+  tamanho = server.arg("tamanho");
+  calda = server.arg("calda");
+
+
+
   digitalWrite(ledPin, HIGH); // Ligar o LED na porta 27
   display.clearDisplay();
   display.setTextSize(1);
   display.setTextColor(SSD1306_WHITE);
   display.setCursor(0, 0);
   display.println("Fazendo pedido...");
-   Serial.print("Fazendo pedido ");
+  Serial.print("Fazendo pedido ");
+  Serial.println("==Sabor:");
+
+    Serial.println(sabor);
+       Serial.println("==Tamanho: ");
+      Serial.println(tamanho);
+         
+ 
+      Serial.println(calda);
+             Serial.println("===Calda: ");
+// enviar para serial 2 as escolhas
+Serial2.println(sabor);
+Serial2.println(tamanho);
+Serial2.println(calda);
+
+  server.send(200, "text/plain", "Informação 1 enviada para o Arduino!");
+
   etapaFimprocesso = false;
   display.display();
   delay(1000); // Aguardar 1 segundo
