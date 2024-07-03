@@ -486,6 +486,12 @@ Utilizando o projeto inicial da <a href=https://wokwi.com/projects/3501444392089
 
 ## Orientações para Projeto 2:
 Aperfeiçoamento do projeto 1 ou uma nova proposta. Acrescentar novos recursos de programação e hardware; PWM, Conversor AD externo I2C (ADS1115), comunicação serial com ESP32 (wifi), memorização de parametros em eeprom, tela OLED I2C.
+
+# Exemplo para identificar uma sequencia de caracteres na porta serial
+
+Olhe este exemplo que recebe uma sequencia de caracteres, sendo que o primeiro tem que ser X
+
+https://wokwi.com/projects/402417705867398145
 	
 ## Links e referências
 
