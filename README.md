@@ -470,7 +470,7 @@ https://github.com/mchavesferreira/mcr/blob/main/ESP32.md
  
 
 
-# Trabalhos Turma 2024
+# Trabalhos Turma 2025
 ## Orientações para Projeto 1:
 
 Utilizando o projeto inicial da <a href=https://wokwi.com/projects/350144439208903252>maquina de lavar</a>, crie uma máquina personalizada (não será considerado máquina de lavar) que atenda os seguintes critérios:
@@ -482,11 +482,14 @@ Utilizando o projeto inicial da <a href=https://wokwi.com/projects/3501444392089
 - as perguntas e respostas devem utilizar display LCD e botões (exemplos para botões: + - 1 2 3 Y N enter) 
 -  enviar o código e link de simulação na área trabalhos (suap), um integrante da dupla. Lembre-se colocar "Lock" em seu projeto 
 - As duplas não podem ter trabalhos "clones", criatividade e dificuldades serão pontuados
-
+  
+- ** outras especificidades posteriormente informadas.
 
 ## Orientações para Projeto 2:
 Aperfeiçoamento do projeto 1 ou uma nova proposta. Acrescentar novos recursos de programação e hardware; PWM, Conversor AD externo I2C (ADS1115), comunicação serial com ESP32 (wifi), memorização de parametros em eeprom, tela OLED I2C.
 
+- ** outras especificidades posteriormente informadas.
+- 
 # Exemplo para identificar uma sequencia de caracteres na porta serial
 
 Olhe este exemplo que recebe uma sequencia de caracteres, sendo que o primeiro tem que ser X
@@ -507,7 +510,7 @@ https://github.com/Franzininho/exemplos-avr-libc/tree/main/exemplos
 https://embarcados.com.br/franzininho-diy-contador-de-pulsos-externos/
 
 
-## Turma 2023
+## Turma 2025
    - Tarefa Suap - Cronometro Big Number em LCD simulado em wokwi e/ou proteus
 
   - Tarefa Suap - Maquina de Lavar com delay simulado em wokwi e/ou proteus
@@ -519,6 +522,6 @@ https://embarcados.com.br/franzininho-diy-contador-de-pulsos-externos/
  - Avaliação Presencial escrita (Sorteio de um projeto em dupla)
 
 
-  - Projeto 2 - 23/6/2023.
+  - Projeto 2 - 23/6/2025.
 
-  - Avaliação 2.  30/6/2023
+  - Avaliação 2.  30/6/2025
