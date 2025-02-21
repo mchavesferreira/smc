@@ -47,13 +47,7 @@ Atmega328P
 
 -CircuitJS - Este é um simulador de circuitos eletrônicos baseado em JavaScript que roda diretamente no navegador. Embora seu foco principal não seja microcontroladores, ele pode ser útil para ensinar os princípios básicos de eletrônica que são relevantes para a engenharia de automação.
 
-## Simuladores para linguagem C
-
-https://www.tutorialspoint.com/compile_c_online.php
-
-https://www.mycompiler.io/pt/new/cpp   
-
-https://www.online-cpp.com/online_c_compiler
+Existem simuladores online, na seção a seguir apresentamos alguns
 
 ## Introdução a linguagem C
 https://github.com/mchavesferreira/smc/tree/main/linguagemc
