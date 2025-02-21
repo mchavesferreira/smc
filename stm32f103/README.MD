@@ -51,14 +51,10 @@ A HAL está dividida em diferentes camadas e módulos:
 
 ---
 
-## 📌 Referências Oficiais
 
-🔹 Documentação oficial da ST: [HAL and LL Drivers](https://www.st.com/content/st_com/en/products/embedded-software/mcu-middleware/stm32-hal-library.html)  
-🔹 Repositório STM32Cube no GitHub: [STMicroelectronics/STM32Cube](https://github.com/STMicroelectronics)  
-🔹 Documentação CMSIS (ARM): [CMSIS Overview](https://developer.arm.com/tools-and-software/embedded/cmsis)  
 
 ---
-## 📌  Exemplo de Código: Alternando um GPIO
+##  Exemplo de Código: Alternando um GPIO
 
 O código abaixo configura um pino GPIO como saída e faz seu estado alternar a cada 500ms.
 
@@ -90,3 +86,48 @@ int main(void) {
 }
 
 ```
+
+
+##  Exemplo: Alternar um GPIO sem a HAL
+
+Este código alterna o pino PC13 (comum em placas como o STM32F103C8T6 "Blue Pill") sem usar a HAL, utilizando apenas manipulação direta dos registradores.
+
+```java
+
+#include "stm32f10x.h"  // Definições específicas do STM32F1 (ajuste conforme a família do STM32)
+
+// Inicializa o GPIO manualmente
+void GPIO_Init(void) {
+    // Habilita o clock do GPIOC
+    RCC->APB2ENR |= RCC_APB2ENR_IOPCEN;
+
+    // Configura o PC13 como saída push-pull, velocidade de 2MHz
+    GPIOC->CRH &= ~(GPIO_CRH_MODE13 | GPIO_CRH_CNF13);  // Limpa os bits de configuração
+    GPIOC->CRH |= (GPIO_CRH_MODE13_1); // Define como saída de 2MHz (10)
+}
+
+// Função de atraso simples (não precisa da HAL)
+void delay_ms(uint32_t ms) {
+    for (uint32_t i = 0; i < ms * 4000; i++) {
+        __NOP(); // No Operation, apenas para gastar tempo
+    }
+}
+
+// Função principal
+int main(void) {
+    GPIO_Init(); // Inicializa o GPIO
+
+    while (1) {
+        GPIOC->ODR ^= (1 << 13);  // Alterna o estado do pino PC13
+        delay_ms(500);  // Aguarda 500ms
+    }
+}
+
+```
+
+
+##  Referências Oficiais
+
+🔹 Documentação oficial da ST: [HAL and LL Drivers](https://www.st.com/content/st_com/en/products/embedded-software/mcu-middleware/stm32-hal-library.html)  
+🔹 Repositório STM32Cube no GitHub: [STMicroelectronics/STM32Cube](https://github.com/STMicroelectronics)  
+🔹 Documentação CMSIS (ARM): [CMSIS Overview](https://developer.arm.com/tools-and-software/embedded/cmsis)  
