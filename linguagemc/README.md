@@ -557,7 +557,6 @@ void main (void) {
 	pont16 = pont32 * var32; // 7
 	pont16 = 40 / 80;        // 8
 }
-![image](https://github.com/user-attachments/assets/f7465848-cd1d-4049-91ba-d03b1ea0c8c8)
 
 ```
 
