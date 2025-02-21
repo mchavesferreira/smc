@@ -537,7 +537,31 @@ int mat[2] [3] = {{51, 52, 53},
 
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/310bf071-61c4-4181-afbc-aab09a1f64ba)
 
-## Macro para I/0
+## Pratica sobre a precisão de variáveis
+
+Quais são os problemas com a atribuição destas variáveis
+
+```java
+void main (void) {
+	char var8;
+	int var16;
+	long int var32;
+	float pont16;
+	double pont32;
+	var8 = var8 + var16;     // 1
+	var8 = var8 + var8;      // 2
+	var16 = var8 * var8;     // 3
+	var32 = var32 / var16;   // 4
+	var32 = pont32 * var32;  // 5
+	pont16 = var8 / var16;   // 6
+	pont16 = pont32 * var32; // 7
+	pont16 = 40 / 80;        // 8
+}
+![image](https://github.com/user-attachments/assets/f7465848-cd1d-4049-91ba-d03b1ea0c8c8)
+
+```
+
+# Criação de Macros  uso com o ATMEGA328P para I/0
 Livro p. 96
 
 ## Primeiro código C
