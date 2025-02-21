@@ -604,3 +604,83 @@ int main( )
 }
 //--------------------------------------------------------------------------------------
 ```
+
+
+## Funções
+
+
+Em C, uma **função** é um bloco de código que realiza uma tarefa específica. Funções ajudam a modularizar o código, tornando-o mais organizado, reutilizável e fácil de entender. 
+
+Uma função em C pode receber argumentos (parâmetros) e pode ou não retornar um valor. O uso de funções é essencial para a construção de programas escaláveis, especialmente ao trabalhar com microcontroladores como o **ESP32**.
+
+A sintaxe básica de uma função em C é:
+
+```java
+tipo_de_retorno nome_da_funcao(tipo parametro1, tipo parametro2, ...) {
+    // Corpo da função
+    return valor; // Se necessário
+}
+```
+
+### Exemplo de Função Sem Retorno (void)
+
+Se uma função não precisa retornar um valor, o tipo de retorno deve ser void.
+
+```java
+
+#include <stdio.h>
+
+// Função que imprime uma mensagem na tela
+void saudacao() {
+    printf("Olá, bem-vindo à revisão de C!\n");
+}
+
+int main() {
+    saudacao(); // Chamando a função
+    return 0;
+}
+```
+
+###  Exemplo de Função Com Retorno
+
+Uma função pode retornar um valor usando a instrução return.
+
+```java
+#include <stdio.h>
+
+// Função que soma dois números inteiros e retorna o resultado
+int soma(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int resultado = soma(5, 3);
+    printf("A soma é: %d\n", resultado);
+    return 0;
+}
+
+```
+###  Exemplo de Função com Ponteiros
+
+Funções podem manipular variáveis por referência utilizando ponteiros.
+
+```java
+#include <stdio.h>
+
+// Função que troca os valores de duas variáveis usando ponteiros
+void trocar(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+int main() {
+    int x = 10, y = 20;
+    printf("Antes da troca: x = %d, y = %d\n", x, y);
+    trocar(&x, &y);
+    printf("Depois da troca: x = %d, y = %d\n", x, y);
+    return 0;
+}
+
+```
+
