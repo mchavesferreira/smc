@@ -67,7 +67,7 @@ Existem simuladores online, na seção a seguir apresentamos alguns
   
 - Variáveis, tipos básicos, typecast, modificadores de acesso, persistência, ponteiros s - Material SUAP: SMC _ SMC _ Cap 4 Variaveis_Rodrigo_Maximiano
 
-Exercício: Ex4.c e Ex5.c
+Exercício: ex2_modificadores.c, ex2_precisaovariaveis.c, Ex4.c e Ex5.c
   
 - Variáveis e estruturas - Material SUAP:  SMC _ Cap 5 Variáveis e estruturas_Rodrigo_Maximiano
 
