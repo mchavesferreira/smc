@@ -49,18 +49,34 @@ Atmega328P
 
 Existem simuladores online, na seção a seguir apresentamos alguns
 
-## Introdução a linguagem C
-https://github.com/mchavesferreira/smc/tree/main/linguagemc
+## Aula 14/02/2025
 
+- Apresentação da disciplina, histórico de microprocessadores, avaliação
+- Material SUAP: SMC _ Cap 1 Introdução aos Sistemas Embarcados _Rodrigo Maximiano.pdf
+  
 
-##  Ambiente de programação
+## Aula 21/02/2025
+
+- Introdução a linguagem C - https://github.com/mchavesferreira/smc/tree/main/linguagemc,  Material SUAP SMC _ Cap 3 Linguagem C_Rodrigo_Maximiano
+
+- Variáveis, diretivas de compilação - Material SUAP: SMC _ SMC _ Cap 4 Variaveis_Rodrigo_Maximiano
+
+## Aula 28/02/2025
+
+- Variáveis, modificadores Funções e Operadores - Material SUAP: SMC _ SMC _ Cap 4 Variaveis_Rodrigo_Maximiano
+  
+- Variáveis e estruturas - Material SUAP:  SMC _ Cap 5 Variáveis e estruturas_Rodrigo_Maximiano
+
+## Aula 07/03/2024
+
+-  Ambiente de programação
 
 Avr Studio 7.0
 http://studio.download.atmel.com/7.0.2389/as-installer-7.0.2389-full.exe
 
-## Primeiro-Programa-em-C
+### Primeiro-Programa-em-C
 
-### Pisca Led
+#### Pisca Led
 Este primeiro exemplo de programa com um pisca Led
 <img src=imagens/piscaled.png>
 
