@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 void main (void) {
 	char var8;
 	int var16;
