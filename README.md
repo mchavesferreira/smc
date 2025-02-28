@@ -57,17 +57,26 @@ Existem simuladores online, na seção a seguir apresentamos alguns
 
 ## Aula 21/02/2025
 
-- Introdução a linguagem C - https://github.com/mchavesferreira/smc/tree/main/linguagemc,  Material SUAP SMC _ Cap 3 Linguagem C_Rodrigo_Maximiano
+- Introdução a linguagem C, Variáveis, diretivas de compilação, comentários - https://github.com/mchavesferreira/smc/tree/main/linguagemc,  Material SUAP SMC _ Cap 3 Linguagem C_Rodrigo_Maximiano
 
-- Variáveis, diretivas de compilação - Material SUAP: SMC _ SMC _ Cap 4 Variaveis_Rodrigo_Maximiano
+
 
 ## Aula 28/02/2025
 
-- Variáveis, modificadores Funções e Operadores - Material SUAP: SMC _ SMC _ Cap 4 Variaveis_Rodrigo_Maximiano
+- Protótipo de funções, função main, operadores, Material SUAP SMC _ Cap 3 Linguagem C_Rodrigo_Maximiano
+  
+- Variáveis, tipos básicos, typecast, modificadores de acesso, persistência, ponteiros s - Material SUAP: SMC _ SMC _ Cap 4 Variaveis_Rodrigo_Maximiano
+
+Exercício: Ex4.c e Ex5.c
   
 - Variáveis e estruturas - Material SUAP:  SMC _ Cap 5 Variáveis e estruturas_Rodrigo_Maximiano
 
+Exercício: Ex3.c
+
 ## Aula 07/03/2024
+
+-  Operadores binários - Material SUAP: SMC _ Cap 6 Operadores Binarios_Rodrigo Maximiano
+
 
 -  Ambiente de programação
 
