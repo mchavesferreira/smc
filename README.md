@@ -27,27 +27,7 @@ ChatGPT:   https://chatgpt.com/g/g-TFvuISQH5-professor-dos-embarcados
 
 Avaliação da Disciplina:
 
-Pinagem
-Atmega328P
-<img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/pinout_atmega328P.png>
 
-<img src=https://github.com/mchavesferreira/smc/assets/63993080/9310c6ec-f83e-40e3-968e-5a459110fd48)>
-
-
-## Simulação online para microcontrolador
-
--Wokwi - Um simulador online muito popular para Arduino e outros microcontroladores. Ele suporta uma variedade de placas Arduino (que são baseadas em microcontroladores de 8 bits) e permite simular circuitos eletrônicos junto com o código. É uma ótima ferramenta para ensinar os conceitos de programação em C junto com a eletrônica básica.
-    https://wokwi.com/projects/356295365780235265
-    
--Tinkercad Circuits - Tinkercad, da Autodesk, oferece um simulador de Arduino que funciona diretamente no navegador. Ele permite aos usuários montar circuitos e escrever código para eles, tudo em uma interface gráfica amigável. É particularmente bom para iniciantes.
-
--Proteus - Embora não seja totalmente online, o Proteus Design Suite oferece recursos de simulação poderosos para uma ampla gama de microcontroladores. Seus estudantes podem escrever código em C, simular o funcionamento do microcontrolador e testar circuitos eletrônicos em um ambiente virtual.
-
--EasyEDA - Outra ferramenta que, embora seja mais focada no design de circuitos eletrônicos, também oferece suporte à simulação de microcontroladores, incluindo a escrita e teste de códigos em C.
-
--CircuitJS - Este é um simulador de circuitos eletrônicos baseado em JavaScript que roda diretamente no navegador. Embora seu foco principal não seja microcontroladores, ele pode ser útil para ensinar os princípios básicos de eletrônica que são relevantes para a engenharia de automação.
-
-Existem simuladores online, na seção a seguir apresentamos alguns
 
 ## Aula 14/02/2025
 
@@ -91,16 +71,42 @@ http://studio.download.atmel.com/7.0.2389/as-installer-7.0.2389-full.exe
 ## Aula 21/03/2024
 
 
-### Primeiro-Programa-em-C
+
+
+## Simulação online para microcontrolador
+
+Existem simuladores online, na seção a seguir apresentamos alguns:
+
+### Wokwi 
+
+Um simulador online muito popular para Arduino e outros microcontroladores. Ele suporta uma variedade de placas Arduino (que são baseadas em microcontroladores de 8 bits) e permite simular circuitos eletrônicos junto com o código. É uma ótima ferramenta para ensinar os conceitos de programação em C junto com a eletrônica básica.
+ - Exemplo 1:   https://wokwi.com/projects/356295365780235265
+ - Exemplo 2:   https://wokwi.com/projects/363128065545249793
+    
+-Tinkercad Circuits - Tinkercad, da Autodesk, oferece um simulador de Arduino que funciona diretamente no navegador. Ele permite aos usuários montar circuitos e escrever código para eles, tudo em uma interface gráfica amigável. É particularmente bom para iniciantes.
+
+-Proteus - Embora não seja totalmente online, o Proteus Design Suite oferece recursos de simulação poderosos para uma ampla gama de microcontroladores. Seus estudantes podem escrever código em C, simular o funcionamento do microcontrolador e testar circuitos eletrônicos em um ambiente virtual.
+
+-EasyEDA - Outra ferramenta que, embora seja mais focada no design de circuitos eletrônicos, também oferece suporte à simulação de microcontroladores, incluindo a escrita e teste de códigos em C.
+
+-CircuitJS - Este é um simulador de circuitos eletrônicos baseado em JavaScript que roda diretamente no navegador. Embora seu foco principal não seja microcontroladores, ele pode ser útil para ensinar os princípios básicos de eletrônica que são relevantes para a engenharia de automação.
+
+
+
+## Primeiro-Programa-em-C
 
 #### Pisca Led
 Este primeiro exemplo de programa com um pisca Led
+
 <img src=imagens/piscaled.png>
 
-Simulador para o programa
-https://wokwi.com/projects/363128065545249793
+### Pinagem
+Atmega328P
+<img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/pinout_atmega328P.png>
 
-Código para o primeiro programa
+<img src=https://github.com/mchavesferreira/smc/assets/63993080/9310c6ec-f83e-40e3-968e-5a459110fd48)>
+
+### Código para o primeiro programa
 ```java
 
 #define F_CPU 16000000UL // Clock frequency, needed to delay functions
