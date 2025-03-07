@@ -76,12 +76,20 @@ Exercício: Ex3.c
 ## Aula 07/03/2024
 
 -  Operadores binários - Material SUAP: SMC _ Cap 6 Operadores Binarios_Rodrigo Maximiano
-
-
 -  Ambiente de programação
-
+-  Primeiro Programa em C
+-  Utilizando Macros
+  
 Avr Studio 7.0
 http://studio.download.atmel.com/7.0.2389/as-installer-7.0.2389-full.exe
+
+
+## Aula 14/03/2024
+
+
+
+## Aula 21/03/2024
+
 
 ### Primeiro-Programa-em-C
 
