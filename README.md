@@ -158,16 +158,23 @@ A técnica de debounce, ou "debouncing", é utilizada para mitigar o efeito de "
 #define cpl_bit(Y,bit_x)(Y^=(1<<bit_x))		//troca o estado do bit x da variavel Y 
 #define tst_bit(Y,bit_x)(Y&(1<<bit_x))  	//testa o bit x da variavel Y (retorna 0 ou 1)
 
-#define LED   PD2   //LED e o substituto de PD2 na programacao 
+#define LED   PD2   //LED e o substituto de PD2 na programacao
+#define LEDPISCA   PD3   //LED e o substituto de PD2 na programacao 
+
 #define BOTAO PD7   //BOTAO e o substituto de PD7 na programacao     	
 //-------------------------------------------------------------------------------------
 int main()
 {
+        unsigned int contador=0;
 	DDRD = 0b00000100;	//configura o PORTD, PD2 saida, os demais pinos entradas
 	PORTD= 0b11111111;	/*habilita o pull-up para o botao e apaga o LED (todas as 
 						entradas com pull-ups habilitados)*/
 	while(1)								//laco infinito
 	{
+                contador++;
+                _delay_ms(1);		
+                if(contador>500) {  contador=0; cpl_bit(PORTD,LEDPISCA);   }
+
 		if(!tst_bit(PIND,BOTAO))			//se o botao for pressionado executa o if
 		{					
 			while(!tst_bit(PIND,BOTAO));	//fica preso ate soltar o botao
