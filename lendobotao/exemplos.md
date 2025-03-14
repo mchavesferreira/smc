@@ -66,6 +66,13 @@ int main() {
 int contador = 0;         // Contador de iterações do botão pressionado
 bool botaoConfirmado = false;  // Variável para indicar confirmação do botão pressionado
 
+
+#define	set_bit(Y,bit_x) (Y|=(1<<bit_x))	//ativa o bit x da vari�vel Y (coloca em 1)
+#define	clr_bit(Y,bit_x) (Y&=~(1<<bit_x))	//limpa o bit x da vari�vel Y (coloca em 0) 
+#define tst_bit(Y,bit_x) (Y&(1<<bit_x))  	//testa o bit x da vari�vel Y (retorna 0 ou 1)
+#define cpl_bit(Y,bit_x) (Y^=(1<<bit_x))	//troca o estado do bit x da vari�vel Y (complementa)
+
+
 void configurarGPIO() {
     DDRD |= (1 << LED);    // Configura PD2 como saída
     PORTD |= (1 << BOTAO); // Habilita pull-up interno no PD7
@@ -73,9 +80,8 @@ void configurarGPIO() {
 
 // Função debounce que verifica o pressionamento contínuo do botão
 void debounceBotao() {
-    int leitura = PIND & (1 << BOTAO) ? HIGH : LOW;  // Lê o estado do botão (pull-up ativo)
 
-    if (leitura == LOW) {  // Se o botão estiver pressionado
+    if (!tst_bit(PORTD,BOTAO)) {  // Se o botão estiver pressionado
         contador++;  // Incrementa o contador
         _delay_ms(1); // Delay de 1 ms antes de retornar à função
 
@@ -95,7 +101,7 @@ int main() {
         debounceBotao(); // Chama a função de debounce continuamente
 
         if (botaoConfirmado) {  // Se o botão for pressionado por tempo suficiente
-            PORTD ^= (1 << LED); // Alterna o estado do LED
+           cpl_bit(PORTD,LED); // Alterna o estado do LED
             botaoConfirmado = false; // Reseta a variável para evitar reativação contínua
             _delay_ms(200); // Pequeno atraso para evitar múltiplos acionamentos rápidos
         }
