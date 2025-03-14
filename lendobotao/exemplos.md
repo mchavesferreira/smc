@@ -1,7 +1,7 @@
 
 Exemplo 1:
 
-'''java
+```java
 
 #include <avr/io.h>
 #include <util/delay.h>
@@ -51,12 +51,12 @@ int main() {
     }
 }
 
-
-'''
+```
 
 # Exemplo 2:
 
-'''java
+```java
+
 #include <avr/io.h>
 #include <util/delay.h>
 
@@ -101,4 +101,4 @@ int main() {
         }
     }
 }
-'''
+```
