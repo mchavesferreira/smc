@@ -53,7 +53,7 @@ Exercício: ex2_modificadores.c, ex2_precisaovariaveis.c, Ex4.c e Ex5.c
 
 Exercício: Ex3.c
 
-## Aula 07/03/2024
+## Aula 07/03/2025
 
 -  Operadores binários - Material SUAP: SMC _ Cap 6 Operadores Binarios_Rodrigo Maximiano
 -  Ambiente de programação
@@ -62,36 +62,6 @@ Exercício: Ex3.c
   
 Avr Studio 7.0
 http://studio.download.atmel.com/7.0.2389/as-installer-7.0.2389-full.exe
-
-
-## Aula 14/03/2024
-
-
-
-## Aula 21/03/2024
-
-
-
-
-## Simulação online para microcontrolador
-
-Existem simuladores online, na seção a seguir apresentamos alguns:
-
-### Wokwi 
-
-Um simulador online muito popular para Arduino e outros microcontroladores. Ele suporta uma variedade de placas Arduino (que são baseadas em microcontroladores de 8 bits) e permite simular circuitos eletrônicos junto com o código. É uma ótima ferramenta para ensinar os conceitos de programação em C junto com a eletrônica básica.
- - Exemplo 1:   https://wokwi.com/projects/356295365780235265
- - Exemplo 2:   https://wokwi.com/projects/363128065545249793
-    
--Tinkercad Circuits - Tinkercad, da Autodesk, oferece um simulador de Arduino que funciona diretamente no navegador. Ele permite aos usuários montar circuitos e escrever código para eles, tudo em uma interface gráfica amigável. É particularmente bom para iniciantes.
-
--Proteus - Embora não seja totalmente online, o Proteus Design Suite oferece recursos de simulação poderosos para uma ampla gama de microcontroladores. Seus estudantes podem escrever código em C, simular o funcionamento do microcontrolador e testar circuitos eletrônicos em um ambiente virtual.
-
--EasyEDA - Outra ferramenta que, embora seja mais focada no design de circuitos eletrônicos, também oferece suporte à simulação de microcontroladores, incluindo a escrita e teste de códigos em C.
-
--CircuitJS - Este é um simulador de circuitos eletrônicos baseado em JavaScript que roda diretamente no navegador. Embora seu foco principal não seja microcontroladores, ele pode ser útil para ensinar os princípios básicos de eletrônica que são relevantes para a engenharia de automação.
-
-
 
 ## Primeiro-Programa-em-C
 
@@ -159,6 +129,9 @@ int main( )
 
 ```
 
+## Aula 14/03/2024
+
+Programação prática com pinos em modo Entrada, uso de botões e máquina de estados
 
 ## Lendo Botão
 
@@ -237,6 +210,36 @@ Este exemplo demonstra a base de uma máquina de estados, onde state determina o
 Compreendendo a mudança de fluxo por meio da chamada de switch-case em um programa principal:
 
 https://wokwi.com/projects/358828863218714625
+
+
+
+## Aula 21/03/2025
+
+
+
+
+## Simulação online para microcontrolador
+
+Existem simuladores online, na seção a seguir apresentamos alguns:
+
+### Wokwi 
+
+Um simulador online muito popular para Arduino e outros microcontroladores. Ele suporta uma variedade de placas Arduino (que são baseadas em microcontroladores de 8 bits) e permite simular circuitos eletrônicos junto com o código. É uma ótima ferramenta para ensinar os conceitos de programação em C junto com a eletrônica básica.
+ - Exemplo 1:   https://wokwi.com/projects/356295365780235265
+ - Exemplo 2:   https://wokwi.com/projects/363128065545249793
+    
+-Tinkercad Circuits - Tinkercad, da Autodesk, oferece um simulador de Arduino que funciona diretamente no navegador. Ele permite aos usuários montar circuitos e escrever código para eles, tudo em uma interface gráfica amigável. É particularmente bom para iniciantes.
+
+-Proteus - Embora não seja totalmente online, o Proteus Design Suite oferece recursos de simulação poderosos para uma ampla gama de microcontroladores. Seus estudantes podem escrever código em C, simular o funcionamento do microcontrolador e testar circuitos eletrônicos em um ambiente virtual.
+
+-EasyEDA - Outra ferramenta que, embora seja mais focada no design de circuitos eletrônicos, também oferece suporte à simulação de microcontroladores, incluindo a escrita e teste de códigos em C.
+
+-CircuitJS - Este é um simulador de circuitos eletrônicos baseado em JavaScript que roda diretamente no navegador. Embora seu foco principal não seja microcontroladores, ele pode ser útil para ensinar os princípios básicos de eletrônica que são relevantes para a engenharia de automação.
+
+
+
+
+
 
 
      
