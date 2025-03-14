@@ -171,9 +171,11 @@ int main()
 						entradas com pull-ups habilitados)*/
 	while(1)								//laco infinito
 	{
+                //////// pisca led
                 contador++;
                 _delay_ms(1);		
                 if(contador>500) {  contador=0; cpl_bit(PORTD,LEDPISCA);   }
+                //////// pisca led
 
 		if(!tst_bit(PIND,BOTAO))			//se o botao for pressionado executa o if
 		{					
