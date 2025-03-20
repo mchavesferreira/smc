@@ -1,3 +1,99 @@
+Dado que o **LightBurn** oferece suporte oficial ao **Ubuntu 20.04 e 22.04**, a escolha mais fácil e sem complicações para instalação seria:
+
+- **Ubuntu 20.04**: Pode instalar a versão normal do LightBurn (método tradicional).
+- **Ubuntu 22.04**: Recomenda-se usar a versão **AppImage**, que é mais fácil de instalar e evitará problemas com dependências como **GLIBC**.
+
+---
+
+## **📌 Melhor Escolha para Evitar Passos Extras**
+Se deseja evitar problemas de dependências e instalação manual de bibliotecas, a melhor escolha é **Ubuntu 22.04** usando a versão **AppImage**.
+
+---
+
+## **🚀 Como Instalar LightBurn no Ubuntu 22.04 via AppImage (Rápido e Simples)**
+
+### **1️⃣ Baixar o LightBurn AppImage**
+Baixe o arquivo `.appimage` no site oficial:
+
+🔗 [Download LightBurn para Linux](https://lightburnsoftware.com/pages/trial-version-try-before-you-buy)
+
+---
+
+### **2️⃣ Adicionar o usuário ao grupo `dialout` e `tty`**
+Isso garante que sua máquina possa acessar dispositivos seriais (USB para comunicação com a máquina a laser):
+
+```bash
+sudo adduser $USER dialout && sudo adduser $USER tty
+```
+
+Depois **faça logout e login novamente** para as permissões terem efeito.
+
+---
+
+### **3️⃣ Instalar a biblioteca necessária (`libfuse`)**
+O Ubuntu 22.04 não vem com a biblioteca necessária para rodar AppImages, então instale com:
+
+```bash
+sudo apt install libfuse2 -y
+```
+
+---
+
+### **4️⃣ Tornar o arquivo AppImage executável**
+Após o download, vá até a pasta onde o arquivo foi salvo (geralmente `~/Downloads`) e rode:
+
+```bash
+cd ~/Downloads
+chmod +x LightBurn-Linux64*.AppImage
+```
+
+---
+
+### **5️⃣ Rodar o LightBurn**
+Agora, basta **dar um duplo clique** no arquivo `.AppImage`, ou rodar pelo terminal:
+
+```bash
+./LightBurn-Linux64*.AppImage
+```
+
+Se quiser, também pode mover o arquivo para `/opt` para que fique acessível para todos os usuários:
+
+```bash
+sudo mv LightBurn-Linux64*.AppImage /opt/LightBurn.AppImage
+```
+
+E criar um **atalho no menu de aplicativos**:
+
+```bash
+nano ~/.local/share/applications/lightburn.desktop
+```
+
+Cole o seguinte conteúdo:
+
+```ini
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=LightBurn
+Comment=Software de controle para máquinas a laser
+Exec=/opt/LightBurn.AppImage
+Icon=/opt/LightBurn.png
+Terminal=false
+Categories=Graphics;
+```
+
+Salve (`Ctrl + X`, `S`, `Enter`), e agora o LightBurn aparecerá no menu do Ubuntu.
+
+---
+
+### **🎯 Conclusão**
+- **Se estiver no Ubuntu 22.04**, usar o **AppImage** é a melhor opção, pois evita problemas com dependências como **GLIBC e libstdc++**.
+- **Se estiver no Ubuntu 20.04**, pode usar o método tradicional (`.run`), mas pode encontrar problemas com GLIBC dependendo da versão.
+- **Evite Ubuntu 18.04** pois apenas versões antigas do LightBurn funcionam nele.
+
+🚀 Agora você pode rodar o **LightBurn no Ubuntu 22.04** de forma rápida e sem complicações!
+
+
 Sim! O **LightBurn** é um software popular para controle de máquinas a laser, e ele pode ser instalado no **Ubuntu 20.04** de maneira relativamente simples. Siga os passos abaixo para instalar corretamente:
 
 ---
