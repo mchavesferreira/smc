@@ -550,8 +550,8 @@ Aperfeiçoamento do projeto 1 ou uma nova proposta com a programação do STM32.
 - 
 <BR><h1>Sugestão de lista de compras para montagem de projetos com ESP32</h1>
 <BR>
-<BR>-Esp32  Devkit Esp32-wroom-32 - 30 Pinos - Tipo C
-<BR><img src=https://github.com/mchavesferreira/mcr/imagens/ESP32_tipoC.png width=200 height=200>
+<BR>-Esp32  Devkit Esp32-wroom-32 ou ESP32S3 - 30 Pinos - Tipo C
+<BR><img src=[https://github.com/mchavesferreira/mcr/imagens/ESP32_tipoC.png ](https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/imagens/ESP32_tipoC.png)width=200 height=200>
 <BR>https://produto.mercadolivre.com.br/MLB-3456778444-esp32-doit-devkit-esp32-wroom-32-30-pinos-tipo-c-_JM
 
 <BR>-Display Oled 0.96 I2c Branco/amarelo ou Azul 
