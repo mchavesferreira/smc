@@ -191,6 +191,8 @@ int main()
 }
 ```
 
+## Aula 21/03/2025
+
 ## Maquina de estados 
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/3765f170-1abe-4377-89a2-41d980c8b771)
 
