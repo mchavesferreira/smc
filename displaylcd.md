@@ -93,4 +93,5 @@ https://wokwi.com/projects/358831286702363649
 
 
 - Fonte: AVR Técnicas de projetos
-- 
+
+Código Fonte:   https://github.com/mchavesferreira/smc/blob/main/LCD_4bits_aula.zip
