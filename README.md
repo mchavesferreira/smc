@@ -193,7 +193,17 @@ int main()
 
 ## Aula 21/03/2025
 
-## Maquina de estados 
+### Display 7 segmentos
+
+<a href=https://github.com/mchavesferreira/smc/blob/main/display7segmentos.md>Exemplo display 7 segmentos</a>
+
+###  Display LCD
+
+<a href=https://github.com/mchavesferreira/smc/blob/main/displaylcd.md>Exemplo LCD</a>
+
+
+### Maquina de estados 
+
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/3765f170-1abe-4377-89a2-41d980c8b771)
 
 ### Switch-case
