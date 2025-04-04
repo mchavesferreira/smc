@@ -11,25 +11,25 @@
 #include <avr/interrupt.h>
 #include "def_principais.h"
 #include "USART.h"
-			//inclusão do arquivo com as principais definições
+			//inclusÃ£o do arquivo com as principais definiÃ§Ãµes
 unsigned int conta;
 
 
 void configura_AD(){
 	// configura canal 0
-	ADMUX = (1<<REFS0) | (1<<MUX2) | (1<<MUX0);			//Tensão interna de ref (+5V), canal ADC5
+	ADMUX = (1<<REFS0) | (1<<MUX2) | (1<<MUX0);			//TensÃ£o interna de ref (+5V), canal ADC5
 	ADCSRA = (1<<ADEN) | (1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0);	//habilita o AD e define um prescaler de 128 (clk_AD = F_CPU/128), 125 kHz
 }
 
 
 signed int le_temp()
 {
-	set_bit(ADCSRA, ADSC);								//inicia a conversão
-	while(tst_bit(ADCSRA,ADSC));						//espera a conversão ser finalizada	
+	set_bit(ADCSRA, ADSC);								//inicia a conversÃ£o
+	while(tst_bit(ADCSRA,ADSC));						//espera a conversÃ£o ser finalizada	
 	return (ADC);
 }
 
-ISR(TIMER0_OVF_vect) // estouro interrupção do TC0
+ISR(TIMER0_OVF_vect) // estouro interrupÃ§Ã£o do TC0
 {   conta++;
 	TCNT0=100; // 156 contagens equivalem a 10ms em 16mhz
 	if(conta==100) // 100* 10ms = 1 seg
@@ -73,7 +73,7 @@ void set_pwm_pb1(unsigned int valor)  // timer 1
 	TCCR1A |= (1<<COM1A1);
 	TCCR1B = (1<< WGM13)|(1<< CS11); //T=20ms prescaler 64
 	TCCR1C = 0;
-	OCR1A  = valor; //inicializa PWM para saida em tensão = 0 Vcc 
+	OCR1A  = valor; //inicializa PWM para saida em tensÃ£o = 0 Vcc 
 	sei();
 }
 
@@ -82,7 +82,7 @@ void set_pwm_pb2(unsigned int valor)   // timer 1
 	TCCR1A |= (1<<COM1B1);
 	TCCR1B = (1<< WGM13)|(1<< CS11); //T=20ms //T=20ms prescaler 64
 	TCCR1C = 0;
-	OCR1B  = valor; //inicializa PWM para saida em tensão = 0 Vcc
+	OCR1B  = valor; //inicializa PWM para saida em tensÃ£o = 0 Vcc
 	sei();
 }
 
@@ -99,35 +99,35 @@ void set_timer1_overflow(unsigned int valor)  // timer 1
 void set_timer0_overflow(unsigned int valor)
 {
 	    TCCR0A = 0b01010000;
-	    TCCR0B = (1<<CS02) | (1<<CS00);		//TC0 com prescaler de 1024, a 16 MHz gera uma interrupção a cada 16,384 ms
-	    TIMSK0 =   1<<TOIE0  ;			//		//habilita a interrupção estouro TC0
+	    TCCR0B = (1<<CS02) | (1<<CS00);		//TC0 com prescaler de 1024, a 16 MHz gera uma interrupÃ§Ã£o a cada 16,384 ms
+	    TIMSK0 =   1<<TOIE0  ;			//		//habilita a interrupÃ§Ã£o estouro TC0
 	    TCNT0= valor;  // contagem iniciando 
 	    sei();
 }
 
 void set_timer1_contapulso(unsigned int valor)   // timer 1 entrada PD5
-{	TIMSK1 = (1<<OCIE1A);	//habilita a interrupção do TC1 por igualdade de comparação
+{	TIMSK1 = (1<<OCIE1A);	//habilita a interrupÃ§Ã£o do TC1 por igualdade de comparaÃ§Ã£o
 	TCCR1B = (1<<WGM12)|(1<<CS12) | (1<<CS11) |(1<<CS10);//clock externo  contagem na borda de subida  PD5- modo CTC
-	OCR1A = 10;							/*valor para a contagem máxima do TC1 – VALOR DE COMPARAÇÃO. 
+	OCR1A = 10;							/*valor para a contagem mÃ¡xima do TC1 â€“ VALOR DE COMPARAÃ‡ÃƒO. 
 										chama-se a interrupcao TIMER1_COMPA_vect
-										Como o sinal de clock externo é de 60 Hz, é gerada uma interrupção a cada 1 s*/
-	sei();								//liga a interrupção
+										Como o sinal de clock externo Ã© de 60 Hz, Ã© gerada uma interrupÃ§Ã£o a cada 1 s*/
+	sei();								//liga a interrupÃ§Ã£o
 
 }
 
 
 int main()
 {
-	DDRB  = 0b00111111;					//somente pino do LED como saída
+	DDRB  = 0b00111111;					//somente pino do LED como saÃ­da
 	PORTB = 0b00000000;					//apaga LED 
 	
-	DDRD  = 0b00000000;						//somente pino do LED como saída
+	DDRD  = 0b00000000;						//somente pino do LED como saÃ­da
 	
-	UCSR0B = 0x00;				//PD0 e PD1 como I/O genérico, para uso no Arduino
+	UCSR0B = 0x00;				//PD0 e PD1 como I/O genÃ©rico, para uso no Arduino
     DDRC= 0b00000000;  // entrada
     PORTC= 0b11111111;
 	
-    //	unsigned char digitos[tam_vetor];	//declaração da variável para armazenagem dos digitos
+    //	unsigned char digitos[tam_vetor];	//declaraÃ§Ã£o da variÃ¡vel para armazenagem dos digitos
     //	unsigned int valorbinario;
    //   USART_Inic(MYUBRR);  // inicia comunicao serial
     //  inic_LCD_4bits();   // inicializa LCD
