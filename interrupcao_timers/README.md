@@ -12,6 +12,10 @@ Slide Interrupção: [ https://github.com/mchavesferreira/smc/blob/main/aula_int
         - [Timer 2](#Timer-2)
 
 
+Exemplo wowki com uso de flags e maquina de estados
+
+https://wokwi.com/projects/427957207902240769
+
 
 ## Interrupção
 
