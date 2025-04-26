@@ -539,7 +539,9 @@ Utilizando o projeto inicial da <a href=https://wokwi.com/projects/3501444392089
 - as perguntas e respostas devem utilizar display LCD e botões (exemplos para botões: + - 1 2 3 Y N enter) 
 -  enviar o código e link de simulação na área trabalhos (suap), um integrante da dupla. Lembre-se colocar "Lock" em seu projeto 
 - As duplas não podem ter trabalhos "clones", criatividade e dificuldades serão pontuados
-  
+<BR>
+<B>OBS: 
+Para tempos de atraso, acima de 10 ms total, utilizar TIMERS 0, 1 ou 2.</B><BR>
 - ** outras especificidades posteriormente informadas.
 
 ## Orientações para Projeto 2:
