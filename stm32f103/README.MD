@@ -21,6 +21,14 @@ A **HAL (Hardware Abstraction Layer)** é uma biblioteca desenvolvida pela **STM
 ✔ **Compatibilidade com CMSIS** → A HAL funciona em conjunto com o **CMSIS** (Cortex Microcontroller Software Interface Standard).  
 ✔ **Geração Automática com STM32CubeMX** → O STM32CubeMX pode gerar código baseado na HAL.  
 
+
+-- 
+## Instalação 
+STM32CubeMX
+https://www.st.com/content/st_com/en/stm32cubemx.html
+
+
+
 ---
 
 ##  Estrutura da Biblioteca HAL
