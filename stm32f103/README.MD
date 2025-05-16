@@ -1,11 +1,28 @@
 
 
-Curso STM32f103
+# Curso STM32f103
 
 
 STM32F103 - PDF Documentation
 
 https://www.st.com/en/microcontrollers-microprocessors/stm32f103/documentation.html
+
+
+## Ambiente de Desenvolvimenoto
+
+
+### Conheça o STM32: 
+https://www.makerhero.com/blog/conheca-o-microcontrolador-stm32
+
+https://embarcados.com.br/memoria-do-microcontrolador-stm32f103c8t6/
+
+###  Como programar STM32 em C : https://www.makerhero.com/blog/como-programar-stm32-em-c/
+
+STM32CubeMX
+https://www.st.com/en/development-tools/stm32cubemx.html#get-software
+
+STM32CubeProgrammer:
+https://www.st.com/en/development-tools/stm32cubeprog.html
 
 
 #  Biblioteca HAL no STM32
