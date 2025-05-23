@@ -45,6 +45,23 @@ STM32CubeMX
 https://www.st.com/content/st_com/en/stm32cubemx.html
 
 
+## Gravando com UART
+
+Configurando o modo boot:
+
+O Blue Pill tem dois jumpers chamados BOOT0 e BOOT1 (às vezes escrito como BOOT0 e BOOT1 no PCB).
+
+Para programar via serial:
+
+    BOOT0 → 1 (High) (lado mais próximo da borda).
+
+    BOOT1 → 0 (Low) (lado mais próximo dos pinos).
+
+Depois de gravar, para rodar o programa, volte para:
+
+    BOOT0 → 0
+
+    BOOT1 → 0
 
 ---
 
