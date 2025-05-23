@@ -168,6 +168,183 @@ int main(void) {
 ```
 
 
+
+# 🚀 Aula: GPIO com STM32 HAL
+
+## 📚 Introdução
+
+GPIO (General Purpose Input/Output) são os pinos de propósito geral dos microcontroladores STM32, que podem ser configurados como **entrada**, **saída**, **entrada com pull-up/pull-down**, ou até para funções especiais como **interrupções externas**.
+
+A biblioteca **HAL** oferece uma camada de abstração para manipular esses pinos de forma simples e portável.
+
+---
+
+## 🔧 Funções GPIO na Biblioteca HAL
+
+### 1️⃣ **Configuração dos GPIOs**
+
+A configuração dos pinos é feita usando a função:
+
+```c
+HAL_GPIO_Init(GPIO_TypeDef *GPIOx, GPIO_InitTypeDef *GPIO_Init);
+```
+
+* **Parâmetros:**
+
+  * `GPIOx`: Porta desejada (`GPIOA`, `GPIOB`, `GPIOC`, etc.).
+  * `GPIO_Init`: Ponteiro para a estrutura que define os parâmetros da configuração.
+
+* **Exemplo de estrutura de configuração:**
+
+```c
+GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+GPIO_InitStruct.Pin = GPIO_PIN_13;
+GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+GPIO_InitStruct.Pull = GPIO_NOPULL;
+GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+
+HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+```
+
+---
+
+### 2️⃣ **Escrever no GPIO (Saída)**
+
+```c
+HAL_GPIO_WritePin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin, GPIO_PinState PinState);
+```
+
+* **Parâmetros:**
+
+  * `GPIOx`: Porta (`GPIOA`, `GPIOB`...).
+  * `GPIO_Pin`: Pino (`GPIO_PIN_13`...).
+  * `PinState`: `GPIO_PIN_SET` (nível alto) ou `GPIO_PIN_RESET` (nível baixo).
+
+* **Exemplo:**
+
+```c
+HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, GPIO_PIN_RESET);
+```
+
+---
+
+### 3️⃣ **Ler do GPIO (Entrada)**
+
+```c
+GPIO_PinState HAL_GPIO_ReadPin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
+```
+
+* **Retorna:** `GPIO_PIN_SET` ou `GPIO_PIN_RESET`.
+
+* **Exemplo:**
+
+```c
+if (HAL_GPIO_ReadPin(GPIOA, GPIO_PIN_0) == GPIO_PIN_SET) {
+    // Botão pressionado
+}
+```
+
+---
+
+### 4️⃣ **Alternar o estado do pino (Toggle)**
+
+```c
+HAL_GPIO_TogglePin(GPIO_TypeDef *GPIOx, uint16_t GPIO_Pin);
+```
+
+* **Exemplo:**
+
+```c
+HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+```
+
+> 📝 *Muito útil para piscar LEDs sem precisar saber se estava ligado ou desligado antes.*
+
+---
+
+### 5️⃣ **Desinicializar um GPIO (Liberar recursos)**
+
+```c
+HAL_GPIO_DeInit(GPIO_TypeDef *GPIOx, uint32_t GPIO_Pin);
+```
+
+* **Exemplo:**
+
+```c
+HAL_GPIO_DeInit(GPIOC, GPIO_PIN_13);
+```
+
+---
+
+## 🏗️ Estrutura da configuração (`GPIO_InitTypeDef`)
+
+| Campo   | Descrição                                             |
+| ------- | ----------------------------------------------------- |
+| `Pin`   | Qual pino será usado (`GPIO_PIN_0` até `GPIO_PIN_15`) |
+| `Mode`  | Modo do pino: saída, entrada, interrupção, etc.       |
+| `Pull`  | Pull-up, Pull-down, ou sem pull                       |
+| `Speed` | Velocidade de operação (para saída)                   |
+
+---
+
+## 🔥 Modos possíveis (`Mode`)
+
+* `GPIO_MODE_INPUT` — Entrada digital
+* `GPIO_MODE_OUTPUT_PP` — Saída push-pull
+* `GPIO_MODE_OUTPUT_OD` — Saída open-drain
+* `GPIO_MODE_AF_PP` — Função alternativa push-pull
+* `GPIO_MODE_AF_OD` — Função alternativa open-drain
+* `GPIO_MODE_ANALOG` — Modo analógico
+* `GPIO_MODE_IT_RISING` — Interrupção borda de subida
+* `GPIO_MODE_IT_FALLING` — Interrupção borda de descida
+* `GPIO_MODE_IT_RISING_FALLING` — Interrupção em ambas bordas
+
+---
+
+## 🎛️ Pull-up / Pull-down (`Pull`)
+
+* `GPIO_NOPULL`
+* `GPIO_PULLUP`
+* `GPIO_PULLDOWN`
+
+---
+
+## ⚡ Velocidade (`Speed`)
+
+* `GPIO_SPEED_FREQ_LOW`
+* `GPIO_SPEED_FREQ_MEDIUM`
+* `GPIO_SPEED_FREQ_HIGH`
+* `GPIO_SPEED_FREQ_VERY_HIGH`
+
+---
+
+## 💡 Exemplo completo: Piscar LED
+
+```c
+GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+// 1. Habilita clock da porta GPIOC
+__HAL_RCC_GPIOC_CLK_ENABLE();
+
+// 2. Configura pino PC13 como saída
+GPIO_InitStruct.Pin = GPIO_PIN_13;
+GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+GPIO_InitStruct.Pull = GPIO_NOPULL;
+GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+HAL_GPIO_Init(GPIOC, &GPIO_InitStruct);
+
+// 3. Loop infinito piscando LED
+while (1) {
+    HAL_GPIO_TogglePin(GPIOC, GPIO_PIN_13);
+    HAL_Delay(500); // atraso de 500ms
+}
+```
+
+---
+
+
+
 ##  Referências Oficiais
 
 🔹 Documentação oficial da ST: [HAL and LL Drivers](https://www.st.com/content/st_com/en/products/embedded-software/mcu-middleware/stm32-hal-library.html)  
