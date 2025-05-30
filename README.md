@@ -547,6 +547,41 @@ Para tempos de atraso, acima de 10 ms total, utilizar TIMERS 0, 1 ou 2.</B><BR>
 ## Orientações para Projeto 2:
 Aperfeiçoamento do projeto 1 ou uma nova proposta com a programação do STM32. Acrescentar novos recursos de programação e hardware; PWM, comunicação serial com ESP32 (wifi), memorização de parametros em eeprom, tela OLED I2C.
 
+
+
+Projeto 2: Microcontrolado com Wifi
+
+    Visualizar Solicitação
+    Editar Solicitação
+    Remover Solicitação
+
+Projeto em AVR C Microcontrolador Atmega 328P utilizando I2C e UART com wifi
+Entregar em formato relatório resumido texto contendo introdução teórica sobre a variável (sensor) utilizada e referências; e enviar por email ou neste canal (suap) também o código fonte.
+
+
+Semelhante a maquina de lavar, o programa deve conter
+
+-Leitura de um sensor analógico utilizando conversor AD
+
+-Função de transferência para o sensor,
+
+- Interface com ESP32 com acesso wifi para uma dashboard em html.
+
+- Atualização de STATUS no OLED e Dashboard
+
+- Comandos na interface será mais ponderados na pontuação.
+
+- Exibir valor no display OLED protocolo i2c.
+
+- Menu para 2 Set Point, ou seja, quando alcançar um valor mínimo, aciona-se LED 1, e quando alcança um limite máximo, acende-se um Led 2.
+- Verifiquem no laboratório a disponibilidade de microntroladores e protoboard
+.
+Use como referências de código o reposítório: https://github.com/mchavesferreira/smc
+
+Recomenda-se como prazo de entrega o dia 27/06/2025.
+
+
+
 Exemplos de projetos
 https://github.com/mchavesferreira/smc/tree/main/esp32_serial2
 
@@ -606,6 +641,6 @@ https://embarcados.com.br/franzininho-diy-contador-de-pulsos-externos/
  - Avaliação Presencial escrita (Sorteio de um projeto em dupla)
 
 
-  - Projeto 2 - 23/6/2025.
+  - Projeto 2 - 27/6/2025.
 
-  - Avaliação 2.  30/6/2025
+  - Avaliação 2.  27/6/2025
