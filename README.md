@@ -547,7 +547,8 @@ Para tempos de atraso, acima de 10 ms total, utilizar TIMERS 0, 1 ou 2.</B><BR>
 ## Orientações para Projeto 2:
 Aperfeiçoamento do projeto 1 ou uma nova proposta com a programação do STM32. Acrescentar novos recursos de programação e hardware; PWM, comunicação serial com ESP32 (wifi), memorização de parametros em eeprom, tela OLED I2C.
 
-
+Exemplos de projetos
+https://github.com/mchavesferreira/smc/tree/main/esp32_serial2
 
 - 
 <BR><h1>Sugestão de lista de compras para montagem de projetos com ESP32</h1>
