@@ -529,6 +529,11 @@ https://github.com/mchavesferreira/mcr/blob/main/ESP32.md
 
 Exemplos de Bridge ESP32 <>UNO
 
+
+Codigo exemplo trabalho 2
+
+https://github.com/mchavesferreira/smc/tree/main/exemplotrabalho2
+
 Pagina interativa com controle de eventos
 
 http://monitor.rpiot.com.br/aula/eventos/
@@ -587,10 +592,7 @@ Use como referências de código o reposítório: https://github.com/mchavesferr
 
 Recomenda-se como prazo de entrega o dia 27/06/2025.
 
-#Aula 13/06/2025
 
-Codigo exemplo trabalho 2
-https://github.com/mchavesferreira/smc/tree/main/exemplotrabalho2
 
 Exemplos de projetos
 https://github.com/mchavesferreira/smc/tree/main/esp32_serial2
