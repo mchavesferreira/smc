@@ -19,8 +19,8 @@ const int serialBaudRate = 115200;
 const int serialDataTimeout = 1000;  // Tempo de espera para receber dados via serial (1 segundo)
 
 // Enter your SSID and PASSWORD
-const char* ssid = "alunos";
-const char* password = "1234678";
+const char* ssid = "ifsp-ibge-1";
+const char* password = "ifspcatanduva";
 
 
 
