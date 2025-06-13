@@ -524,7 +524,14 @@ Exemplo:  https://wokwi.com/projects/365174034245894145
 
 https://github.com/mchavesferreira/mcr/blob/main/ESP32.md
 
- 
+
+# Aula 13/06/2025
+
+Exemplos de Bridge ESP32 <>UNO
+
+Pagina interativa com controle de eventos
+
+http://monitor.rpiot.com.br/aula/eventos/
 
 
 # Trabalhos Turma 2025
