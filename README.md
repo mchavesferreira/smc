@@ -587,7 +587,10 @@ Use como referências de código o reposítório: https://github.com/mchavesferr
 
 Recomenda-se como prazo de entrega o dia 27/06/2025.
 
+#Aula 13/06/2025
 
+Codigo exemplo trabalho 2
+https://github.com/mchavesferreira/smc/tree/main/exemplotrabalho2
 
 Exemplos de projetos
 https://github.com/mchavesferreira/smc/tree/main/esp32_serial2
