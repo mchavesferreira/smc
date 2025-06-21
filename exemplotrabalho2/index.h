@@ -8,7 +8,6 @@ const char MAIN_page[] PROGMEM = R"=====(
     </head>
 <style>
 body {
-    background-image: url('https://th.bing.com/th/id/OIG.MbP81HSn3hqRMeZV8ZpD?w=270&h=270&c=6&r=0&o=5&dpr=1.3&pid=ImgGn');
     background-size: 70% auto;
     background-repeat: no-repeat;
     background-position: center;
@@ -19,6 +18,18 @@ body {
 .card{
     max-width: 400px;
     min-height: 400px;
+    background: rgba(2, 184, 117, 0.8);
+    padding: 30px;
+    box-sizing: border-box;
+    color: #FFF;
+    margin:20px;
+    box-shadow: 0px 2px 18px -4px rgba(0,0,0,0.75);
+    text-align: center;
+}
+
+.card2{
+    max-width: 150px;
+    min-height: 100px;
     background: rgba(2, 184, 117, 0.8);
     padding: 30px;
     box-sizing: border-box;
@@ -67,7 +78,7 @@ body {
 <body>
 
 <div class="card">
-    <h4>Projeto Máquina de Milkshake</h4>
+    <h3>Exemplo Máquina de Milkshake</h4>
     <div class="menu-item">
         <span>Sabor:</span>
         <select id="sabor">
@@ -96,7 +107,7 @@ body {
     <button onclick="cancelarPedido()">Cancelar Pedido</button>
     <h1>Status:<span id="textoserial"></span></h1>
 
-<div class="card">
+<div class="card2">
   <div class="oled" id="oled">
     ...
   </div>
