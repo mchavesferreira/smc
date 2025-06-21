@@ -133,8 +133,8 @@ https://github.com/mchavesferreira/smc/blob/main/esp32_serial2/
 #include <WebServer.h>
 
 // Defina suas credenciais de Wi-Fi
-const char* ssid = "ifsp-ibge-1";
-const char* password = "ifspcatanduva";
+const char* ssid = "";
+const char* password = "";
 
 const int serialDataTimeout = 1000;  // Tempo de espera para receber dados via serial (1 segundo)
 
