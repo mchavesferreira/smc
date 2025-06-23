@@ -592,6 +592,10 @@ Use como referências de código o reposítório: https://github.com/mchavesferr
 
 Recomenda-se como prazo de entrega o dia 27/06/2025.
 
+# Exemplo projeto 2 
+
+https://github.com/mchavesferreira/IoT_Esp32_Uno_SMC_projeto2
+
 
 
 Exemplos de projetos
