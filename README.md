@@ -35,7 +35,7 @@ Avaliação da Disciplina:
 - Material SUAP: SMC _ Cap 1 Introdução aos Sistemas Embarcados _Rodrigo Maximiano.pdf
   
 
-## Aula 24/02/20266
+## Aula 24/02/2026
 
 - Introdução a linguagem C, Variáveis, diretivas de compilação, comentários - https://github.com/mchavesferreira/smc/tree/main/linguagemc,  Material SUAP SMC _ Cap 3 Linguagem C_Rodrigo_Maximiano
 
