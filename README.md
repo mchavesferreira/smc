@@ -29,19 +29,19 @@ Avaliação da Disciplina:
 
 
 
-## Aula 14/02/2025
+## Aula 10/02/2026
 
 - Apresentação da disciplina, histórico de microprocessadores, avaliação
 - Material SUAP: SMC _ Cap 1 Introdução aos Sistemas Embarcados _Rodrigo Maximiano.pdf
   
 
-## Aula 21/02/2025
+## Aula 24/02/20266
 
 - Introdução a linguagem C, Variáveis, diretivas de compilação, comentários - https://github.com/mchavesferreira/smc/tree/main/linguagemc,  Material SUAP SMC _ Cap 3 Linguagem C_Rodrigo_Maximiano
 
 
 
-## Aula 28/02/2025
+## Aula 03/03/2026
 
 - Protótipo de funções, função main, operadores, Material SUAP SMC _ Cap 3 Linguagem C_Rodrigo_Maximiano
   
@@ -53,7 +53,7 @@ Exercício: ex2_modificadores.c, ex2_precisaovariaveis.c, Ex4.c e Ex5.c
 
 Exercício: Ex3.c
 
-## Aula 07/03/2025
+## Aula 10/03/2026
 
 -  Operadores binários - Material SUAP: SMC _ Cap 6 Operadores Binarios_Rodrigo Maximiano
 -  Ambiente de programação
@@ -129,7 +129,7 @@ int main( )
 
 ```
 
-## Aula 14/03/2024
+## Aula 
 
 Programação prática com pinos em modo Entrada, uso de botões e máquina de estados
 
@@ -191,7 +191,7 @@ int main()
 }
 ```
 
-## Aula 21/03/2025
+## Aula 
 
 ### Display 7 segmentos
 
@@ -234,7 +234,7 @@ https://wokwi.com/projects/358828863218714625
 
 
 
-## Aula 21/03/2025
+## Aula 
 
 
 
@@ -539,10 +539,11 @@ Pagina interativa com controle de eventos
 http://monitor.rpiot.com.br/aula/eventos/
 
 
-# Trabalhos Turma 2025
+# Trabalhos Turma 2026
+
 ## Orientações para Projeto 1:
 
-Utilizando o projeto inicial da <a href=https://wokwi.com/projects/350144439208903252>maquina de lavar</a>, crie uma máquina personalizada (não será considerado máquina de lavar) que atenda os seguintes critérios:
+Utilizando o projeto inicial da <a href=https://wokwi.com/projects/350144439208903252>maquina de lavar</a>, crie uma máquina personalizada (não será considerado máquina de lavar e café) que atenda os seguintes critérios:
 
 - apresente no mínimo 05 perguntas entre (sim x não) ou ajustes de valores (exemplo tempo);
 - ajustes de pelo menos 03 valores inteiros;
@@ -557,15 +558,13 @@ Para tempos de atraso, acima de 10 ms total, utilizar TIMERS 0, 1 ou 2.</B><BR>
 - ** outras especificidades posteriormente informadas.
 
 ## Orientações para Projeto 2:
+
 Aperfeiçoamento do projeto 1 ou uma nova proposta com a programação do STM32. Acrescentar novos recursos de programação e hardware; PWM, comunicação serial com ESP32 (wifi), memorização de parametros em eeprom, tela OLED I2C.
 
 
 
-Projeto 2: Microcontrolado com Wifi
+## Orientações para  Projeto 2: Microcontrolado com Wifi
 
-    Visualizar Solicitação
-    Editar Solicitação
-    Remover Solicitação
 
 Projeto em AVR C Microcontrolador Atmega 328P utilizando I2C e UART com wifi
 Entregar em formato relatório resumido texto contendo introdução teórica sobre a variável (sensor) utilizada e referências; e enviar por email ou neste canal (suap) também o código fonte.
@@ -590,7 +589,7 @@ Semelhante a maquina de lavar, o programa deve conter
 .
 Use como referências de código o reposítório: https://github.com/mchavesferreira/smc
 
-Recomenda-se como prazo de entrega o dia 27/06/2025.
+Recomenda-se como prazo de entrega o dia xx/06/2026.
 
 # Exemplo projeto 2 
 
@@ -645,18 +644,3 @@ https://github.com/Franzininho/exemplos-avr-libc/tree/main/exemplos
 https://embarcados.com.br/franzininho-diy-contador-de-pulsos-externos/
 
 
-## Turma 2025
-   - Tarefa Suap - Cronometro Big Number em LCD simulado em wokwi e/ou proteus
-
-  - Tarefa Suap - Maquina de Lavar com delay simulado em wokwi e/ou proteus
-
-   - Tarefa Suap - Maquina de Lavar com Timers simulado em wokwi e/ou proteus
-
-- Projeto 1: Protótipo em protoboard do projeto 1
-
- - Avaliação Presencial escrita (Sorteio de um projeto em dupla)
-
-
-  - Projeto 2 - 27/6/2025.
-
-  - Avaliação 2.  27/6/2025
