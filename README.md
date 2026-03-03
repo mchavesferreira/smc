@@ -77,6 +77,32 @@ Atmega328P
 <img src=https://github.com/mchavesferreira/smc/assets/63993080/9310c6ec-f83e-40e3-968e-5a459110fd48)>
 
 ### Código para o primeiro programa
+
+Este primeiro exemplo de programa com um pisca Led
+
+Código para o primeiro programa
+```java
+#define F_CPU 16000000UL // Define clock do microcontrolador (16 MHz)
+#include <avr/io.h> // Permite acesso aos registradores do AVR
+#include <util/delay.h> // Biblioteca para funções de atraso
+
+int main()
+{
+  DDRB = 0b00100000; // Configura PB5 como saída
+  while(true)  // Loop infinito
+  { 
+    PORTB = 0b00100000; // Coloca PB5 em nível alto (liga LED)
+    _delay_ms(1000); // Espera 1 segundo
+    PORTB = 0b00000000; // Coloca PB5 em nível baixo (desliga LED)
+    _delay_ms(1000); // Espera 1 segundo antes de repetir
+  }
+}
+}
+```
+<br><a href=https://wokwi.com/projects/363128065545249793>Pisca Led em C</a>
+
+### Utilizando operadores
+
 ```java
 
 #define F_CPU 16000000UL // Clock frequency, needed to delay functions
@@ -91,7 +117,7 @@ int main(){
    PORTB &= ~(1<<PB5); // Turn led off
   _delay_ms(1000); // Wait another second
   }
-return 0;
+
 }
 ```
 
