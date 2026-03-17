@@ -88,12 +88,12 @@ int main()
 	}
 
 }
-```java
+```
 </details>
 
 
-
 Exemplo de impressão de números, primeiro é necessário separar as casas posicionais
+
 ```java
 ident_num(cont,digitos);
 			cmd_LCD(0x8D,0);			//desloca o cursor para que os 3 digitos fiquem a direita do LCD
