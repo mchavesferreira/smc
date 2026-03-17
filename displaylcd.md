@@ -49,24 +49,7 @@ PROGMEM const char mensagem[] = " DADOS DE 4BITS!\0"; //mensagem armazenada na m
 escreve_LCD_Flash(mensagem);	//string armazenada na flash
 ```
 
-### Programa-Reservatorio
 
-Exemplo de um programa para controle de reservatório.
-
-<BR>Defina pinos de entrada e saída. As entradas com push button aterradas e  pull up ativos. O Programa aguarda “Start” ser pressionado, que liga a  Valvula 1 até que sensor cheio seja acionado. O misturador é acionado  por2 segundos. Esvazia-se o tanque até o sensor vazio ser acionado, retornando ao estado inicial. Considere clock 16Mhz.
-<br><BR>Solução:
-<br>Para que servem e quais são os registradores de I/O de um AVR Atmega?  Os registradores de IO  funcionam para configurar, ler e escrever cada  pino das portas  do microcontrolador, cada bit representa um pino:  DDRx  quando em 0=entrada e 1=saída. PINx para a leitura do pino quando este é  definido com entrada; PORTx escreve na saída se o pino é definido como  saída ou ativa pull-up se o pino é definido como entrada.
-	<Br>
-<details><summary>Ilustração da Solução (clique)</summary>
-<p>
-<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/oprojeto.jpg?raw=true>
-<br><img src=[https://github.com/mchavesferreira/mcr/imagens/](https://github.com/mchavesferreira/mcr/blob/main/imagens/)configuracaopinos.jpg>
-
-</p>
-</details>
-
-<details><summary>Código Solução Controle Reservatório</summary>
-<p>
 
 ### Código Impressão de numeros
 
@@ -75,13 +58,7 @@ Exemplo de um programa para controle de reservatório.
 https://wokwi.com/projects/393019671977442305
 
 <details><summary>Codigo (clique)</summary>
-//------------------------------------------------------------------------------------- //
-//		AVR e Arduino: T�cnicas de Projeto, 2a ed. - 2012.								//	
-//------------------------------------------------------------------------------------- //
-//=====================================================================================	//
-//		ACIONANDO UM DISPLAY DE CRISTAL LIQUIDO DE 16x2									//
-//		Uso da fun��o ident_num(...)													//
-//=====================================================================================	//
+```java	
 
 #include "def_principais.h"	//inclus�o do arquivo com as principais defini��es 
 #include "LCD.h"
@@ -111,7 +88,7 @@ int main()
 	}
 
 }
-//======================================================================================
+```java
 </details>
 
 
