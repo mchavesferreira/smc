@@ -59,7 +59,7 @@ Exemplo de um programa para controle de reservatório.
 	<Br>
 <details><summary>Ilustração da Solução (clique)</summary>
 <p>
-<br><img src=https://github.com/mchavesferreira/mcr/imagens/oprojeto.jpg>
+<br><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/opr/oprojeto.jpg>
 <br><img src=https://github.com/mchavesferreira/mcr/imagens/configuracaopinos.jpg>
 
 </p>
