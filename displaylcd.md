@@ -48,8 +48,27 @@ escreve_LCD("  INTERFACE DE");	//string armazenada na RAM
 PROGMEM const char mensagem[] = " DADOS DE 4BITS!\0"; //mensagem armazenada na memória flash
 escreve_LCD_Flash(mensagem);	//string armazenada na flash
 ```
-### Código Impressão de mensagens
 
+### Programa-Reservatorio
+
+Exemplo de um programa para controle de reservatório.
+
+<BR>Defina pinos de entrada e saída. As entradas com push button aterradas e  pull up ativos. O Programa aguarda “Start” ser pressionado, que liga a  Valvula 1 até que sensor cheio seja acionado. O misturador é acionado  por2 segundos. Esvazia-se o tanque até o sensor vazio ser acionado, retornando ao estado inicial. Considere clock 16Mhz.
+<br><BR>Solução:
+<br>Para que servem e quais são os registradores de I/O de um AVR Atmega?  Os registradores de IO  funcionam para configurar, ler e escrever cada  pino das portas  do microcontrolador, cada bit representa um pino:  DDRx  quando em 0=entrada e 1=saída. PINx para a leitura do pino quando este é  definido com entrada; PORTx escreve na saída se o pino é definido como  saída ou ativa pull-up se o pino é definido como entrada.
+	<Br>
+<details><summary>Ilustração da Solução (clique)</summary>
+<p>
+<br><img src=https://github.com/mchavesferreira/mcr/imagens/oprojeto.jpg>
+<br><img src=https://github.com/mchavesferreira/mcr/imagens/configuracaopinos.jpg>
+
+</p>
+</details>
+
+<details><summary>Código Solução Controle Reservatório</summary>
+<p>
+
+### Código Impressão de numeros
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/6a78c2ac-b812-420b-ba2a-50b0d7c25f71)
 
 https://wokwi.com/projects/393019671977442305
