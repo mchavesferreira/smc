@@ -217,11 +217,13 @@ int main()
 }
 ```
 
-## Aula 
+
 
 ### Display 7 segmentos
 
 <a href=https://github.com/mchavesferreira/smc/blob/main/display7segmentos.md>Exemplo display 7 segmentos</a>
+
+## Aula 17/03/2026
 
 ###  Display LCD
 
