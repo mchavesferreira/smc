@@ -229,6 +229,7 @@ int main()
 
 <a href=https://github.com/mchavesferreira/smc/blob/main/displaylcd.md>Exemplo LCD</a>
 
+## Aula 24/03/2026
 
 ### Maquina de estados 
 
@@ -312,59 +313,6 @@ Um simulador online muito popular para Arduino e outros microcontroladores. Ele 
 <br>Para que servem e quais são os registradores de I/O de um AVR Atmega?  Os registradores de IO  funcionam para configurar, ler e escrever cada  pino das portas  do microcontrolador, cada bit representa um pino:  DDRx  quando em 0=entrada e 1=saída. PINx para a leitura do pino quando este é  definido com entrada; PORTx escreve na saída se o pino é definido como  saída ou ativa pull-up se o pino é definido como entrada.
 	<Br>
 
-<details><summary>Exemplo em assembly</summary>
-<p>
-
-```ruby  
-.ORG 0x000				
-INICIO:
-     LDI R19, 0b00000111	//carrega R19 
-     OUT DDRB,R19		//configura todos os pinos
-     LDI R19, 0b00111000
-     OUT PORTB, R19
-; aguarda botao start
-PRINCIPAL:      
-     SBIC PINB,5		
-     RJMP Principal
-     RJMP ENCHER
-; Liga válvula aguarda sensor cheio
-ENCHER:
-    SBI PORTB,0
-    SBIC PINB,3
-    RJMP ENCHER
-    RJMP MISTURAR
-
-; desliga V1, liga misturador por 2 seg. 
-MISTURAR:
-    CBI PORTB,0
-    SBI PORTB,2
-    RCALL ATRASO 
-    RCALL ATRASO 
-    CBI PORTB, 2
-    RJMP ESVAZIAR
-
-; Liga válvula 2 aguarda sensor vazio
-ESVAZIAR:
-    SBI PORTB,1
-    SBIC PINB,4
-    RJMP ESVAZIAR
-    CBI PORTB,1
-    RJMP PRINCIPAL
-; .  .    .   .    .    .    .    .   .     .   
-; rotina de atraso 1 segundo. 
-ATRASO:	
-      LDI R19,80	
-volta:		
-      DEC  R17	
-      BRNE volta
-      DEC  R18	
-      BRNE volta
-      DEC  R19
-      BRNE volta
-      RET
-```
-</p>
-</details> 
 
 
 
@@ -377,7 +325,38 @@ Este exemplo online exemplifica a aplicação da máquina de estados e uso do LC
 https://wokwi.com/projects/350144439208903252
 
 
+### Utilizando maquina de estados de forma estruturada
 
+```java
+// Exemplo de máquina de estados usando switch-case
+
+// Definindo os estados possíveis da máquina de estados
+typedef enum {
+  STATE_IDLE,
+  STATE_WAITING_BUTTON_PRESS,
+  STATE_WAITING_SENSOR_TRIGGER,
+  STATE_LIGHT_ON,
+  STATE_LIGHT_OFF
+} State;
+
+
+void stateMachineExample(int state) {
+    switch(State) {
+        case  STATE_IDLE:
+            // Ação para o estado 1
+            break;
+        case STATE_WAITING_BUTTON_PRESS:
+            // Ação para o estado 2
+            break;
+        // Adicione mais estados conforme necessário
+        default:
+            // Ação padrão se nenhum estado anterior corresponder
+            break;
+    }
+}
+```
+
+https://github.com/mchavesferreira/smc/blob/main/maquina_estado_v2.c
 
 
 
