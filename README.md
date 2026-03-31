@@ -328,11 +328,15 @@ https://github.com/mchavesferreira/smc/blob/main/maquina_estado_v2.c
 
 
 
-
+## Aula 31/03/2026
 
 ## Interrupções
 
 Saima mais sobre Interrupções: https://github.com/mchavesferreira/smc/tree/main/interrupcao_timers
+
+## Aula 07/04/2026
+
+### Avaliação Escrita 
 
 ## UART
 
