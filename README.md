@@ -577,26 +577,30 @@ escreve_USART(serial_buffer);
 
 Exemplo:  https://wokwi.com/projects/365174034245894145
 
+# Aula 05/05/2026
 
+Entrega final para Projeto 1
 
-## Orientações para Projeto 1:
+## Orientações:
 
 Utilizando o projeto inicial da <a href=https://wokwi.com/projects/350144439208903252>maquina de lavar</a>, crie uma máquina personalizada (não será considerado máquina de lavar e café) que atenda os seguintes critérios:
-
+- montagem em protoboard com ATMEGA328P
 - apresente no mínimo 05 perguntas entre (sim x não) ou ajustes de valores (exemplo tempo);
 - ajustes de pelo menos 03 valores inteiros;
 - transições das etapas em máquina de estados;
 - utilize pelo menos 03 leds como saídas;
-- as perguntas e respostas devem utilizar display LCD e botões (exemplos para botões: + - 1 2 3 Y N enter) 
--  enviar o código e link de simulação na área trabalhos (suap), um integrante da dupla. Lembre-se colocar "Lock" em seu projeto 
+- Interação através de duas interfaces: utilizar display LCD e botões (exemplos para botões: + - 1 2 3 Y N enter) e Interação via Terminal Serial (UART)
 - As duplas não podem ter trabalhos "clones", criatividade e dificuldades serão pontuados
+- criar simulação em wowki ou proteus
+- Relatório em formato pdf descrevendo a identificação do projeto, nomes dos integrantes, funcionamento, circuito elétrico, links e códigos.
+-  enviar o relatório na área trabalhos (suap), um integrante da dupla. Lembre-se colocar "Lock" em seu projeto 
 <BR>
 <B>OBS: 
 Para tempos de atraso, acima de 10 ms total, utilizar TIMERS 0, 1 ou 2.</B><BR>
-- ** outras especificidades posteriormente informadas.
 
 
-# Aula 05/05/2026
+
+
 
 # Aula 12/05/2026
 
