@@ -604,15 +604,27 @@ Para tempos de atraso, acima de 10 ms total, utilizar TIMERS 0, 1 ou 2.</B><BR>
 
 # Aula 12/05/2026
 
+Conversor AD
+
 # Aula 19/05/2026
+
+Comunicação I2C e SPI
 
 # Aula 26/05/2026
 
+IOT ESP32 webserver
+
 # Aula 02/06/2026
+
+STM32 - GPIO
 
 # Aula 09/06/2026
 
+STM32 - AD/DMA
+
 # Aula 16/06/2026
+
+Integração STM32/ESP32
 
 # Aula 23/06/2026
 
