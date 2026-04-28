@@ -354,16 +354,30 @@ https://github.com/mchavesferreira/smc/blob/main/serialAVR/main_usart_menu.c <BR
 https://wokwi.com/projects/365174034245894145   Simulação
 
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/9b5c31a2-7060-45b2-ad95-73ccb14e9c3c)
-Blocos do UART
 
-### Registradores:
+
+### Registradores de configuração UART
 
 #### UBRRn - A taxa de transmissão (baud rate) é calculada com base na frequência do clock 
+ Define a taxa de transmissão:
  
   Formula Normal  UBRR = (F_CPU / (16 * BAUD)) - 1
+  
+```ruby 
+  UBRR0H
+  UBRR0L
+```
 
 #### UDR0 – USART I/O Data Register
 
+Função dupla:
+
+Escrita → transmite dado
+Leitura → recebe dado
+```ruby 
+UDR0 = 'A';       // transmite
+char c = UDR0;    // recebe
+```
 #### UCSR0A  - USART Control and Status Register A
 
 | Bit | Nome  | Função                      |
@@ -563,26 +577,7 @@ escreve_USART(serial_buffer);
 
 Exemplo:  https://wokwi.com/projects/365174034245894145
 
-## ESP32 e suas aplicações IOT
 
-https://github.com/mchavesferreira/mcr/blob/main/ESP32.md
-
-
-# Aula 13/06/2025
-
-Exemplos de Bridge ESP32 <>UNO
-
-
-Codigo exemplo trabalho 2
-
-https://github.com/mchavesferreira/smc/tree/main/exemplotrabalho2
-
-Pagina interativa com controle de eventos
-
-http://monitor.rpiot.com.br/aula/eventos/
-
-
-# Trabalhos Turma 2026
 
 ## Orientações para Projeto 1:
 
@@ -599,6 +594,49 @@ Utilizando o projeto inicial da <a href=https://wokwi.com/projects/3501444392089
 <B>OBS: 
 Para tempos de atraso, acima de 10 ms total, utilizar TIMERS 0, 1 ou 2.</B><BR>
 - ** outras especificidades posteriormente informadas.
+
+
+# Aula 05/05/2026
+
+# Aula 12/05/2026
+
+# Aula 19/05/2026
+
+# Aula 26/05/2026
+
+# Aula 02/06/2026
+
+# Aula 09/06/2026
+
+# Aula 16/06/2026
+
+# Aula 23/06/2026
+
+Avaliação P2/ data final de trabalho 2
+
+# Aula 30/06/2026
+
+IFA - Avaliação de recuperação
+
+## ESP32 e suas aplicações IOT
+
+https://github.com/mchavesferreira/mcr/blob/main/ESP32.md
+
+
+
+
+Exemplos de Bridge ESP32 <>UNO
+
+
+Codigo exemplo trabalho 2
+
+https://github.com/mchavesferreira/smc/tree/main/exemplotrabalho2
+
+Pagina interativa com controle de eventos
+
+http://monitor.rpiot.com.br/aula/eventos/
+
+
 
 ## Orientações para Projeto 2:
 
