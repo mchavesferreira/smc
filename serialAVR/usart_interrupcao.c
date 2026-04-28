@@ -1,4 +1,4 @@
-//Neste segundo exemplo será feita uma comunicação simples com o computador utilizando a biblioteca UART.h, 
+// exemplo de  uma comunicação simples com o computador utilizando a biblioteca UART.h, 
 ///convertendo as letras maiúsculas em minúsculas e vice-versa.
 // fonte:   Professor Rodrigo Rech
 
