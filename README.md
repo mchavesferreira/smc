@@ -338,6 +338,9 @@ Saima mais sobre Interrupções: https://github.com/mchavesferreira/smc/tree/mai
 
 ### Avaliação Escrita 
 
+## Aula 28/04/2026
+
+
 ## UART
 
 Comuniação Serial
@@ -351,19 +354,67 @@ https://github.com/mchavesferreira/smc/blob/main/serialAVR/main_usart_menu.c <BR
 https://wokwi.com/projects/365174034245894145   Simulação
 
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/9b5c31a2-7060-45b2-ad95-73ccb14e9c3c)
-Blocos do UAR
+Blocos do UART
 
-Registradores:
+### Registradores:
 
-UBRRn - A taxa de transmissão (baud rate) é calculada com base na frequência do clock 
+#### UBRRn - A taxa de transmissão (baud rate) é calculada com base na frequência do clock 
+ 
+  Formula Normal  UBRR = (F_CPU / (16 * BAUD)) - 1
 
-UDR0 – USART I/O Data Register
+#### UDR0 – USART I/O Data Register
 
-UCSR0A 
+#### UCSR0A  - USART Control and Status Register A
 
-UCSR0B 
+| Bit | Nome  | Função                      |
+| --- | ----- | --------------------------- |
+| 7   | RXC0  | Recepção completa           |
+| 6   | TXC0  | Transmissão completa        |
+| 5   | UDRE0 | Buffer de transmissão vazio |
+| 4   | FE0   | Erro de frame               |
+| 3   | DOR0  | Overrun                     |
+| 2   | UPE0  | Paridade                    |
+| 1   | U2X0  | Double speed                |
+| 0   | MPCM0 | Multi-processor             |
 
-UCSR0C 
+
+exemplo: 
+```ruby  
+while (!(UCSR0A & (1 << RXC0))); // espera receber
+```
+
+#### UCSR0B USART Control and Status Register B
+
+| Bit | Nome   | Função               |
+| --- | ------ | -------------------- |
+| 7   | RXCIE0 | Interrupção RX       |
+| 6   | TXCIE0 | Interrupção TX       |
+| 5   | UDRIE0 | Interrupção buffer   |
+| 4   | RXEN0  | Habilita recepção    |
+| 3   | TXEN0  | Habilita transmissão |
+| 2   | UCSZ02 | Tamanho do dado      |
+| 1   | RXB80  | Bit extra RX         |
+| 0   | TXB80  | Bit extra TX         |
+
+exemplo: 
+```ruby  
+UCSR0B = (1 << RXEN0) | (1 << TXEN0);
+```
+
+#### UCSR0C – USART Control and Status Register C
+
+| Bit | Nome    | Função                |
+| --- | ------- | --------------------- |
+| 7   | UMSEL01 | Modo USART            |
+| 6   | UMSEL00 | (assíncrono/síncrono) |
+| 5   | UPM01   | Paridade              |
+| 4   | UPM00   |                       |
+| 3   | USBS0   | Stop bits             |
+| 2   | UCSZ01  | Tamanho dado          |
+| 1   | UCSZ00  |                       |
+| 0   | UCPOL0  | Clock polarity        |
+
+
 
 Bibliotecas:
 
