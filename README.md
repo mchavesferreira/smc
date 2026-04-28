@@ -343,14 +343,20 @@ Saima mais sobre Interrupções: https://github.com/mchavesferreira/smc/tree/mai
 
 ## UART
 
-Comuniação Serial
+### Comuniação Serial
 https://github.com/mchavesferreira/smc/blob/main/serialAVR/
 
-Comunicação Serial (ESP32)
+### Comunicação Serial (ESP32)
+
 https://github.com/mchavesferreira/mcr/blob/main/esp32/serialprint.md
+
+### referência: Cap. Livro AVR
+
+https://github.com/mchavesferreira/smc/blob/main/serialAVR/USART_%20cap%20Livro.pdf
 
 Exemplo com menu:
 https://github.com/mchavesferreira/smc/blob/main/serialAVR/main_usart_menu.c <BR>
+
 https://wokwi.com/projects/365174034245894145   Simulação
 
 ![image](https://github.com/mchavesferreira/smc/assets/63993080/9b5c31a2-7060-45b2-ad95-73ccb14e9c3c)
