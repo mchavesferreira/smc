@@ -588,7 +588,9 @@ Exemplo:  https://wokwi.com/projects/365174034245894145
 
 # Aula 05/05/2026
 
-Conversor AD
+
+<a href=https://github.com/mchavesferreira/smc/tree/main/conversorADavr>Conversor AD</a> - Saiba mais
+
 
 # Aula 12/05/2026
 Entrega final para Projeto 1
