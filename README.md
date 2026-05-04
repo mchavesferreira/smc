@@ -583,8 +583,14 @@ escreve_USART(serial_buffer);
 
 Exemplo:  https://wokwi.com/projects/365174034245894145
 
+
+
+
 # Aula 05/05/2026
 
+Conversor AD
+
+# Aula 12/05/2026
 Entrega final para Projeto 1
 
 ## Orientações:
@@ -604,13 +610,6 @@ Utilizando o projeto inicial da <a href=https://wokwi.com/projects/3501444392089
 <B>OBS: 
 Para tempos de atraso, acima de 10 ms total, utilizar TIMERS 0, 1 ou 2.</B><BR>
 
-
-
-
-
-# Aula 12/05/2026
-
-Conversor AD
 
 # Aula 19/05/2026
 
