@@ -670,7 +670,7 @@ Aperfeiçoamento do projeto 1 ou uma nova proposta com a programação do STM32.
 ## Orientações para  Projeto 2: Microcontrolado com Wifi
 
 
-Projeto em AVR C Microcontrolador Atmega 328P utilizando I2C e UART com wifi
+Projeto em AVR C Microcontrolador STM32 stm32f411ceu6 (stm32 black pill) utilizando I2C e UART com wifi
 Entregar em formato relatório resumido texto contendo introdução teórica sobre a variável (sensor) utilizada e referências; e enviar por email ou neste canal (suap) também o código fonte.
 
 
@@ -693,12 +693,17 @@ Semelhante a maquina de lavar, o programa deve conter
 .
 Use como referências de código o reposítório: https://github.com/mchavesferreira/smc
 
-Recomenda-se como prazo de entrega o dia xx/06/2026.
+Recomenda-se como prazo de entrega o dia 23/06/2026.
 
 # Exemplo projeto 2 
 
 https://github.com/mchavesferreira/IoT_Esp32_Uno_SMC_projeto2
 
+## Video anos anteriores
+
+https://www.youtube.com/watch?v=DMCxhJ-Arqk
+
+https://www.youtube.com/watch?v=R6QUzjMyoRM
 
 
 Exemplos de projetos
