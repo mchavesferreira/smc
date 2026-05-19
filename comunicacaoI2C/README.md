@@ -284,7 +284,13 @@ ADS1307 é um Relógio de tempo real ou RTC (real time clock), sendo um componen
 ### Display Oled  + ESP32
   <BR>03 -<a href=https://wokwi.com/projects/342195248670179922> Exemplo Oled U8g2lib</a>
   <BR>04 -<a href=https://wokwi.com/projects/342195418005766739> Exemplo Adafruit_SSD1306</a>
+   <BR>05 -<a href=https://wokwi.com/projects/387456104962557953> Exemplo Esp32 S3 Oled</a>
+  
   <Br> <img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/oled.png width=400 height=225><BR>
+
+
+  <img width="1584" height="1080" alt="ESP32-S3-pinout" src="https://github.com/user-attachments/assets/c1a53d01-6135-4ec3-bc80-2d2f55db514a" />
+
 <details><summary>Exemplo Oled</summary>
 <p>
 
