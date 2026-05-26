@@ -22,6 +22,7 @@ figura: Comunicação entre o dispositivo mestre (master) e o escravo (slave) ut
 
 
 <img width="789" height="582" alt="image" src="https://github.com/user-attachments/assets/a63edac4-a917-4b2f-af1d-d71eeca13370" />
+
 figura: Comunicação entre um dispositivo mestre e três escravos utilizando a interface de comunicação SPI. 
 
 
