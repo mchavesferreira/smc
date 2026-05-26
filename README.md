@@ -621,6 +621,8 @@ Comunicação I2C e SPI
 
 IOT ESP32 webserver
 
+https://github.com/mchavesferreira/mcr/tree/main/esp32_iot
+
 # Aula 02/06/2026
 
 STM32 - GPIO
