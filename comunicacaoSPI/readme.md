@@ -21,9 +21,12 @@ figura: Comunicação entre um dispositivo mestre e três escravos utilizando a 
 
 
 <img width="776" height="216" alt="image" src="https://github.com/user-attachments/assets/449df24a-6cfe-4991-a0ba-3863be30fc48" />
+
 <img width="600" height="194" alt="SPI-Communication-Module-Block-Diagram-600x194" src="https://github.com/user-attachments/assets/1357f394-5533-47b7-9b59-b6ab7c8fab00" />
+
 <img width="845" height="187" alt="SPI-Working-Data-Transfer" src="https://github.com/user-attachments/assets/1f260eb9-f9e7-4dc1-a158-0be369c76068" />
-<img width="845" height="187" alt="SPI-Internal-Hardware-Setup" src="https://github.com/user-attachments/assets/3d71bb8e-fc29-40f6-a492-008d7ff9ac15" />
+
+
 
 
 
