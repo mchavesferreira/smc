@@ -1,5 +1,7 @@
 # Interface de Comunicação SPI no ATmega328P
 
+(Cap 14. SPI pagina 317 Livro de referência)
+
 A interface SPI (*Serial Peripheral Interface*) é um protocolo de comunicação síncrona que opera em modo *full-duplex*, permitindo transmissão e recepção de dados simultaneamente. No microcontrolador ATmega328P, essa comunicação é realizada por meio de quatro sinais principais:
 
 * **MOSI** (*Master Output Slave Input*): linha utilizada para envio de dados do mestre para o escravo;
