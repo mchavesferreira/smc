@@ -10,5 +10,18 @@ https://www.st.com/en/microcontrollers-microprocessors/stm32f411ce.html
 https://github.com/embeddedalpha/STM32F411CEU6
 
 
+Exemplos projeto Franzininho cortex M0+: https://github.com/Franzininho/franzininho-c0-exemplos-stm32cubeide
+
+
+Informações sobre a blackpill:
+
+https://github.com/trebisky/stm32f411
+
+esquema blackpill:  http://cholla.mmto.org/stm32all/black_pill/WeAct_Black_Pill_V2.0_schematic.pdf
+
+
+
+
+
 
 
