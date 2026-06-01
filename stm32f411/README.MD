@@ -23,6 +23,7 @@ esquema blackpill:  http://cholla.mmto.org/stm32all/black_pill/WeAct_Black_Pill_
 pisca led
 
   /* USER CODE BEGIN WHILE */
+
   while (1)
   {
 ```java
