@@ -17,6 +17,8 @@ O **STM32F411CE** é um microcontrolador de alto desempenho da família STM32 ba
 
 ---
 
+<a href=imagens/blackpill.png><img src=imagens/blackpill.png width=300 height=300 border=0></a>
+
 ## Documentação Oficial
 
 ### Página do Fabricante (STMicroelectronics)
