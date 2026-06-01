@@ -58,3 +58,59 @@ while:
 	  }
 ```
 
+
+## pisca sem delay
+
+Objetivo é piscar um LED, conectado ao PC6, a cada 0,5s (500ms) utilizando a criação de atraso com o Timer 3.
+
+    Clock do sistema: interno 48 MHz
+	
+    Prescaler escolhido para o exemplo: 48000 - 1
+	
+    contador: 500-1
+
+Clock = 48 MHz
+
+48.000.000 Hz
+     ↓
+Prescaler = 48000
+     ↓
+1000 Hz
+     ↓
+1 ms por contagem
+     ↓
+ARR = 500
+     ↓
+500 ms
+     ↓
+Evento Update
+     ↓
+Toggle LED
+
+<img width="1026" height="776" alt="image" src="https://github.com/user-attachments/assets/f39b4cea-acda-4084-b942-58793ac3ebaa" />
+
+
+```java
+MX_GPIO_Init();
+  MX_USART1_UART_Init();
+  MX_TIM3_Init();
+  /* USER CODE BEGIN 2 */
+  HAL_TIM_Base_Start_IT(&htim3);
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+  while (1)
+  {
+
+	  if(__HAL_TIM_GET_FLAG(&htim3, TIM_FLAG_UPDATE)){
+	  	    __HAL_TIM_CLEAR_FLAG(&htim3, TIM_FLAG_UPDATE);
+	  	    HAL_GPIO_TogglePin(GPIOC, LED1_Pin);
+	  	  }
+    /* USER CODE END WHILE */
+
+    /* USER CODE BEGIN 3 */
+  }
+
+```
+
