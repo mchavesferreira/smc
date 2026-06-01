@@ -101,3 +101,10 @@ Diagrama esquemático da placa WeAct Black Pill V2.0:
 * Interface de programação: SWD
 * Conector USB para alimentação e comunicação
 
+
+
+## Gravador ST-Link V2
+
+
+<img src=imagens/stm32-st-link-v2-arduino.png>
+
