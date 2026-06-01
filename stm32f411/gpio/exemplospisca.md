@@ -4,7 +4,9 @@
 <img width="640" height="505" alt="image" src="https://github.com/user-attachments/assets/87d7d7ff-730e-44f1-b2d8-64887cd7cd5a" />
 
 Configure os pinos:
+
 LED1 > PC13  output
+
 Button > PC14 input pull_up
 
 ## Alternando um pino de saída (LED)
