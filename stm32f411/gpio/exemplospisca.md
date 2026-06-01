@@ -115,7 +115,9 @@ MX_GPIO_Init();
 ```
 ## Gerando uma interrupção com timer
 
-Mantenhas as mesmas configurações de preescaler e o contador, habilitando a interrupção em NVIC
+Mantenhas as mesmas configurações de preescaler e o contador, habilitando a interrupção em NVIC.
+
+Esta abordagem de interrução é útil para lidar com eventos assíncronos e em tempo real.
 
 <img width="721" height="205" alt="image" src="https://github.com/user-attachments/assets/2372cb82-e4ff-45f3-83eb-b44b49481fb8" />
 
