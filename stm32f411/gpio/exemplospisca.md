@@ -1,6 +1,7 @@
 
-pisca led
+# Exemplos de códigos
 
+## Alternando um pino de saída (LED)
   /* USER CODE BEGIN WHILE */
 
   while (1)
@@ -16,8 +17,7 @@ pisca led
 OU
 
 ```java
-   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
-
+       HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
 	   HAL_Delay(200);
 	   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 0);
 	   HAL_Delay(200);
@@ -25,4 +25,28 @@ OU
 
 
 
+## Imprimindo na UART1
+main:
+```java
+	const uint8_t msg[] = "Hello Franzininho C0\r\n";
+```
+while:
+```java
+HAL_UART_Transmit(&huart1, msg, (sizeof(msg)-1), 1000);	// Transmite mensagem serial pela UART
+```
+
+## Lendo botão
+acrescente o button  com pull-up
+
+while:
+```java
+ if (!HAL_GPIO_ReadPin(Button_GPIO_Port, Button_Pin))	// Se o botão estiver pressionado...
+	  {
+		  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 1);	// ...Acende o LED1
+	  }
+	  else
+	  {
+		  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, 0);	// Senão, apaga o LED1
+	  }
+```
 
