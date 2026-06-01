@@ -59,7 +59,7 @@ while:
 ```
 
 
-## pisca sem delay
+## Pisca com Timer
 
 Objetivo é piscar um LED, conectado ao PC6, a cada 0,5s (500ms) utilizando a criação de atraso com o Timer 3.
 
@@ -69,23 +69,7 @@ Objetivo é piscar um LED, conectado ao PC6, a cada 0,5s (500ms) utilizando a cr
 	
     contador: 500-1
 
-Clock = 48 MHz
 
-48.000.000 Hz
-     ↓
-Prescaler = 48000
-     ↓
-1000 Hz
-     ↓
-1 ms por contagem
-     ↓
-ARR = 500
-     ↓
-500 ms
-     ↓
-Evento Update
-     ↓
-Toggle LED
 
 <img width="1026" height="776" alt="image" src="https://github.com/user-attachments/assets/f39b4cea-acda-4084-b942-58793ac3ebaa" />
 
@@ -95,7 +79,7 @@ MX_GPIO_Init();
   MX_USART1_UART_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-  HAL_TIM_Base_Start_IT(&htim3);
+  HAL_TIM_Base_Start(&htim3);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -113,6 +97,9 @@ MX_GPIO_Init();
   }
 
 ```
+  HAL_TIM_Base_Start_IT(&htim3) é usada para iniciar a contagem do timer, e dentro do loop principal, o código verifica se a flag de atualização do timer foi acionada, indicando que timer atingiu o período deseado, então o código limpa a flag e alterna o estado do led.
+  
+
 ## Gerando uma interrupção com timer
 
 Mantenhas as mesmas configurações de preescaler e o contador, habilitando a interrupção em NVIC.
@@ -121,10 +108,20 @@ Esta abordagem de interrução é útil para lidar com eventos assíncronos e em
 
 <img width="721" height="205" alt="image" src="https://github.com/user-attachments/assets/2372cb82-e4ff-45f3-83eb-b44b49481fb8" />
 
-Retire o codigo de comparação em while(1){  } acrescente a seguinte função depois de main
-
+Altere o codigo e acrescente a função callback seguinte depois de main
 ```java
-/* USER CODE BEGIN 4 */
+/* USER CODE BEGIN 2 */
+  HAL_TIM_Base_Start_IT(&htim3);
+  /* USER CODE END 2 */
+
+  /* Infinite loop */
+  /* USER CODE BEGIN WHILE */
+  while (1)
+  {
+  }
+
+}
+
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
@@ -134,6 +131,10 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 	}
 }
 
-/* USER CODE END 4 */
 
 ```
+
+Nesta configuração
+
+HAL_TIM_Base_Start_IT(&htim3); é usada para iniciar o timer com interrupção e é adicionada uma função de callback void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+
