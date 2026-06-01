@@ -71,7 +71,8 @@ Diagrama esquemático da placa WeAct Black Pill V2.0:
 2. Organização da memória Flash e SRAM
 3. Clock do sistema e PLL
 4. Estrutura de um projeto STM32CubeIDE
-5. GPIO e registradores (MODER, OTYPER, OSPEEDR e PUPDR)
+5. GPIO e registradores https://github.com/mchavesferreira/smc/blob/main/stm32f411/gpio.md
+
 6. Interrupções e NVIC
 7. Timers e PWM
 8. UART
