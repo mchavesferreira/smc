@@ -1,5 +1,23 @@
 # Registradores de controle do GPIO
 
+rm0383-stm32f411xce-advanced-armbased-32bit-mcus-stmicroelectronics-1.pdf (cap. 8, p.146)
+
+### Descrição funcional dos GPIOs
+
+Sujeito às características específicas de hardware de cada porta de E/S listadas no datasheet, cada bit das portas de entrada/saída de propósito geral (**GPIO**) pode ser configurado individualmente por software em vários modos:
+
+* Entrada flutuante
+* Entrada com pull-up
+* Entrada com pull-down
+* Analógico
+* Saída open-drain com capacidade de pull-up ou pull-down
+* Saída push-pull com capacidade de pull-up ou pull-down
+* Função alternativa push-pull com capacidade de pull-up ou pull-down
+* Função alternativa open-drain com capacidade de pull-up ou pull-down
+
+<img width="1135" height="644" alt="image" src="https://github.com/user-attachments/assets/58aa660a-fa2f-4068-bc52-89017be0c768" />
+
+
 ### MODER (Mode Register)
 
 O registrador **MODER** define o modo de operação de cada pino da porta GPIO. Cada pino utiliza dois bits para determinar sua função, podendo ser configurado como **entrada digital (Input)**, **saída digital (Output)**, **função alternativa (Alternate Function)** ou **modo analógico (Analog)**. No STM32F411, esse registrador é normalmente o primeiro a ser configurado, pois determina como o hardware interno irá conectar o pino aos circuitos de entrada, saída, periféricos ou conversores analógicos.
