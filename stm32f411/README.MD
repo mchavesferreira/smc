@@ -44,3 +44,17 @@ OU
 	   HAL_Delay(200);
 ```
 
+
+
+Na pasta **Src** gerada pelo STM32CubeMX/CubeIDE, esses arquivos possuem funções bem definidas dentro do projeto:
+
+| Arquivo                 | Função                                                                                                                                                                                                                          |
+| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **main.c**              | Arquivo principal da aplicação. Contém a função `main()`, inicialização do HAL, configuração dos periféricos gerados pelo CubeMX e o laço principal `while(1)` onde normalmente o usuário desenvolve sua aplicação.             |
+| **stm32c0xx_hal_msp.c** | Contém as funções **MSP (MCU Support Package)**. Aqui são configurados recursos de baixo nível dos periféricos, como habilitação de clocks, configuração de GPIOs, DMA, interrupções NVIC e pinos utilizados pelos periféricos. |
+| **stm32c0xx_it.c**      | Arquivo das **rotinas de interrupção (Interrupt Handlers)**. Contém funções como `SysTick_Handler()`, `USART_IRQHandler()`, `TIM_IRQHandler()`, entre outras, executadas automaticamente quando ocorre uma interrupção.         |
+| **syscalls.c**          | Implementa chamadas de sistema utilizadas pela biblioteca padrão C. Permite funções como `printf()`, `malloc()`, acesso a UART para saída padrão, entre outras. Faz a ponte entre a biblioteca C e o hardware embarcado.        |
+| **sysmem.c**            | Gerencia a memória dinâmica do sistema. Implementa funções relacionadas à alocação de memória (`malloc`, `free`) e controle do heap utilizado pela biblioteca C.                                                                |
+| **system_stm32c0xx.c**  | Arquivo de inicialização do microcontrolador. Configura o clock do sistema, variáveis globais do CMSIS e contém a função `SystemInit()`, executada logo após o reset, antes da função `main()`.                                 |
+
+
