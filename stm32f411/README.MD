@@ -39,7 +39,7 @@ Este repositório contém exemplos de utilização dos periféricos do STM32F411
 
 Embora voltado ao STM32C0 (Cortex-M0+), este repositório apresenta exemplos úteis para compreender a estrutura dos projetos STM32 gerados pelo STM32CubeIDE.
 
-[https://github.com/Franzininho/franzininho-c0-exemplos-stm32cubeide](https://github.com/Franzininho/franzininho-c0-exemplos-stm32cubeide)
+[https://github.com/Franzininho/Franzininho-C0-Com-STM32CubeIDE-Artigos/tree/master](https://github.com/Franzininho/Franzininho-C0-Com-STM32CubeIDE-Artigos/tree/master)
 
 ---
 
