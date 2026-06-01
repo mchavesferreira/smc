@@ -1,60 +1,100 @@
-TM32F411CE
+# STM32F411CE (Black Pill)
 
+## Descrição
 
-High-performance access line, Arm Cortex-M4 core with DSP and FPU, 512 Kbytes of Flash memory, 100 MHz CPU, ART Accelerator 
+O **STM32F411CE** é um microcontrolador de alto desempenho da família STM32 baseado no núcleo **ARM Cortex-M4**, operando em até **100 MHz**. Possui recursos avançados para aplicações embarcadas, incluindo suporte a **DSP (Digital Signal Processing)** e **FPU (Floating Point Unit)** para operações matemáticas em ponto flutuante.
 
+### Principais Características
 
-https://www.st.com/en/microcontrollers-microprocessors/stm32f411ce.html
+* Núcleo ARM Cortex-M4 de 32 bits
+* Frequência de operação de até 100 MHz
+* 512 kB de memória Flash
+* 128 kB de SRAM
+* Unidade DSP integrada
+* FPU (Floating Point Unit)
+* ART Accelerator (Acelerador de acesso à memória Flash)
+* Interfaces UART, SPI, I2C, I2S, ADC, DMA, Timers e GPIO
 
+---
 
-https://github.com/embeddedalpha/STM32F411CEU6
+## Documentação Oficial
 
+### Página do Fabricante (STMicroelectronics)
 
-Exemplos projeto Franzininho cortex M0+: https://github.com/Franzininho/franzininho-c0-exemplos-stm32cubeide
+[https://www.st.com/en/microcontrollers-microprocessors/stm32f411ce.html](https://www.st.com/en/microcontrollers-microprocessors/stm32f411ce.html)
 
+---
 
-Informações sobre a blackpill:
+## Repositório de Exemplos para STM32F411CEU6
 
-https://github.com/trebisky/stm32f411
+[https://github.com/embeddedalpha/STM32F411CEU6](https://github.com/embeddedalpha/STM32F411CEU6)
 
-esquema blackpill:  http://cholla.mmto.org/stm32all/black_pill/WeAct_Black_Pill_V2.0_schematic.pdf
+Este repositório contém exemplos de utilização dos periféricos do STM32F411 utilizando STM32CubeIDE.
 
+---
 
-pisca led
+## Exemplos para Franzininho Cortex-M0+
 
-  /* USER CODE BEGIN WHILE */
+Embora voltado ao STM32C0 (Cortex-M0+), este repositório apresenta exemplos úteis para compreender a estrutura dos projetos STM32 gerados pelo STM32CubeIDE.
 
-  while (1)
-  {
-```java
+[https://github.com/Franzininho/franzininho-c0-exemplos-stm32cubeide](https://github.com/Franzininho/franzininho-c0-exemplos-stm32cubeide)
 
-	   HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);	// Inverte a saída do LED1
-	   HAL_Delay(100);	
-```
-    /* USER CODE END WHILE */
+---
 
+## Informações sobre a Placa Black Pill
 
-OU
+Documentação e informações adicionais sobre a placa Black Pill baseada no STM32F411:
 
-```java
-   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
+[https://github.com/trebisky/stm32f411](https://github.com/trebisky/stm32f411)
 
-	   HAL_Delay(200);
-	   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 0);
-	   HAL_Delay(200);
-```
+---
 
+## Esquema Elétrico da Black Pill
 
+Diagrama esquemático da placa WeAct Black Pill V2.0:
 
-Na pasta **Src** gerada pelo STM32CubeMX/CubeIDE, esses arquivos possuem funções bem definidas dentro do projeto:
+[http://cholla.mmto.org/stm32all/black_pill/WeAct_Black_Pill_V2.0_schematic.pdf](http://cholla.mmto.org/stm32all/black_pill/WeAct_Black_Pill_V2.0_schematic.pdf)
 
-| Arquivo                 | Função                                                                                                                                                                                                                          |
-| ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **main.c**              | Arquivo principal da aplicação. Contém a função `main()`, inicialização do HAL, configuração dos periféricos gerados pelo CubeMX e o laço principal `while(1)` onde normalmente o usuário desenvolve sua aplicação.             |
-| **stm32c0xx_hal_msp.c** | Contém as funções **MSP (MCU Support Package)**. Aqui são configurados recursos de baixo nível dos periféricos, como habilitação de clocks, configuração de GPIOs, DMA, interrupções NVIC e pinos utilizados pelos periféricos. |
-| **stm32c0xx_it.c**      | Arquivo das **rotinas de interrupção (Interrupt Handlers)**. Contém funções como `SysTick_Handler()`, `USART_IRQHandler()`, `TIM_IRQHandler()`, entre outras, executadas automaticamente quando ocorre uma interrupção.         |
-| **syscalls.c**          | Implementa chamadas de sistema utilizadas pela biblioteca padrão C. Permite funções como `printf()`, `malloc()`, acesso a UART para saída padrão, entre outras. Faz a ponte entre a biblioteca C e o hardware embarcado.        |
-| **sysmem.c**            | Gerencia a memória dinâmica do sistema. Implementa funções relacionadas à alocação de memória (`malloc`, `free`) e controle do heap utilizado pela biblioteca C.                                                                |
-| **system_stm32c0xx.c**  | Arquivo de inicialização do microcontrolador. Configura o clock do sistema, variáveis globais do CMSIS e contém a função `SystemInit()`, executada logo após o reset, antes da função `main()`.                                 |
+---
 
+## Ferramentas Recomendadas
+
+* STM32CubeIDE
+* STM32CubeMX
+* STM32CubeProgrammer
+
+---
+
+## Tópicos Sugeridos para Aula
+
+1. Arquitetura ARM Cortex-M4
+2. Organização da memória Flash e SRAM
+3. Clock do sistema e PLL
+4. Estrutura de um projeto STM32CubeIDE
+5. GPIO e registradores (MODER, OTYPER, OSPEEDR e PUPDR)
+6. Interrupções e NVIC
+7. Timers e PWM
+8. UART
+9. SPI
+10. I2C
+11. ADC
+12. DMA
+13. Modos de baixo consumo
+14. Debug via SWD
+15. Desenvolvimento de aplicações utilizando HAL e acesso direto aos registradores
+
+---
+
+## Placa Utilizada
+
+**Black Pill STM32F411CEU6**
+
+* Microcontrolador: STM32F411CEU6
+* Arquitetura: ARM Cortex-M4
+* Clock máximo: 100 MHz
+* Flash: 512 kB
+* SRAM: 128 kB
+* Tensão de operação: 3,3 V
+* Interface de programação: SWD
+* Conector USB para alimentação e comunicação
 
