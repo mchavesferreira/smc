@@ -106,6 +106,10 @@ São os timers mais utilizados em projetos embarcados.
 
 ---
 
+General-purpose timer block diagram
+
+<img width="867" height="631" alt="image" src="https://github.com/user-attachments/assets/94efbf7c-3e43-4c92-9841-2ca9aae2c0a0" />
+
 ## TIM9
 
 Timer intermediário entre os timers completos e os timers simples.
