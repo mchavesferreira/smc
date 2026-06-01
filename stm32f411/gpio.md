@@ -49,5 +49,20 @@ O NVIC do STM32F411 suporta até 62 interrupções externas mascaráveis, além 
 ## Mapeamento das Funções Alternativas (Alternate Functions - AF) dos pinos GPIO
 A tabela Alternate Function Mapping informa qual valor AF (AF0 a AF15) deve ser programado nos registradores AFRL/AFRH para conectar um periférico interno a um determinado pino GPIO. Por exemplo, AF7 conecta os periféricos USART1 e USART2, AF5 conecta SPI1 e SPI2, e AF4 conecta os módulos I²C. Ao configurar um pino para função alternativa, o registrador MODER deve ser ajustado para o modo Alternate Function e o registrador AFR deve receber o número AF correspondente ao periférico desejado. Isso permite que um mesmo pino físico desempenhe diferentes funções conforme a necessidade da aplicação.
 
+### O **Batch Acquisition Mode (BAM)** 
 
+É uma técnica de economia de energia utilizada em aplicações de aquisição de dados. Durante esse modo, o processador praticamente "dorme", enquanto o DMA continua coletando informações dos sensores e armazenando-as diretamente na SRAM. Como a CPU, a Flash e diversos periféricos permanecem desligados ou com seus clocks interrompidos, o consumo de energia é significativamente reduzido.
+
+
+<img width="1048" height="682" alt="image" src="https://github.com/user-attachments/assets/029e54ca-7ce9-4c97-8c7b-59a45eec25b6" />
+
+#### Exemplo do Modo de Aquisição em Lote (Batch Acquisition Mode - BAM)
+
+Os dados são transferidos através do **DMA** das interfaces de comunicação para a **SRAM interna**, enquanto o restante do microcontrolador é colocado em modo de baixo consumo de energia.
+
+* O código é executado a partir da **RAM** antes do desligamento da memória Flash.
+* A memória **Flash** é colocada em modo de desligamento (*Power Down*) e o clock da interface Flash (**ART™ Accelerator**) é interrompido.
+* Os clocks permanecem habilitados apenas para as interfaces realmente necessárias.
+* O núcleo do microcontrolador (**MCU Core**) é colocado em modo de espera (*Sleep Mode*), com o clock do processador interrompido aguardando uma interrupção.
+* Apenas os canais DMA necessários permanecem habilitados e em funcionamento.
 
