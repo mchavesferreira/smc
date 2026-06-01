@@ -34,6 +34,13 @@ pisca led
     /* USER CODE END WHILE */
 
 
+OU
 
+```java
+   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 1);
 
+	   HAL_Delay(200);
+	   HAL_GPIO_WritePin(GPIOC, GPIO_PIN_13, 0);
+	   HAL_Delay(200);
+```
 
