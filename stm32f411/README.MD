@@ -25,10 +25,11 @@ pisca led
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-´´´ java
+```java
+
 	   HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);	// Inverte a saída do LED1
 	   HAL_Delay(100);	
-´´´
+```
     /* USER CODE END WHILE */
 
 
