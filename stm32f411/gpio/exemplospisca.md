@@ -113,4 +113,25 @@ MX_GPIO_Init();
   }
 
 ```
+## Gerando uma interrupção com timer
 
+Mantenhas as mesmas configurações de preescaler e o contador, habilitando a interrupção em NVIC
+
+<img width="721" height="205" alt="image" src="https://github.com/user-attachments/assets/2372cb82-e4ff-45f3-83eb-b44b49481fb8" />
+
+Retire o codigo de comparação em while(1){  } acrescente a seguinte função depois de main
+
+```java
+/* USER CODE BEGIN 4 */
+
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+	if (htim == &htim3)
+	{
+		HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);	// Inverte saída do LED1 quando ocorre a interrupção (a cada 0,25s)
+	}
+}
+
+/* USER CODE END 4 */
+
+```
