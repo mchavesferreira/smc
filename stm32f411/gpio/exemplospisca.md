@@ -138,3 +138,40 @@ Nesta configuração
 
 HAL_TIM_Base_Start_IT(&htim3); é usada para iniciar o timer com interrupção e é adicionada uma função de callback void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 
+
+## Interrupção externa
+
+Adaptado de: https://github.com/Franzininho/Franzininho-C0-Com-STM32CubeIDE-Artigos/tree/master/InterrupcaoExterna
+
+```java
+/* Private variables ---------------------------------------------------------*/
+TIM_HandleTypeDef htim3;
+
+UART_HandleTypeDef huart1;
+
+/* USER CODE BEGIN PV */
+uint8_t msg_subida[] = "Borda subida identificada. \r\n";
+uint8_t msg_descida[] = "Borda descida identificada.\r\n";
+/* USER CODE END PV */
+```
+
+Fora do main()
+```java
+/* USER CODE BEGIN 4 */
+
+void HAL_GPIO_EXTI_Falling_Callback(uint16_t GPIO_Pin)	// Função de callback para tratamento da interrupção externa (descida)
+{
+	if(GPIO_Pin == GPIO_PIN_8)
+	{
+		HAL_UART_Transmit(&huart1, msg_descida, (sizeof(msg_descida)-1), 1000);	// Transmite mensagem serial pela UART
+	}
+}
+
+void HAL_GPIO_EXTI_Rising_Callback(uint16_t GPIO_Pin)	// Função de callback para tratamento da interrupção externa (subida)
+{
+	if(GPIO_Pin == GPIO_PIN_8)
+	{
+		HAL_UART_Transmit(&huart1, msg_subida, (sizeof(msg_subida)-1), 1000);	// Transmite mensagem serial pela UART
+	}
+}
+```
