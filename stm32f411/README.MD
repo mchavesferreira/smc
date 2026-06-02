@@ -108,3 +108,9 @@ Diagrama esquemático da placa WeAct Black Pill V2.0:
 
 <img src=imagens/stm32-st-link-v2-arduino.png>
 
+
+## Documentação Biblioteca HAL
+UM1725  Description of STM32F4 HAL and low-layer drivers
+
+https://www.st.com/resource/en/user_manual/um1725-description-of-stm32f4-hal-and-lowlayer-drivers-stmicroelectronics.pdf
+
