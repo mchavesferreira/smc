@@ -68,3 +68,33 @@ PB6<>SCL
   }
 ```
 
+# Leitura AD
+
+função AD no stm32
+
+### Caracteristicas do ADC 
+### Resolução
+
+### taxa de amostragem (H)
+### tensão de referencia
+#### resolução de tensão
+
+# POLLING, Interrupção e DMA
+
+
+Ao trabalhoar com leituras ADC pode se escolher tres métodos principais:  
+
+## POlling
+o microcontrolador inicia a leitura do ADC e aguarda até que a conversão seja concluida
+
+
+#interrupção
+O microcontrolador começa a leitura do ADC e continua executando outras tarefas, quando a conversão termina, o ADC envia uma interrução para ser processada a leitura
+
+#DMA
+Direct Memory Acess
+O microcontrolador instrui DMA, uma unidade independente para iniciar a leitura e gerenciar a conversão do ADC, durante ess a opoeração, o microcontrolador continua suas tarefas, quando a  conversão termina, o DMA envia uma interrupção ao microcontrolador
+
+
+
+
