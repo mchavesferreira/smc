@@ -104,6 +104,10 @@ Configure AD para o canal :  Analog > ADC selecione "IN7", mantenha as configura
 
 Hailibite o TIM3 e configure para gerar uma interrução a cada um segundo, utilizando preescalaer em 48000-1 e contador em 1000-1
 
+<img src=../imagens/tim3.png>
+<BR><BR>
+<img src=../imagens/in7.png>
+
 
 
 
