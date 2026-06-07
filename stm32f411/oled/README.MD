@@ -59,7 +59,8 @@ PB6<>SCL
 	    ssd1306_SetCursor(4, 24);
 	    ssd1306_WriteString("Temperatura", Font_16x15, White);
 	    ssd1306_SetCursor(4, 44);
-	    snprintf(buff, sizeof(buff), "%lu seg", (unsigned long)time);
+	    //snprintf(buff, sizeof(buff), "%lu seg", (unsigned long)time);
+	    sprintf(buff, "%lu s", (unsigned long)time);
 	    ssd1306_WriteString(buff, Font_11x18, White);
 	    ssd1306_UpdateScreen();
 	    HAL_Delay(1000);
