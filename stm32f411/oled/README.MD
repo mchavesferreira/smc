@@ -43,4 +43,27 @@ PB6<>SCL
 <img width="756" height="398" alt="image" src="https://github.com/user-attachments/assets/50c20462-6862-4481-b244-c8f4280930b7" />
 
 
+### Display com numeros e letras
+
+```java
+
+  ssd1306_Init();
+  char buff[64];
+  volatile uint32_t time=0;
+
+  while (1)
+  {
+	    ssd1306_Fill(Black);
+	    ssd1306_SetCursor(4, 4);
+	    ssd1306_WriteString("IFSP Catanduva", Font_6x8, White);
+	    ssd1306_SetCursor(4, 24);
+	    ssd1306_WriteString("Temperatura", Font_16x15, White);
+	    ssd1306_SetCursor(4, 44);
+	    snprintf(buff, sizeof(buff), "%lu seg", (unsigned long)time);
+	    ssd1306_WriteString(buff, Font_11x18, White);
+	    ssd1306_UpdateScreen();
+	    HAL_Delay(1000);
+	    time++;
+  }
+```
 
