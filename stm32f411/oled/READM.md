@@ -1,10 +1,10 @@
 # utilizando oled no stm32
 
-Baixar a biblioteca deste repositorio e criar um pasta lib no stm32IDE
+### Baixar a biblioteca deste repositorio
 
 https://github.com/afiskon/stm32-ssd1306
 
-Copie da pasta SSD1306 estes arquivos para a pasta SRC de seu projeto. 
+Descompacte, e copie  arquivos da pasta SSD1306 para a pasta SRC de seu projeto. 
 
 <img width="206" height="287" alt="image" src="https://github.com/user-attachments/assets/c8dc1510-0b66-41e4-b5e7-08ee51b2dad9" />
 
@@ -32,5 +32,15 @@ Altere o codigo para realizar os teste de recursos do display
 
 }
 ```
+## Monte o circuito
+
+Monte e grave o arquivo compilado em seu STM32f411
+```java
+PB7<>SDA
+PB6<>SCL
+```
+
+<img width="756" height="398" alt="image" src="https://github.com/user-attachments/assets/50c20462-6862-4481-b244-c8f4280930b7" />
+
 
 
