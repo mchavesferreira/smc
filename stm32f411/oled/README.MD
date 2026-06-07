@@ -96,5 +96,16 @@ Direct Memory Acess
 O microcontrolador instrui DMA, uma unidade independente para iniciar a leitura e gerenciar a conversão do ADC, durante ess a opoeração, o microcontrolador continua suas tarefas, quando a  conversão termina, o DMA envia uma interrupção ao microcontrolador
 
 
+## exemplo
+
+Altere a frequencia de clock com o cristal externo em 48MHZ
+
+Configure AD para o canal :  Analog > ADC selecione "IN7", mantenha as configurações padrões
+
+Hailibite o TIM3 e configure para gerar uma interrução a cada um segundo, utilizando preescalaer em 48000-1 e contador em 1000-1
+
+
+
+
 
 
