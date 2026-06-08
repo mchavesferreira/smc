@@ -69,22 +69,22 @@ Diagrama esquemático da placa WeAct Black Pill V2.0:
 
 ## Tópicos Sugeridos para Aula
 
-. Arquitetura ARM Cortex-M4
-. Organização da memória Flash e SRAM
-. Clock do sistema e PLL
-. Estrutura de um projeto STM32CubeIDE
-. <a href=hall.md>Biblioteca Hall </a>
+* Arquitetura ARM Cortex-M4
+* Organização da memória Flash e SRAM
+* Clock do sistema e PLL
+* Estrutura de um projeto STM32CubeIDE
+* <a href=hall.md>Biblioteca Hall </a>
 
-. <a href=https://github.com/mchavesferreira/smc/blob/main/stm32f411/gpio.md>GPIO</a>
-. Interrupções e NVIC
-. Timers e PWM
-. UART
-. SPI
-. I2C
-. <a href=https://github.com/mchavesferreira/smc/tree/main/stm32f411/adc>ADC e DMA</a>
-. Modos de baixo consumo
-. Debug via SWD
-. Desenvolvimento de aplicações utilizando HAL e acesso direto aos registradores
+* <a href=https://github.com/mchavesferreira/smc/blob/main/stm32f411/gpio.md>GPIO</a>
+* Interrupções e NVIC
+* Timers e PWM
+* UART
+* SPI
+* <a href=https://github.com/mchavesferreira/smc/tree/main/stm32f411/oled>I2C e display Oled</a>
+* <a href=https://github.com/mchavesferreira/smc/tree/main/stm32f411/adc>ADC e DMA</a>
+* Modos de baixo consumo
+* Debug via SWD
+* Desenvolvimento de aplicações utilizando HAL e acesso direto aos registradores
 
 ---
 
