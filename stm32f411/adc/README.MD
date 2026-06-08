@@ -76,6 +76,11 @@ Bits de habilitação de interrupção: OVRIE, EOCIE, JEOCIE, AWDIE
 
 ADC Interrupt to NVIC- Quando o ADC gera uma interrupção, o pedido vai para o NVIC. O NVIC decide se a CPU deve parar o que está fazendo e executar a rotina de interrupção do ADC. O NVIC é o controlador de interrupções do Cortex-M.
 
+Analog watchdog: é um comparador digital interno associado ao ADC.
+
+EXTSEL - Seleciona qual evento externo vai disparar o ADC, enquanto EXTEN define em qual borda o disparo acontece.
+
+JEXTSEL e JEXTEN — gatilho externo do grupo injetado. São equivalentes aos blocos EXTSEL e EXTEN, mas para o grupo injetado.
 
 # 2.Prática com códigos
 
