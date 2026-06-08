@@ -84,6 +84,17 @@ JEXTSEL e JEXTEN — gatilho externo do grupo injetado. São equivalentes aos bl
 
 # 2.Prática com códigos
 
+## funções HALL genéricas
+
+```java
+HAL_StatusTypeDef HAL_ADC_Init(ADC_HandleTypeDef* hadc);
+HAL_StatusTypeDef HAL_ADC_DeInit(ADC_HandleTypeDef *hadc);
+HAL_StatusTypeDef HAL_ADC_Start(ADC_HandleTypeDef* hadc);
+HAL_StatusTypeDef HAL_ADC_Stop(ADC_HandleTypeDef* hadc);
+HAL_StatusTypeDef HAL_ADC_Start_IT(ADC_HandleTypeDef* hadc);
+HAL_StatusTypeDef HAL_ADC_Stop_IT(ADC_HandleTypeDef* hadc);
+void HAL_ADC_IRQHandler(ADC_HandleTypeDef* hadc);
+```
 
 ## 2.1 Método Polling
 
