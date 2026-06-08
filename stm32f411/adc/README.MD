@@ -351,3 +351,8 @@ int main(void)
 <a href=https://www.st.com/resource/en/reference_manual/rm0383-stm32f411xce-advanced-armbased-32bit-mcus-stmicroelectronics.pdf> Reference Manual STM32F411<a/>
 
 <a href=https://www.st.com/resource/en/application_note/cd00211314.pdf>How to optimize the ADC accuracy </a>
+
+
+https://community.st.com/t5/stm32cubeide-mcus/hal-adc-convcpltcallback-only-called-once/td-p/637221
+
+https://sourcevu.sysprogs.com/stm32/HAL/symbols/HAL_ADCEx_MultiModeStart_DMA
