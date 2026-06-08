@@ -87,36 +87,55 @@ O sinal de entrada passa primeiro pelo bloco SHA (*Sample-and-Hold*), responsáv
 Em seguida, o comparador verifica a diferença entre a tensão amostrada e a tensão gerada internamente pelo DAC. A lógica SAR ajusta esse valor passo a passo, por aproximações sucessivas, até encontrar o número digital que melhor representa a tensão de entrada.
 A temporização controla os instantes de amostragem, comparação e atualização dos blocos internos, garantindo que a conversão ocorra de forma ordenada e precisa.
 
+Para uma descrição completa de todos os modos disponíveis, recomenda-se consultar a nota de aplicação <a href=https://www.st.com/content/ccc/resource/technical/document/application_note/c4/63/a9/f4/ae/f2/48/5d/CD00258017.pdf/files/CD00258017.pdf/jcr:content/translations/en.CD00258017.pdf>AN3116 da STMicroelectronics</a>.
 
-função AD no stm32
 
-### Caracteristicas do ADC 
+### Características do ADC
+
+Conjunto de parâmetros que define como o conversor analógico-digital mede, converte e representa uma tensão analógica em valor digital.
+
 ### Resolução
 
-### taxa de amostragem (H)
-### tensão de referencia
-#### resolução de tensão
+Quantidade de bits usada na conversão, determinando quantos níveis digitais o ADC consegue representar.
 
-# POLLING, Interrupção e DMA
+### Taxa de amostragem
+
+Quantidade de leituras ou conversões que o ADC consegue realizar por segundo, geralmente expressa em amostras por segundo.
+
+### Tensão de referência
+
+Tensão máxima usada como base de comparação para converter a entrada analógica em valor digital.
+
+### Resolução de tensão
+
+Menor variação de tensão que o ADC consegue distinguir entre dois níveis digitais consecutivos.
+
+Segue revisado, com uma linha para cada conceito:
+
+# Polling, Interrupção e DMA
+
+Ao trabalhar com leituras ADC, podem ser escolhidos três métodos principais para obter o resultado da conversão:
+
+## Polling
+
+O microcontrolador inicia a conversão ADC e fica aguardando até que o resultado esteja disponível.
+
+## Interrupção
+
+O microcontrolador inicia a conversão ADC e continua executando outras tarefas, sendo avisado por uma interrupção quando a leitura termina.
+
+## DMA
+
+O ADC transfere automaticamente os dados convertidos para a memória, sem exigir intervenção constante da CPU.
 
 
-Ao trabalhoar com leituras ADC pode se escolher tres métodos principais:  
 
-## POlling
-o microcontrolador inicia a leitura do ADC e aguarda até que a conversão seja concluida
+## exemplos de código
 
 
-#interrupção
-O microcontrolador começa a leitura do ADC e continua executando outras tarefas, quando a conversão termina, o ADC envia uma interrução para ser processada a leitura
+### Método Polling
 
-#DMA
-Direct Memory Acess
-O microcontrolador instrui DMA, uma unidade independente para iniciar a leitura e gerenciar a conversão do ADC, durante ess a opoeração, o microcontrolador continua suas tarefas, quando a  conversão termina, o DMA envia uma interrupção ao microcontrolador
-
-
-## exemplo
-
-Altere a frequencia de clock com o cristal externo em 48MHZ
+Altere a frequência de clock com o cristal externo em 48MHZ
 
 Configure AD para o canal :  Analog > ADC selecione "IN7", mantenha as configurações padrões
 
@@ -197,7 +216,7 @@ int main(void) {
 
 ```
 
-## Conversão AD em modo DMA
+### Método Conversão AD em modo DMA
 
 No **STM32F411**, a conversão do **ADC em modo DMA** funciona assim: o ADC faz as leituras analógicas e o **DMA copia automaticamente os valores convertidos para um vetor na RAM**, sem a CPU precisar buscar cada amostra manualmente.
 
@@ -361,5 +380,13 @@ int main(void)
     }
 }
 ```
+
+
+# Referências
+<a href=https://www.st.com/resource/en/reference_manual/rm0383-stm32f411xce-advanced-armbased-32bit-mcus-stmicroelectronics.pdf> Reference Manual STM32F411<a/>
+
+<a href=https://www.st.com/resource/en/application_note/cd00211314.pdf>How to optimize the ADC accuracy </a>
+
+
 
 
