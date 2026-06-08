@@ -1,4 +1,4 @@
-# utilizando oled no stm32
+# 2. Prática: Utilizando display I2C Oled
 
 ### Baixar a biblioteca deste repositorio
 
