@@ -109,6 +109,41 @@ Hailibite o TIM3 e configure para gerar uma interrução a cada um segundo, util
 <img src=../imagens/in7.png>
 
 
+### codigo para leitura AD com temporizador tim3
+
+```java
+  ssd1306_Init();
+  char buff[64];
+  volatile uint32_t leitura_ad=0;  // variavel ad
+
+  HAL_TIM_Base_Start(&htim3);  // temporizador
+
+  while (1)
+  {
+
+	  if(__HAL_TIM_GET_FLAG(&htim3, TIM_FLAG_UPDATE)){
+	  	  	    __HAL_TIM_CLEAR_FLAG(&htim3, TIM_FLAG_UPDATE);
+                // ADC COM POLLING
+	  	  	    HAL_ADC_Start(&hadc1);
+	  	  	    HAL_ADC_PollForConversion(&hadc1, 100); // aguarda a conversao ser concluida
+	  	  	    leitura_ad=HAL_ADC_GetValue(&hadc1);
+	  	  	    HAL_ADC_Stop(&hadc1);
+
+	  		    ssd1306_Fill(Black);
+	  		    ssd1306_SetCursor(4, 22);
+	  		    ssd1306_WriteString("Leitura AD", Font_16x15, White);
+	  		    ssd1306_SetCursor(4, 44);
+	  		    sprintf(buff, "%lu ", (unsigned long)leitura_ad);
+
+	  		    ssd1306_WriteString(buff, Font_11x18, White);
+	  		    ssd1306_UpdateScreen();
+	  	  	  }
+```
+
+### Método ADC por interrução
+
+Considere as configurações realizadas no método polling, habilitando o método interrupção. Vá em ANALOG> ADC > NVIC Setting e habilite a interrupção
+
 
 
 
