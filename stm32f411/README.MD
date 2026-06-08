@@ -19,6 +19,26 @@ O **STM32F411CE** é um microcontrolador de alto desempenho da família STM32 ba
 
 <a href=imagens/blackpill.png><img src=imagens/blackpill.png width=300 height=300 border=0></a>
 
+## Tópicos
+
+* Arquitetura ARM Cortex-M4
+* Organização da memória Flash e SRAM
+* Clock do sistema e PLL
+* Estrutura de um projeto STM32CubeIDE
+* <a href=hall.md>Biblioteca Hall </a>
+* <a href=https://github.com/mchavesferreira/smc/blob/main/stm32f411/gpio>GPIO</a>
+* <a href=https://github.com/mchavesferreira/smc/blob/main/stm32f411/interrupcoes>Interrupções e NVIC</a>
+* <a href=https://github.com/mchavesferreira/smc/blob/main/stm32f411/timers>Timers e PWM</a>
+* UART
+* SPI
+* <a href=https://github.com/mchavesferreira/smc/tree/main/stm32f411/oled>I2C e display Oled</a>
+* <a href=https://github.com/mchavesferreira/smc/tree/main/stm32f411/adc>ADC e DMA</a>
+* Modos de baixo consumo
+* Debug via SWD
+
+
+---
+
 ## Documentação Oficial
 
 ### Página do Fabricante (STMicroelectronics)
@@ -67,25 +87,7 @@ Diagrama esquemático da placa WeAct Black Pill V2.0:
 
 ---
 
-## Tópicos
 
-* Arquitetura ARM Cortex-M4
-* Organização da memória Flash e SRAM
-* Clock do sistema e PLL
-* Estrutura de um projeto STM32CubeIDE
-* <a href=hall.md>Biblioteca Hall </a>
-* <a href=https://github.com/mchavesferreira/smc/blob/main/stm32f411/gpio>GPIO</a>
-* <a href=https://github.com/mchavesferreira/smc/blob/main/stm32f411/interrupcoes>Interrupções e NVIC</a>
-* <a href=https://github.com/mchavesferreira/smc/blob/main/stm32f411/timers>Timers e PWM</a>
-* UART
-* SPI
-* <a href=https://github.com/mchavesferreira/smc/tree/main/stm32f411/oled>I2C e display Oled</a>
-* <a href=https://github.com/mchavesferreira/smc/tree/main/stm32f411/adc>ADC e DMA</a>
-* Modos de baixo consumo
-* Debug via SWD
-
-
----
 
 ## Placa Utilizada
 
