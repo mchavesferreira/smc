@@ -34,7 +34,7 @@ O **STM32F411CE** é um microcontrolador de alto desempenho da família STM32 ba
 * <a href=https://github.com/mchavesferreira/smc/tree/main/stm32f411/oled>I2C e display Oled</a>
 * <a href=https://github.com/mchavesferreira/smc/tree/main/stm32f411/adc>ADC e DMA</a>
 * Modos de baixo consumo
-* Debug via SWD
+* <a href=debug_serial_wire.md>Debug via SWD</a>
 
 
 ---
