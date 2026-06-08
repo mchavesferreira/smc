@@ -98,3 +98,7 @@ Os campos `memory_size` e `peripheral_size` foram definidos como 8 bits, usando 
 
 Por fim, a função `DMA_Init(DMA)` é chamada para aplicar a configuração definida na estrutura.
 
+Fontes:
+
+https://github.com/embeddedalpha/STM32F411CEU6/blob/main/DMA/README.md
+
