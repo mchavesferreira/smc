@@ -112,6 +112,19 @@ Hailibite o TIM3 e configure para gerar uma interrução a cada um segundo, util
 ### codigo para leitura AD com temporizador tim3
 
 ```java
+
+
+```
+
+
+## 2.2 Método ADC por interrução
+
+Considere as configurações realizadas no método polling, habilitando o método interrupção. Vá em ANALOG> ADC > NVIC Setting e habilite a interrupção
+
+Como de costume, precisamos definir a rotina de serviço de interrupção (ISR) conectada à interrupção do ADC, atribuir a prioridade de interrupção desejada e habilitar a IRQ correspondente. Como todos os outros periféricos da HAL, precisamos chamar a função HAL_ADC_IRQHandler() da ISR do ADC e implementar a rotina de retorno de chamada HAL_ADC_ConvCpltCallback(), que é chamada automaticamente pela HAL quando uma conversão termina. Finalmente, todas as interrupções relacionadas ao ADC são habilitadas iniciando o ADC usando a função HAL_ADC_Start_IT().
+
+
+```java
 #include <stdio.h>
 #include <string.h>
 #include "ssd1306_fonts.h"
@@ -181,45 +194,6 @@ int main(void)
       HAL_ADC_Start_IT(&hadc1);
     }
   }
-}
-```
-
-
-## 2.2 Método ADC por interrução
-
-Considere as configurações realizadas no método polling, habilitando o método interrupção. Vá em ANALOG> ADC > NVIC Setting e habilite a interrupção
-
-Como de costume, precisamos definir a rotina de serviço de interrupção (ISR) conectada à interrupção do ADC, atribuir a prioridade de interrupção desejada e habilitar a IRQ correspondente. Como todos os outros periféricos da HAL, precisamos chamar a função HAL_ADC_IRQHandler() da ISR do ADC e implementar a rotina de retorno de chamada HAL_ADC_ConvCpltCallback(), que é chamada automaticamente pela HAL quando uma conversão termina. Finalmente, todas as interrupções relacionadas ao ADC são habilitadas iniciando o ADC usando a função HAL_ADC_Start_IT().
-
-
-```java
-void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
-	char msg[20];
-	uint16_t rawValue;
-	float temp;
-	rawValue = HAL_ADC_GetValue(&hadc1);
-	temp = ((float)rawValue) / 4095 * 3300;
-	temp = ((temp - 760.0) / 2.5) + 25;
-	sprintf(msg, "rawValue: %hu\r\n", rawValue);
-	HAL_UART_Transmit(&huart2, (uint8_t*) msg, strlen(msg), HAL_MAX_DELAY);
-	sprintf(msg, "Temperature: %f\r\n", temp);
-	HAL_UART_Transmit(&huart2, (uint8_t*) msg, strlen(msg), HAL_MAX_DELAY);
-}
-
-
-int main(void) {
-	HAL_Init();
-	Nucleo_BSP_Init();
-	/* Initialize all configured peripherals */
-	MX_ADC1_Init();
-	HAL_NVIC_SetPriority(ADC_IRQn, 0, 0);
-	HAL_NVIC_EnableIRQ(ADC_IRQn);
-	HAL_ADC_Start_IT(&hadc1);
-	while (1);
-		}
-		void ADC_IRQHandler(void) {
-		HAL_ADC_IRQHandler(&hadc1);
-		}
 }
 
 ```
