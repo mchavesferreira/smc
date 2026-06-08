@@ -1,6 +1,6 @@
 # Leitura AD
 
-## Conversor Analógico-Digital no STM32F411
+## 1. Teoria: Conversor Analógico-Digital no STM32F411
 
 Em sistemas embarcados, muitos dispositivos, como sensores, potenciômetros e transdutores, geram sinais analógicos que precisam ser convertidos em valores digitais para serem processados pelo microcontrolador. Essa função é realizada pelo ADC, ou Conversor Analógico-Digital.
 
@@ -60,10 +60,10 @@ O ADC transfere automaticamente os dados convertidos para a memória, sem exigir
 
 
 
-## exemplos de código
+# 2.Prática com códigos
 
 
-### Método Polling
+## 2.1 Método Polling
 
 Altere a frequência de clock com o cristal externo em 48MHZ
 
@@ -107,7 +107,8 @@ Hailibite o TIM3 e configure para gerar uma interrução a cada um segundo, util
 	  	  	  }
 ```
 
-### Método ADC por interrução
+
+## 2.2 Método ADC por interrução
 
 Considere as configurações realizadas no método polling, habilitando o método interrupção. Vá em ANALOG> ADC > NVIC Setting e habilite a interrupção
 
@@ -146,7 +147,8 @@ int main(void) {
 
 ```
 
-### Método Conversão AD em modo DMA
+
+## 2.3 Método Conversão AD em modo DMA
 
 No **STM32F411**, a conversão do **ADC em modo DMA** funciona assim: o ADC faz as leituras analógicas e o **DMA copia automaticamente os valores convertidos para um vetor na RAM**, sem a CPU precisar buscar cada amostra manualmente.
 
