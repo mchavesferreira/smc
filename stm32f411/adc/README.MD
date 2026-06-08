@@ -356,3 +356,7 @@ int main(void)
 https://community.st.com/t5/stm32cubeide-mcus/hal-adc-convcpltcallback-only-called-once/td-p/637221
 
 https://sourcevu.sysprogs.com/stm32/HAL/symbols/HAL_ADCEx_MultiModeStart_DMA
+
+https://deepbluembedded.com/stm32-adc-read-example-dma-interrupt-polling/
+
+
