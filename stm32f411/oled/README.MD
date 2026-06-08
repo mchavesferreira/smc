@@ -1,6 +1,8 @@
 # 2. Prática: Utilizando display I2C Oled
 
-### Baixar a biblioteca deste repositorio
+### 2.1 Exemplo de código para testes com display Oled
+
+Baixar a biblioteca deste repositorio
 
 https://github.com/afiskon/stm32-ssd1306
 
@@ -43,7 +45,7 @@ PB6<>SCL
 <img width="756" height="398" alt="image" src="https://github.com/user-attachments/assets/50c20462-6862-4481-b244-c8f4280930b7" />
 
 
-### Display com numeros e letras
+### 2.1 Exemplo de código para testes com display Oled para String e variaveis numéricas
 
 ```java
 
