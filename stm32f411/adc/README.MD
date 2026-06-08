@@ -42,21 +42,25 @@ Menor variação de tensão que o ADC consegue distinguir entre dois níveis dig
 
 Segue revisado, com uma linha para cada conceito:
 
-# Polling, Interrupção e DMA
+## Polling, Interrupção e DMA
 
 Ao trabalhar com leituras ADC, podem ser escolhidos três métodos principais para obter o resultado da conversão:
 
-## Polling
+### Polling
 
 O microcontrolador inicia a conversão ADC e fica aguardando até que o resultado esteja disponível.
 
-## Interrupção
+### Interrupção
 
 O microcontrolador inicia a conversão ADC e continua executando outras tarefas, sendo avisado por uma interrupção quando a leitura termina.
 
-## DMA
+### DMA
 
 O ADC transfere automaticamente os dados convertidos para a memória, sem exigir intervenção constante da CPU.
+
+## Descrição dos Blocos funcionais
+
+<a href=blocosad_stm32f411.png><img src=blocosad_stm32f411.png width=400 height=400 border=0></a>
 
 
 
