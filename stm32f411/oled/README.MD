@@ -144,7 +144,204 @@ Hailibite o TIM3 e configure para gerar uma interrução a cada um segundo, util
 
 Considere as configurações realizadas no método polling, habilitando o método interrupção. Vá em ANALOG> ADC > NVIC Setting e habilite a interrupção
 
+Como de costume, precisamos definir a rotina de serviço de interrupção (ISR) conectada à interrupção do ADC, atribuir a prioridade de interrupção desejada e habilitar a IRQ correspondente. Como todos os outros periféricos da HAL, precisamos chamar a função HAL_ADC_IRQHandler() da ISR do ADC e implementar a rotina de retorno de chamada HAL_ADC_ConvCpltCallback(), que é chamada automaticamente pela HAL quando uma conversão termina. Finalmente, todas as interrupções relacionadas ao ADC são habilitadas iniciando o ADC usando a função HAL_ADC_Start_IT().
 
 
+```java
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc) {
+	char msg[20];
+	uint16_t rawValue;
+	float temp;
+	rawValue = HAL_ADC_GetValue(&hadc1);
+	temp = ((float)rawValue) / 4095 * 3300;
+	temp = ((temp - 760.0) / 2.5) + 25;
+	sprintf(msg, "rawValue: %hu\r\n", rawValue);
+	HAL_UART_Transmit(&huart2, (uint8_t*) msg, strlen(msg), HAL_MAX_DELAY);
+	sprintf(msg, "Temperature: %f\r\n", temp);
+	HAL_UART_Transmit(&huart2, (uint8_t*) msg, strlen(msg), HAL_MAX_DELAY);
+}
+
+
+int main(void) {
+	HAL_Init();
+	Nucleo_BSP_Init();
+	/* Initialize all configured peripherals */
+	MX_ADC1_Init();
+	HAL_NVIC_SetPriority(ADC_IRQn, 0, 0);
+	HAL_NVIC_EnableIRQ(ADC_IRQn);
+	HAL_ADC_Start_IT(&hadc1);
+	while (1);
+		}
+		void ADC_IRQHandler(void) {
+		HAL_ADC_IRQHandler(&hadc1);
+		}
+}
+
+```
+
+## Conversão AD em modo DMA
+
+No **STM32F411**, a conversão do **ADC em modo DMA** funciona assim: o ADC faz as leituras analógicas e o **DMA copia automaticamente os valores convertidos para um vetor na RAM**, sem a CPU precisar buscar cada amostra manualmente.
+
+Esse modo é muito útil quando você quer:
+
+```text
+ler continuamente um canal analógico
+ler vários canais ADC em sequência
+usar um timer para amostrar em frequência fixa
+reduzir o uso da CPU
+```
+
+### Ideia principal
+
+Em vez de fazer:
+
+```c
+HAL_ADC_Start(&hadc1);
+HAL_ADC_PollForConversion(&hadc1, timeout);
+valor = HAL_ADC_GetValue(&hadc1);
+```
+
+você usa:
+
+```c
+HAL_ADC_Start_DMA(&hadc1, buffer_adc, tamanho);
+```
+
+A partir daí, o ADC converte e o DMA grava os resultados no vetor:
+
+```c
+uint32_t buffer_adc[4];
+```
+
+Por exemplo, se você estiver lendo 4 canais, o DMA pode preencher:
+
+```text
+buffer_adc[0] -> canal 1
+buffer_adc[1] -> canal 2
+buffer_adc[2] -> canal 3
+buffer_adc[3] -> canal 4
+```
+
+### Passos para usar ADC com DMA no STM32F411
+
+Primeiro você configura o **ADC1** no CubeMX. No STM32F411, normalmente usa-se o **ADC1**, porque ele é o conversor ADC principal disponível nessa família.
+
+Depois, configure o ADC conforme o tipo de leitura:
+
+```text
+Scan Conversion Mode: Enabled, se usar vários canais
+Continuous Conversion Mode: Enabled, se quiser conversão contínua
+DMA Continuous Requests: Enabled
+Data Alignment: Right
+Resolution: 12 bits
+```
+
+Depois você configura o **DMA** associado ao ADC1. No STM32F411, o ADC1 usa normalmente:
+
+```text
+DMA2
+Stream 0
+Channel 0
+```
+
+O DMA pode ser configurado como:
+
+```text
+Mode: Circular
+Peripheral to Memory
+Peripheral increment: Disabled
+Memory increment: Enabled
+Data width: Half Word ou Word
+```
+
+O modo **Circular** é importante quando você quer que o ADC fique convertendo continuamente e preenchendo o mesmo buffer em ciclo.
+
+### Ligação entre ADC e DMA
+
+No código HAL, o DMA precisa ser ligado ao ADC com a macro:
+
+```c
+__HAL_LINKDMA(&hadc1, DMA_Handle, hdma_adc1);
+```
+
+Quando você usa CubeMX/CubeIDE, isso geralmente é gerado automaticamente dentro da função:
+
+```c
+HAL_ADC_MspInit()
+```
+
+### Iniciando a conversão
+
+Depois da inicialização do sistema, GPIO, DMA e ADC, você inicia assim:
+
+```c
+uint32_t adc_buffer[1];
+
+HAL_ADC_Start_DMA(&hadc1, adc_buffer, 1);
+```
+
+Para vários canais:
+
+```c
+uint32_t adc_buffer[3];
+
+HAL_ADC_Start_DMA(&hadc1, adc_buffer, 3);
+```
+
+Nesse caso, o tamanho passado deve corresponder ao número de conversões da sequência ADC.
+
+### Callback de fim de conversão
+
+Quando o DMA termina de preencher o buffer, a HAL pode chamar:
+
+```c
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
+{
+    if (hadc->Instance == ADC1)
+    {
+        // dados novos disponíveis em adc_buffer
+    }
+}
+```
+
+Se o DMA estiver em modo circular, essa função será chamada repetidamente a cada ciclo completo do buffer.
+
+### Resumo prático para STM32F411
+
+Para usar ADC com DMA no STM32F411:
+
+```text
+1. Configure o ADC1.
+2. Ative DMA Continuous Requests.
+3. Configure o DMA2 Stream 0 Channel 0 para ADC1.
+4. Use modo Circular se quiser leitura contínua.
+5. Inicie com HAL_ADC_Start_DMA().
+6. Leia os valores no vetor preenchido pelo DMA.
+7. Use HAL_ADC_ConvCpltCallback() se quiser tratar o fim da conversão.
+```
+
+Exemplo simples:
+
+```c
+uint32_t adc_buffer[1];
+
+int main(void)
+{
+    HAL_Init();
+    SystemClock_Config();
+
+    MX_GPIO_Init();
+    MX_DMA_Init();
+    MX_ADC1_Init();
+
+    HAL_ADC_Start_DMA(&hadc1, adc_buffer, 1);
+
+    while (1)
+    {
+        // adc_buffer[0] contém o valor atual do ADC
+    }
+}
+```
 
 
