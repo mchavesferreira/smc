@@ -70,6 +70,24 @@ PB6<>SCL
 
 # Leitura AD
 
+## Introdução ao Conversor Analógico-Digital no STM32F411
+
+Em sistemas embarcados, muitos dispositivos, como sensores, potenciômetros e transdutores, geram sinais analógicos que precisam ser convertidos em valores digitais para serem processados pelo microcontrolador. Essa função é realizada pelo ADC, ou Conversor Analógico-Digital.
+
+O STM32F411 possui um ADC do tipo SAR (*Successive Approximation Register*) com resolução de 12 bits, permitindo representar a tensão medida por valores de 0 a 4095. Considerando uma referência de 3,3 V, uma entrada de 0 V resulta em valor próximo de 0, enquanto uma entrada próxima de 3,3 V resulta em valor próximo de 4095.
+
+O ADC pode ler diferentes canais analógicos por meio de uma seleção interna semelhante a um multiplexador. As conversões podem ocorrer em modo simples, contínuo ou em sequência de canais (*scan mode*). Também é possível iniciar conversões por software ou por eventos gerados por temporizadores.
+
+Quando associado ao DMA, o ADC transfere os dados convertidos diretamente para a memória, reduzindo a carga da CPU. Assim, o ADC do STM32F411 permite medir grandezas físicas e utilizá-las em aplicações de monitoramento, controle e aquisição de dados.
+
+<img src=../imagens/sar.png>
+
+A figura apresenta a estrutura básica de um conversor ADC do tipo SAR, usado para transformar uma tensão analógica em um valor digital.
+O sinal de entrada passa primeiro pelo bloco SHA (*Sample-and-Hold*), responsável por amostrar a tensão e mantê-la estável durante o tempo necessário para a conversão.
+Em seguida, o comparador verifica a diferença entre a tensão amostrada e a tensão gerada internamente pelo DAC. A lógica SAR ajusta esse valor passo a passo, por aproximações sucessivas, até encontrar o número digital que melhor representa a tensão de entrada.
+A temporização controla os instantes de amostragem, comparação e atualização dos blocos internos, garantindo que a conversão ocorra de forma ordenada e precisa.
+
+
 função AD no stm32
 
 ### Caracteristicas do ADC 
