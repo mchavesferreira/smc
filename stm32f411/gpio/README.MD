@@ -1,4 +1,4 @@
-# 1. Instrodução aos GPIO
+# 1. Introdução aos GPIO
 
 
 ## Registradores de controle do GPIO
