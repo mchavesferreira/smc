@@ -112,32 +112,76 @@ Hailibite o TIM3 e configure para gerar uma interrução a cada um segundo, util
 ### codigo para leitura AD com temporizador tim3
 
 ```java
+#include <stdio.h>
+#include <string.h>
+#include "ssd1306_fonts.h"
+#include "ssd1306.h"
+#include "ssd1306_tests.h"
+
+ADC_HandleTypeDef hadc1;
+I2C_HandleTypeDef hi2c1;
+TIM_HandleTypeDef htim3;
+UART_HandleTypeDef huart1;
+uint8_t adc_Flag;
+volatile uint32_t leitura_ad;
+
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+static void MX_I2C1_Init(void);
+static void MX_ADC1_Init(void);
+static void MX_TIM3_Init(void);
+static void MX_USART1_UART_Init(void);
+
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
+{
+   leitura_ad = HAL_ADC_GetValue(&hadc1);
+   adc_Flag = 1;
+
+   char msg[50];
+   sprintf(msg, "%lu\r\n", (unsigned long)leitura_ad);
+   HAL_UART_Transmit(&huart1, (uint8_t *)msg, strlen(msg), 1000);
+}
+
+int main(void)
+{
+  HAL_Init();
+
+  SystemClock_Config();
+
+  MX_GPIO_Init();
+  MX_I2C1_Init();
+  MX_ADC1_Init();
+  MX_TIM3_Init();
+  MX_USART1_UART_Init();
+
   ssd1306_Init();
   char buff[64];
-  volatile uint32_t leitura_ad=0;  // variavel ad
-
-  HAL_TIM_Base_Start(&htim3);  // temporizador
+  adc_Flag = 0;
+  HAL_TIM_Base_Start(&htim3);
+  HAL_ADC_Start_IT(&hadc1);
 
   while (1)
   {
+    if (adc_Flag == 1)
+    {
+      adc_Flag = 0;
 
-	  if(__HAL_TIM_GET_FLAG(&htim3, TIM_FLAG_UPDATE)){
-	  	  	    __HAL_TIM_CLEAR_FLAG(&htim3, TIM_FLAG_UPDATE);
-                // ADC COM POLLING
-	  	  	    HAL_ADC_Start(&hadc1);
-	  	  	    HAL_ADC_PollForConversion(&hadc1, 100); // aguarda a conversao ser concluida
-	  	  	    leitura_ad=HAL_ADC_GetValue(&hadc1);
-	  	  	    HAL_ADC_Stop(&hadc1);
+      ssd1306_Fill(Black);
+      ssd1306_SetCursor(4, 22);
+      ssd1306_WriteString("Leitura AD", Font_16x15, White);
 
-	  		    ssd1306_Fill(Black);
-	  		    ssd1306_SetCursor(4, 22);
-	  		    ssd1306_WriteString("Leitura AD", Font_16x15, White);
-	  		    ssd1306_SetCursor(4, 44);
-	  		    sprintf(buff, "%lu ", (unsigned long)leitura_ad);
+      ssd1306_SetCursor(4, 44);
+      sprintf(buff, "%lu ", (unsigned long)leitura_ad);
 
-	  		    ssd1306_WriteString(buff, Font_11x18, White);
-	  		    ssd1306_UpdateScreen();
-	  	  	  }
+      ssd1306_WriteString(buff, Font_11x18, White);
+      ssd1306_UpdateScreen();
+
+      HAL_Delay(200);
+
+      HAL_ADC_Start_IT(&hadc1);
+    }
+  }
+}
 ```
 
 
