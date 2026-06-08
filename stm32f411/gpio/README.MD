@@ -95,7 +95,7 @@ OU
 ## Imprimindo na UART1
 main:
 ```java
-	const uint8_t msg[] = "Hello Franzininho C0\r\n";
+	const uint8_t msg[] = "Hello World!! \r\n";
 ```
 while:
 ```java
