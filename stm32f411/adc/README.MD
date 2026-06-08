@@ -60,8 +60,21 @@ O ADC transfere automaticamente os dados convertidos para a memória, sem exigir
 
 ## Descrição dos Blocos funcionais
 
+A figura a seguir, mostra a arquitetura interna de um bloco ADC do STM32F411. A ideia geral continua sendo: um sinal analógico entra por um pino, passa por um multiplexador, é convertido para número digital e o resultado vai para registradores. Porém, no STM32 há alguns blocos extras importantes que não aparecem nos ADCs mais simples.
+
 <a href=blocosad_stm32f411.png><img src=blocosad_stm32f411.png width=400 height=400 border=0></a>
 
+O bloco Regular channels representa o grupo principal de conversões do ADC.Esse é o modo mais usado. Quando você faz uma leitura simples com HAL, normalmente está usando o grupo regular.
+
+O bloco Injected channels é um recurso mais avançado.Ele permite criar um grupo especial de conversões com prioridade maior. A ideia é que uma conversão “injetada” possa interromper ou ser encaixada no fluxo das conversões regulares.
+
+DMA request. O ADC pode pedir ao DMA para transferir automaticamente os resultados das conversões para uma área da memória RAM, sem a CPU precisar copiar valor por valor.
+
+Flags são bits de status. Elas indicam que algum evento aconteceu.: OVR, EOC, JEOC e AWD
+
+Bits de habilitação de interrupção: OVRIE, EOCIE, JEOCIE, AWDIE
+
+ADC Interrupt to NVIC- Quando o ADC gera uma interrupção, o pedido vai para o NVIC. O NVIC decide se a CPU deve parar o que está fazendo e executar a rotina de interrupção do ADC. O NVIC é o controlador de interrupções do Cortex-M.
 
 
 # 2.Prática com códigos
