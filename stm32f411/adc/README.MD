@@ -239,6 +239,34 @@ Data Alignment: Right
 Resolution: 12 bits
 ```
 
+
+Clica em Analog > ADC DMA Settings, seleciona "ADC"  e e clique em "ADD"
+
+<img src=../imagens/configura_dma1.png>
+
+Adiciona o novo canal DMA,  configura em modo "normal" e habilita "memory"
+
+<img src=../imagens/configura_dma2.png?
+
+Volte em "Parameter Setting" e altere Conversao em modo continuo habilitado (Enable) e as requisições DMA
+
+Gere os codigos
+
+Em core/src/main.c  adicione as biblioecas 
+
+```java
+#include "stdio.h"
+#include "string.h"
+```
+
+Crei um array para armazenar a leitura do ADC
+```java
+uint16t adc_data[1];
+```
+
+Adicione a função callback que será chamada quando DMA completar a transferência de dados
+
+
 Depois você configura o **DMA** associado ao ADC1. No STM32F411, o ADC1 usa normalmente:
 
 ```text
