@@ -1,5 +1,8 @@
 
-#  Biblioteca HAL no STM32
+#  Biblioteca HAL  STM32F411
+
+
+<a href=https://www.st.com/resource/en/user_manual/um1725-description-of-stm32f4-hal-and-lowlayer-drivers-stmicroelectronics.pdf> UM1725 - Manual de referência para STM32F4</a>
 
 A **HAL (Hardware Abstraction Layer)** é uma biblioteca desenvolvida pela **STMicroelectronics** para facilitar a programação de microcontroladores **STM32**. Ela oferece uma camada de abstração para os periféricos do microcontrolador, permitindo que o desenvolvedor interaja com o hardware sem precisar manipular diretamente os registradores de baixo nível.
 
