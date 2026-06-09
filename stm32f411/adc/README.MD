@@ -181,7 +181,30 @@ Considere as configurações realizadas no método polling, habilitando o métod
 
 Como de costume, precisamos definir a rotina de serviço de interrupção (ISR) conectada à interrupção do ADC, atribuir a prioridade de interrupção desejada e habilitar a IRQ correspondente. Como todos os outros periféricos da HAL, precisamos chamar a função HAL_ADC_IRQHandler() da ISR do ADC e implementar a rotina de retorno de chamada HAL_ADC_ConvCpltCallback(), que é chamada automaticamente pela HAL quando uma conversão termina. Finalmente, todas as interrupções relacionadas ao ADC são habilitadas iniciando o ADC usando a função HAL_ADC_Start_IT().
 
+Habilite a interrupção 
 
+<B>Analog > ADC > NVIC Settings </b>
+
+<img src=adc_interrupcao1.png>
+
+Inclua as bibliotecas
+```java
+#include <stdio.h>
+#include <string.h>
+```
+
+e a função de callback
+```java
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
+{
+   leitura_ad = HAL_ADC_GetValue(&hadc1);
+   adc_Flag = 1;
+
+   char msg[50];
+   sprintf(msg, "%lu\r\n", (unsigned long)leitura_ad);
+   HAL_UART_Transmit(&huart1, (uint8_t *)msg, strlen(msg), 1000);
+}
+```
 ```java
 #include <stdio.h>
 #include <string.h>
