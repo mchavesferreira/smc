@@ -64,9 +64,9 @@ A figura a seguir, mostra a arquitetura interna de um bloco ADC do STM32F411. A 
 
 <a href=blocosad_stm32f411.png><img src=blocosad_stm32f411.png width=400 height=400 border=0></a>
 
-O bloco Regular channels representa o grupo principal de conversões do ADC.Esse é o modo mais usado. Quando você faz uma leitura simples com HAL, normalmente está usando o grupo regular.
+O bloco  <b> Regular channels </b> representa o grupo principal de conversões do ADC.Esse é o modo mais usado. Quando você faz uma leitura simples com HAL, normalmente está usando o grupo regular.
 
-O bloco Injected channels é um recurso mais avançado.Ele permite criar um grupo especial de conversões com prioridade maior. A ideia é que uma conversão “injetada” possa interromper ou ser encaixada no fluxo das conversões regulares.
+O bloco <b> Injected channels </b>é um recurso mais avançado.Ele permite criar um grupo especial de conversões com prioridade maior. A ideia é que uma conversão “injetada” possa interromper ou ser encaixada no fluxo das conversões regulares.
 
 DMA request. O ADC pode pedir ao DMA para transferir automaticamente os resultados das conversões para uma área da memória RAM, sem a CPU precisar copiar valor por valor.
 
