@@ -363,6 +363,9 @@ Data width: Half Word ou Word
 
 O modo **Circular** é importante quando você quer que o ADC fique convertendo continuamente e preenchendo o mesmo buffer em ciclo.
 
+### O exemplo a seguir, faz a leitura de dois canais diretamente com DMA
+
+
 ### Ligação entre ADC e DMA
 
 No código HAL, o DMA precisa ser ligado ao ADC com a macro:
@@ -427,26 +430,94 @@ Para usar ADC com DMA no STM32F411:
 7. Use HAL_ADC_ConvCpltCallback() se quiser tratar o fim da conversão.
 ```
 
-Exemplo simples:
+
 
 ```c
-uint32_t adc_buffer[1];
+#include <stdio.h>
+#include <string.h>
+#include "ssd1306_fonts.h"
+#include "ssd1306.h"
+#include "ssd1306_tests.h"
+
+ADC_HandleTypeDef hadc1;
+DMA_HandleTypeDef hdma_adc1;
+
+I2C_HandleTypeDef hi2c1;
+
+TIM_HandleTypeDef htim3;
+
+UART_HandleTypeDef huart1;
+
+uint8_t adc_Flag;
+uint16_t pot1;
+uint16_t pot2;
+
+volatile uint32_t readValue[2];
+char buffer[50];
+
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+static void MX_DMA_Init(void);
+static void MX_I2C1_Init(void);
+static void MX_ADC1_Init(void);
+static void MX_TIM3_Init(void);
+static void MX_USART1_UART_Init(void);
 
 int main(void)
 {
-    HAL_Init();
-    SystemClock_Config();
+  HAL_Init();
 
-    MX_GPIO_Init();
-    MX_DMA_Init();
-    MX_ADC1_Init();
+  SystemClock_Config();
 
-    HAL_ADC_Start_DMA(&hadc1, adc_buffer, 1);
+  MX_GPIO_Init();
+  MX_DMA_Init();
+  MX_I2C1_Init();
+  MX_ADC1_Init();
+  MX_TIM3_Init();
+  MX_USART1_UART_Init();
 
-    while (1)
+  ssd1306_Init();
+
+  adc_Flag = 0;
+
+  HAL_TIM_Base_Start(&htim3);
+  HAL_ADC_Start_DMA(&hadc1, (uint32_t *)readValue, 2);
+
+  char buff[64];
+
+  while (1)
+  {
+    for (uint8_t i = 0; i < hadc1.Init.NbrOfConversion; i++)
     {
-        // adc_buffer[0] contém o valor atual do ADC
+      pot1 = (uint16_t)readValue[0];
+      pot2 = (uint16_t)readValue[1];
     }
+
+    snprintf(buffer, sizeof(buffer), "Pot1: %d, Pot2: %d \r\n", pot1, pot2);
+    HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), HAL_MAX_DELAY);
+
+    HAL_Delay(200);
+
+    if (__HAL_TIM_GET_FLAG(&htim3, TIM_FLAG_UPDATE))
+    {
+      __HAL_TIM_CLEAR_FLAG(&htim3, TIM_FLAG_UPDATE);
+
+      ssd1306_Fill(Black);
+
+      ssd1306_SetCursor(4, 15);
+      ssd1306_WriteString("Leitura AD", Font_16x15, White);
+
+      ssd1306_SetCursor(4, 30);
+      snprintf(buff, sizeof(buff), "Pot1: %d", pot1);
+      ssd1306_WriteString(buff, Font_16x15, White);
+
+      ssd1306_SetCursor(4, 45);
+      snprintf(buff, sizeof(buff), "Pot2: %d", pot2);
+      ssd1306_WriteString(buff, Font_16x15, White);
+
+      ssd1306_UpdateScreen();
+    }
+  }
 }
 ```
 
