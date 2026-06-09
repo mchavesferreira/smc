@@ -235,3 +235,6 @@ void HAL_GPIO_EXTI_Rising_Callback(uint16_t GPIO_Pin)	// Função de callback pa
 }
 ```
 
+## Referências
+
+https://deepbluembedded.com/stm32-gpio-tutorial/
