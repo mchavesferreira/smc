@@ -24,19 +24,19 @@ Para uma descrição completa de todos os modos disponíveis, recomenda-se consu
 
 Conjunto de parâmetros que define como o conversor analógico-digital mede, converte e representa uma tensão analógica em valor digital.
 
-### Resolução
+#### - Resolução
 
 Quantidade de bits usada na conversão, determinando quantos níveis digitais o ADC consegue representar.
 
-### Taxa de amostragem
+#### - Taxa de amostragem
 
 Quantidade de leituras ou conversões que o ADC consegue realizar por segundo, geralmente expressa em amostras por segundo.
 
-### Tensão de referência
+#### - Tensão de referência
 
 Tensão máxima usada como base de comparação para converter a entrada analógica em valor digital.
 
-### Resolução de tensão
+#### - Resolução de tensão
 
 Menor variação de tensão que o ADC consegue distinguir entre dois níveis digitais consecutivos.
 
@@ -68,7 +68,7 @@ O bloco  <b> Regular channels </b> representa o grupo principal de conversões d
 
 O bloco <b> Injected channels </b>é um recurso mais avançado.Ele permite criar um grupo especial de conversões com prioridade maior. A ideia é que uma conversão “injetada” possa interromper ou ser encaixada no fluxo das conversões regulares.
 
-DMA request. O ADC pode pedir ao DMA para transferir automaticamente os resultados das conversões para uma área da memória RAM, sem a CPU precisar copiar valor por valor.
+<b>DMA request</b>. O ADC pode pedir ao DMA para transferir automaticamente os resultados das conversões para uma área da memória RAM, sem a CPU precisar copiar valor por valor.
 
 Flags são bits de status. Elas indicam que algum evento aconteceu.: OVR, EOC, JEOC e AWD
 
@@ -100,9 +100,9 @@ void HAL_ADC_IRQHandler(ADC_HandleTypeDef* hadc);
 
 Altere a frequência de clock com o cristal externo em 48MHZ
 
-Configure AD para o canal :  Analog > ADC selecione "IN7", mantenha as configurações padrões
+Configure AD para o canal : <b> Analog > ADC</b> selecione "IN7", mantenha as configurações padrões
 
-Hailibite o TIM3 e configure para gerar uma interrução a cada um segundo, utilizando preescalaer em 48000-1 e contador em 1000-1
+Hailibite o <b>TIM3</b> e configure para gerar uma interrução a cada um segundo, utilizando preescalaer em 48000-1 e contador em 1000-1
 
 <img src=../imagens/tim3.png>
 <BR><BR>
@@ -185,7 +185,7 @@ Habilite a interrupção
 
 <B>Analog > ADC > NVIC Settings </b>
 
-<img src=adc_interrupcao1.png>
+<img src=../imagens/adc_interrupcao1.png>
 
 Inclua as bibliotecas
 ```java
