@@ -5,7 +5,7 @@
 
 ### Os pinos PB7 e PB6 serão os pinos SDA e SCL respectivamente. Ative o modo Speed: Fast Mode
 
-<img src=i2cconfigura.png>
+<img src=../imagens/i2cconfigura.png>
 
 
 ### 2.1 Exemplo de código para testes com display Oled
