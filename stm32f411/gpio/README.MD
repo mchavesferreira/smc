@@ -120,7 +120,7 @@ while:
 
 ## Pisca com Timer
 
-Objetivo é piscar um LED, conectado ao PC6, a cada 0,5s (500ms) utilizando a criação de atraso com o Timer 3.
+Objetivo é piscar um LED, conectado ao PC6, a cada 0,5s (500ms) utilizando a criação de atraso com o <a href=https://github.com/mchavesferreira/smc/tree/main/stm32f411/timers>Timer 3</a>.
 
     Clock do sistema: interno 48 MHz
 	
