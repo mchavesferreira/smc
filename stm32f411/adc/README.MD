@@ -430,6 +430,20 @@ Para usar ADC com DMA no STM32F411:
 7. Use HAL_ADC_ConvCpltCallback() se quiser tratar o fim da conversão.
 ```
 
+## Preparando o ambiente Cubemx
+
+configure dois canais de leitura conforme a figura
+
+<img src=../imagens/multiadc1.png>
+
+Vá em DMA Settings > ADD > ADC1
+
+Configure modo Circular e DAta Width Word
+
+<img src=../imagens/multiadc2.png>
+
+Habilite ADC1 global interrupt
+<img src=../imagens/multiadc3.png>
 
 
 ```c
@@ -524,6 +538,8 @@ int main(void)
 }
 
 ```
+
+##### Tutorial multichannel ADC DMA: https://www.youtube.com/watch?v=C4y3z0Sz3iI
 
 
 # Referências
