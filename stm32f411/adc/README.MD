@@ -433,6 +433,7 @@ Para usar ADC com DMA no STM32F411:
 
 
 ```c
+#include "main.h"
 #include <stdio.h>
 #include <string.h>
 #include "ssd1306_fonts.h"
@@ -448,12 +449,14 @@ TIM_HandleTypeDef htim3;
 
 UART_HandleTypeDef huart1;
 
-uint8_t adc_Flag;
-uint16_t pot1;
-uint16_t pot2;
+uint8_t adc_Flag = 0;
+uint16_t pot1 = 0;
+uint16_t pot2 = 0;
 
 volatile uint32_t readValue[2];
+
 char buffer[50];
+char buff[64];
 
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
@@ -462,6 +465,16 @@ static void MX_I2C1_Init(void);
 static void MX_ADC1_Init(void);
 static void MX_TIM3_Init(void);
 static void MX_USART1_UART_Init(void);
+
+void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef *hadc)
+{
+  if (hadc->Instance == ADC1)
+  {
+    pot1 = (uint16_t)readValue[0];
+    pot2 = (uint16_t)readValue[1];
+    adc_Flag = 1;
+  }
+}
 
 int main(void)
 {
@@ -478,29 +491,17 @@ int main(void)
 
   ssd1306_Init();
 
-  adc_Flag = 0;
-
   HAL_TIM_Base_Start(&htim3);
   HAL_ADC_Start_DMA(&hadc1, (uint32_t *)readValue, 2);
 
-  char buff[64];
-
   while (1)
   {
-    for (uint8_t i = 0; i < hadc1.Init.NbrOfConversion; i++)
+    if (adc_Flag == 1)
     {
-      pot1 = (uint16_t)readValue[0];
-      pot2 = (uint16_t)readValue[1];
-    }
+      adc_Flag = 0;
 
-    snprintf(buffer, sizeof(buffer), "Pot1: %d, Pot2: %d \r\n", pot1, pot2);
-    HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), HAL_MAX_DELAY);
-
-    HAL_Delay(200);
-
-    if (__HAL_TIM_GET_FLAG(&htim3, TIM_FLAG_UPDATE))
-    {
-      __HAL_TIM_CLEAR_FLAG(&htim3, TIM_FLAG_UPDATE);
+      snprintf(buffer, sizeof(buffer), "Pot1: %d, Pot2: %d\r\n", pot1, pot2);
+      HAL_UART_Transmit(&huart1, (uint8_t *)buffer, strlen(buffer), 100);
 
       ssd1306_Fill(Black);
 
@@ -516,9 +517,12 @@ int main(void)
       ssd1306_WriteString(buff, Font_16x15, White);
 
       ssd1306_UpdateScreen();
+
+      HAL_Delay(200);
     }
   }
 }
+
 ```
 
 
