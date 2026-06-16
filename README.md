@@ -635,6 +635,12 @@ STM32 - <a href=https://github.com/mchavesferreira/smc/tree/main/stm32f411/adc>A
 
 Integração STM32/ESP32
 
+STM32F411 Slave: lê uma entrada analógica PA0 / ADC1_IN0 e fica disponível no barramento I2C.
+
+ESP32 Master: solicita ao slave o valor ADC via I2C e envia o resultado pela UART.
+
+https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/stm32_esp32_i2c.md
+
 # Aula 23/06/2026
 
 Avaliação P2/ data final de trabalho 2
