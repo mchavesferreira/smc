@@ -685,9 +685,9 @@ Entregar em formato relatório resumido texto contendo introdução teórica sob
 
 -Utilize o stm32f411ceu6 (stm32 black pill) no papel de um conversor AD I2C (exemplo de código: https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/stm32_esp32_i2c.md)
 
--ESP32 realizando o papel de interface através de uma pagina WEB (https://github.com/mchavesferreira/smc/tree/main/exemplotrabalho2)
-
 -ESP32 deve conversar entre o UNO(Atmega328P) através da porta serial (https://github.com/mchavesferreira/smc/tree/main/esp32_serial2)
+
+-ESP32 realizando o papel de interface através de uma pagina WEB (https://github.com/mchavesferreira/IoT_Esp32_Uno_SMC_projeto2)
 
 -ESP32 deve conter uma pagina (html) para realizar o pedido/setup da máquina
 
