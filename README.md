@@ -615,7 +615,7 @@ Para tempos de atraso, acima de 10 ms total, utilizar TIMERS 0, 1 ou 2.</B><BR>
 
 # Aula 19/05/2026
 
-Comunicação I2C e SPI
+<a href=https://github.com/mchavesferreira/smc/tree/main/comunicacaoI2C>Comunicação I2C</a> e <a href=https://github.com/mchavesferreira/smc/tree/main/comunicacaoSPI>SPI</a>
 
 # Aula 26/05/2026
 
@@ -625,11 +625,11 @@ https://github.com/mchavesferreira/mcr/tree/main/esp32_iot
 
 # Aula 02/06/2026
 
-STM32 - GPIO
+<a href=https://github.com/mchavesferreira/smc/tree/main/stm32f411>STM32 - GPIO</a>
 
 # Aula 09/06/2026
 
-STM32 - AD/DMA
+STM32 - <a href=https://github.com/mchavesferreira/smc/tree/main/stm32f411/adc>AD/DMA</a>
 
 # Aula 16/06/2026
 
