@@ -54,6 +54,13 @@ NVIC
 - Habilite I2C1 error interrupt
 ```
 
+<img width="1566" height="678" alt="image" src="https://github.com/user-attachments/assets/4e97c235-eb6a-44e6-928b-3126970ba7a5" />
+
+<img width="985" height="203" alt="image" src="https://github.com/user-attachments/assets/ac6a066a-4f50-4abf-ac7f-c552d29ec86d" />
+
+<img width="990" height="748" alt="image" src="https://github.com/user-attachments/assets/cb31e6b7-2993-46c0-9374-9fbbb6e61247" />
+
+
 ---
 
 # Código 1 — STM32F411 Slave: ADC + I2C
