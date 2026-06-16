@@ -388,3 +388,18 @@ void loop() {
   delay(1000);
 }
 ```
+
+## Comunicação com a mesma porta I2C utilizada pelo display mude
+
+```java
+ Wire.requestFrom(STM32_SLAVE_ADDR, 4);
+
+  if (Wire.available() != 4)
+  {
+    return false;
+  }
+
+  for (int i = 0; i < 4; i++)
+  {
+    rx[i] = Wire.read();
+```
