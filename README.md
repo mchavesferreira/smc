@@ -678,27 +678,42 @@ Aperfeiçoamento do projeto 1 ou uma nova proposta com a programação do STM32.
 ## Orientações para  Projeto 2: Microcontrolado com Wifi
 
 
-Projeto em AVR C Microcontrolador STM32 stm32f411ceu6 (stm32 black pill) utilizando I2C e UART com wifi
+Projeto em AVR C Microcontrolador STM32 + esp32 + ATMEGA328p 
+
+
 Entregar em formato relatório resumido texto contendo introdução teórica sobre a variável (sensor) utilizada e referências; e enviar por email ou neste canal (suap) também o código fonte.
 
+-Utilize o stm32f411ceu6 (stm32 black pill) no papel de um conversor AD I2C (exemplo de código: https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/stm32_esp32_i2c.md)
 
-Semelhante a maquina de lavar, o programa deve conter
+-ESP32 realizando o papel de interface através de uma pagina WEB (https://github.com/mchavesferreira/smc/tree/main/exemplotrabalho2)
 
--Leitura de um sensor analógico utilizando conversor AD
+-ESP32 deve conversar entre o UNO(Atmega328P) através da porta serial (https://github.com/mchavesferreira/smc/tree/main/esp32_serial2)
 
--Função de transferência para o sensor,
+-ESP32 deve conter uma pagina (html) para realizar o pedido/setup da máquina
+
+-Somente o ESP32 pode ser programado com IDE Arduino. STM32 e Atmega328P deve uilizar a linguagem C (atmega328P) ou Hal para STM32
+
+-Estruturar o programa em máquina de estados. Utilize Timers para períodos longos de temporização
+
+- O atmega328P pode ser eliminado do projeto, desde que a maquina de estados esteja no STM32
+  
+-Semelhante a maquina de lavar, o programa deve conter:
+
+-Leitura de um sensor analógico utilizando conversor AD (stm32)
+
+-Função de transferência para o sensor;
 
 - Interface com ESP32 com acesso wifi para uma dashboard em html.
 
 - Atualização de STATUS no OLED e Dashboard
 
-- Comandos na interface será mais ponderados na pontuação.
+- Opcionalmente pode-se manter os botões físicos para controle.
 
 - Exibir valor no display OLED protocolo i2c.
 
-- Menu para 2 Set Point, ou seja, quando alcançar um valor mínimo, aciona-se LED 1, e quando alcança um limite máximo, acende-se um Led 2.
+- Menu para 2 Set Point, ou seja, EXEMPLO> quando alcançar um valor mínimo, aciona-se LED 1, e quando alcança um limite máximo, acende-se um Led 2.
 - Verifiquem no laboratório a disponibilidade de microntroladores e protoboard
-.
+
 Use como referências de código o reposítório: https://github.com/mchavesferreira/smc
 
 Recomenda-se como prazo de entrega o dia 23/06/2026.
