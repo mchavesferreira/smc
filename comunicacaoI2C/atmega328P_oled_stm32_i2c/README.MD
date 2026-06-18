@@ -7,7 +7,7 @@ Este exemplo tem como objetivo demonstrar o uso do **barramento I2C** para comun
 Neste projeto, o **ATmega328P** atua como **mestre I2C**, comunicando-se com dois dispositivos no mesmo barramento:
 
 - um **display OLED SSD1306 0,96"**, usado para exibir os dados;
-- um **STM32F411**, configurado como **escravo I2C**, responsável por realizar uma leitura analógica usando o ADC.
+- um **STM32F411**, configurado como **escravo I2C**, código disponível neste <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/stm32_esp32_i2c.md>link</a> responsável por realizar uma leitura analógica usando o ADC.
 
 O valor lido pelo ADC do STM32F411 é enviado ao ATmega328P via I2C. Em seguida, o ATmega328P mostra esse valor no display OLED em duas formas:
 
