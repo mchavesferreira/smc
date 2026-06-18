@@ -685,6 +685,8 @@ Entregar em formato relatório resumido texto contendo introdução teórica sob
 
 -Utilize o stm32f411ceu6 (stm32 black pill) no papel de um conversor AD I2C (exemplo de código: https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/stm32_esp32_i2c.md)
 
+-Utilize este exemplo para comunicar entre  <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/atmega328P_oled_stm32_i2c/> ATmega328P + OLED SSD1306 + STM32F411 via I2C </a>
+
 -ESP32 deve conversar entre o UNO(Atmega328P) através da porta serial (https://github.com/mchavesferreira/smc/tree/main/esp32_serial2)
 
 -ESP32 realizando o papel de interface através de uma pagina WEB (https://github.com/mchavesferreira/IoT_Esp32_Uno_SMC_projeto2)
@@ -722,15 +724,19 @@ Recomenda-se como prazo de entrega o dia 23/06/2026.
 
 https://github.com/mchavesferreira/IoT_Esp32_Uno_SMC_projeto2
 
-## Video anos anteriores
+## Video de alunos apresentando projetos em anos anteriores
 
 https://www.youtube.com/watch?v=DMCxhJ-Arqk
 
 https://www.youtube.com/watch?v=R6QUzjMyoRM
 
 
-Exemplos de projetos
+## Exemplos de projetos
 https://github.com/mchavesferreira/smc/tree/main/esp32_serial2
+
+# Exemplo I2C entre Atmega328P + display Oled + STM32
+
+<a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/atmega328P_oled_stm32_i2c/><img src=https://github.com/mchavesferreira/smc/raw/main/comunicacaoI2C/atmega328P_oled_stm32_i2c/uno_stm32.png border=0></a>
 
 - 
 <BR><h1>Sugestão de lista de compras para montagem de projetos com ESP32</h1>
