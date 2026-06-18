@@ -554,7 +554,10 @@ serialTransmit('   *   \n');
 
 ### Exemplo analisando uma combinação com iniciais "FA"
 <BR>https://wokwi.com/projects/365183451516854273
-	
+
+### recebe uma sequencia de caracteres, sendo que o primeiro tem que ser X
+
+https://wokwi.com/projects/402417705867398145
 	
 ### Exemplo recebe "LEDOF1"  e "LEDON1" através da porta serial e acende ou apaga um led.
 <BR>https://wokwi.com/projects/365185955727181825
@@ -673,12 +676,7 @@ http://monitor.rpiot.com.br/aula/eventos/
 
 Aperfeiçoamento do projeto 1 ou uma nova proposta com a programação do STM32. Acrescentar novos recursos de programação e hardware; PWM, comunicação serial com ESP32 (wifi), memorização de parametros em eeprom, tela OLED I2C.
 
-
-
-## Orientações para  Projeto 2: Microcontrolado com Wifi
-
-
-Projeto em AVR C Microcontrolador STM32 + esp32 + ATMEGA328p 
+### Projeto em AVR C Microcontrolador STM32 + esp32 + ATMEGA328p 
 
 
 Entregar em formato relatório resumido texto contendo introdução teórica sobre a variável (sensor) utilizada e referências; e enviar por email ou neste canal (suap) também o código fonte.
@@ -720,9 +718,11 @@ Use como referências de código o reposítório: https://github.com/mchavesferr
 
 Recomenda-se como prazo de entrega o dia 23/06/2026.
 
-# Exemplo projeto 2 
+# Exemplo de códigos para  projeto 2 
 
 https://github.com/mchavesferreira/IoT_Esp32_Uno_SMC_projeto2
+
+https://github.com/mchavesferreira/smc/tree/main/esp32_serial2
 
 ## Video de alunos apresentando projetos em anos anteriores
 
@@ -730,9 +730,6 @@ https://www.youtube.com/watch?v=DMCxhJ-Arqk
 
 https://www.youtube.com/watch?v=R6QUzjMyoRM
 
-
-## Exemplos de projetos
-https://github.com/mchavesferreira/smc/tree/main/esp32_serial2
 
 # Exemplo I2C entre Atmega328P + display Oled + STM32
 
@@ -760,13 +757,6 @@ https://github.com/mchavesferreira/smc/tree/main/esp32_serial2
 
 <BR>
 
-- ** outras especificidades posteriormente informadas.
-- 
-# Exemplo para identificar uma sequencia de caracteres na porta serial
-
-Olhe este exemplo que recebe uma sequencia de caracteres, sendo que o primeiro tem que ser X
-
-https://wokwi.com/projects/402417705867398145
 	
 ## Links e referências
 
@@ -808,11 +798,6 @@ Um simulador online muito popular para Arduino e outros microcontroladores. Ele 
 
 
      
-### Exemplo de um programa para controle de uma caixa d'agua.
 
-<BR>Defina pinos de entrada e saída. As entradas com push button aterradas e  pull up ativos. O Programa aguarda “Start” ser pressionado, que liga a  Valvula 1 até que sensor cheio seja acionado. O misturador é acionado  por2 segundos. Esvazia-se o tanque até o sensor vazio ser acionado, retornando ao estado inicial. Considere clock 16Mhz.
-<br><BR>**Solução:**
-<br>Para que servem e quais são os registradores de I/O de um AVR Atmega?  Os registradores de IO  funcionam para configurar, ler e escrever cada  pino das portas  do microcontrolador, cada bit representa um pino:  DDRx  quando em 0=entrada e 1=saída. PINx para a leitura do pino quando este é  definido com entrada; PORTx escreve na saída se o pino é definido como  saída ou ativa pull-up se o pino é definido como entrada.
-	<Br>
 
 
