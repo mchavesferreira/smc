@@ -20,6 +20,7 @@ ChatGPT:   https://chatgpt.com/g/g-TFvuISQH5-professor-dos-embarcados
 - [Comunicação Serial](#UART)
 - <a href=https://github.com/mchavesferreira/smc/tree/main/conversorADavr>Conversor AD</a>
 - <a href=https://github.com/mchavesferreira/smc/tree/main/comunicacaoI2C>Comunicação I2C</a>
+- AVR<>STM<>Oled I2C<span style="color:red; font-weight:bold;">NOVO</span> 
 - <a href=https://github.com/mchavesferreira/mcr/blob/main/ESP32.md>ESP32 Introdução</a>
 - <a href=https://github.com/mchavesferreira/smc/tree/main/esp32_serial2>ESP32 Iot e Webserver</a>
 - [Links e referências](#Links-e-referências)
@@ -683,7 +684,7 @@ Entregar em formato relatório resumido texto contendo introdução teórica sob
 
 -Utilize o stm32f411ceu6 (stm32 black pill) no papel de um conversor AD I2C (exemplo de código: https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/stm32_esp32_i2c.md)
 
--Utilize este exemplo para comunicar entre  <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/atmega328P_oled_stm32_i2c/> ATmega328P + OLED SSD1306 + STM32F411 via I2C </a>
+-Utilize este exemplo para comunicar entre  <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/atmega328P_oled_stm32_i2c/> ATmega328P + OLED SSD1306 + STM32F411 via I2C </a> <span style="color:red; font-weight:bold;">NOVO</span> 
 
 -ESP32 deve conversar entre o UNO(Atmega328P) através da porta serial (https://github.com/mchavesferreira/smc/tree/main/esp32_serial2)
 
