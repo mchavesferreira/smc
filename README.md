@@ -20,9 +20,8 @@ ChatGPT:   https://chatgpt.com/g/g-TFvuISQH5-professor-dos-embarcados
 - [Comunicação Serial](#UART)
 - [Conversor AD](#Conversor-AD)
 - [Comunicação I2C](#I2C) 
-- [Introdução STM32](#STM32)  
-- <a href=https://github.com/mchavesferreira/mcr/blob/main/ESP32.md>ESP32 Introdução</a>
-- <a href=https://github.com/mchavesferreira/smc/tree/main/esp32_serial2>ESP32 Iot e Webserver</a>
+- [Introdução STM32](#STM32)
+- [ESP32 Iot e Webserver](#ESP32) 
 - [Links e referências](#Links-e-referências)
 
 
@@ -626,9 +625,16 @@ Para tempos de atraso, acima de 10 ms total, utilizar TIMERS 0, 1 ou 2.</B><BR>
 
 # Aula 26/05/2026
 
-IOT ESP32 webserver
+## ESP32
 
-https://github.com/mchavesferreira/mcr/tree/main/esp32_iot
+Conheça a programação do ESP32 utilizando IDE-Arduino
+
+- <a href=https://github.com/mchavesferreira/mcr/blob/main/ESP32.md>ESP32 Introdução</a>
+
+ESP32 sendo utilizado como webserver para um projeto de introdução ao IoT.
+
+- <a href=https://github.com/mchavesferreira/smc/tree/main/esp32_serial2>ESP32 Iot e Webserver</a>
+
 
 # Aula 02/06/2026
 
@@ -659,26 +665,6 @@ Avaliação P2/ data final de trabalho 2
 # Aula 30/06/2026
 
 IFA - Avaliação de recuperação
-
-## ESP32 e suas aplicações IOT
-
-https://github.com/mchavesferreira/mcr/blob/main/ESP32.md
-
-
-
-
-Exemplos de Bridge ESP32 <>UNO
-
-
-Codigo exemplo trabalho 2
-
-https://github.com/mchavesferreira/smc/tree/main/exemplotrabalho2
-
-Pagina interativa com controle de eventos
-
-http://monitor.rpiot.com.br/aula/eventos/
-
-
 
 ## Orientações para Projeto 2:
 
