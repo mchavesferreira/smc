@@ -18,9 +18,9 @@ ChatGPT:   https://chatgpt.com/g/g-TFvuISQH5-professor-dos-embarcados
 - [Trabalhos-Turma-2024](#Trabalhos-Turma-2024)
 - <a href=https://github.com/mchavesferreira/smc/tree/main/interrupcao_timers#readme>Interrupções</a>
 - [Comunicação Serial](#UART)
-- <a href=https://github.com/mchavesferreira/smc/tree/main/conversorADavr>Conversor AD</a>
-- <a href=https://github.com/mchavesferreira/smc/tree/main/comunicacaoI2C>Comunicação I2C</a>
-- AVR<>STM<>Oled I2C<span style="color:red; font-weight:bold;">NOVO</span> 
+- [Conversor AD](#Conversor-AD)
+- [Comunicação I2C](#I2C) 
+- [Introdução STM32](#STM32)  
 - <a href=https://github.com/mchavesferreira/mcr/blob/main/ESP32.md>ESP32 Introdução</a>
 - <a href=https://github.com/mchavesferreira/smc/tree/main/esp32_serial2>ESP32 Iot e Webserver</a>
 - [Links e referências](#Links-e-referências)
@@ -592,6 +592,7 @@ Exemplo:  https://wokwi.com/projects/365174034245894145
 
 # Aula 05/05/2026
 
+## Conversor AD
 
 <a href=https://github.com/mchavesferreira/smc/tree/main/conversorADavr>Conversor AD</a> - Saiba mais
 
@@ -619,6 +620,8 @@ Para tempos de atraso, acima de 10 ms total, utilizar TIMERS 0, 1 ou 2.</B><BR>
 
 # Aula 19/05/2026
 
+## I2C 
+
 <a href=https://github.com/mchavesferreira/smc/tree/main/comunicacaoI2C>Comunicação I2C</a> e <a href=https://github.com/mchavesferreira/smc/tree/main/comunicacaoSPI>SPI</a>
 
 # Aula 26/05/2026
@@ -628,6 +631,10 @@ IOT ESP32 webserver
 https://github.com/mchavesferreira/mcr/tree/main/esp32_iot
 
 # Aula 02/06/2026
+
+## STM32
+
+### Introdução ao STM32, conhecendo STM32F411
 
 <a href=https://github.com/mchavesferreira/smc/tree/main/stm32f411>STM32 - GPIO</a>
 
