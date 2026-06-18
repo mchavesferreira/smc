@@ -14,6 +14,7 @@ O valor lido pelo ADC do STM32F411 é enviado ao ATmega328P via I2C. Em seguida,
 - valor inteiro do ADC;
 - valor convertido para tensão.
 
+<img src=uno_stm32.png>
 ---
 
 ## Endereços I2C dos dispositivos
