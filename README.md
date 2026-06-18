@@ -735,8 +735,11 @@ https://www.youtube.com/watch?v=R6QUzjMyoRM
 
 <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/atmega328P_oled_stm32_i2c/><img src=https://github.com/mchavesferreira/smc/raw/main/comunicacaoI2C/atmega328P_oled_stm32_i2c/uno_stm32.png border=0></a>
 
-- 
-<BR><h1>Sugestão de lista de compras para montagem de projetos com ESP32</h1>
+Este exemplo tem como objetivo demonstrar o uso do barramento I2C para comunicação entre diferentes dispositivos embarcados. <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/atmega328P_oled_stm32_i2c/>Saiba mais</a>
+
+Neste projeto, o ATmega328P atua como mestre I2C, comunicando-se com dois dispositivos no mesmo barramento:
+ 
+# Sugestão de lista de compras para montagem de projetos com ESP32
 <BR>
 <BR>-Esp32  Devkit Esp32-wroom-32 ou ESP32S3 - 30 Pinos - Tipo C
 
