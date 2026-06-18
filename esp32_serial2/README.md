@@ -117,11 +117,9 @@ void loop() {
 
 
 
-## Projeto 2 
+## Códigos exemplos para projeto 2
 
-### Exemplos para trabalho:
-
-https://github.com/mchavesferreira/smc/blob/main/esp32_serial2/
+O código a seguir é um exempo de pagina web, com a função de enviar para a porta serial do ESP32 a partir de uma escolha de opções.
 
 
 ### Exemplo Pagina web e envio para porta serial
@@ -235,7 +233,7 @@ void loop() {
 
 ```
 
-### Exemplo web com ajax
+### Exemplo completo:
 
 Faça download destes arquivos na mesma pasta para gravar no ESP32  (fazerpedido.ino e index.h)
 
@@ -243,6 +241,12 @@ https://github.com/mchavesferreira/smc/blob/main/esp32_serial2/fazerpedido.ino
 
 https://github.com/mchavesferreira/smc/blob/main/esp32_serial2/index.h
 
+### Exemplo de anos anteriores para o projeto 2
 
+
+
+https://github.com/mchavesferreira/smc/tree/main/esp32_serial2/Spray_Drayer
+
+https://github.com/mchavesferreira/smc/tree/main/esp32_serial2/maquinaWEB
 
  
