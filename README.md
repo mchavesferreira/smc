@@ -677,7 +677,7 @@ Entregar em formato relatório resumido texto contendo introdução teórica sob
 
 -Utilize o stm32f411ceu6 (stm32 black pill) no papel de um conversor AD I2C (exemplo de código: https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/stm32_esp32_i2c.md)
 
--Utilize este exemplo para comunicar entre  <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/atmega328P_oled_stm32_i2c/> ATmega328P + OLED SSD1306 + STM32F411 via I2C </a> <span style="color:red; font-weight:bold;">NOVO</span> 
+-Utilize este exemplo para comunicar entre  <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/atmega328P_oled_stm32_i2c/> ATmega328P + OLED SSD1306 + STM32F411 via I2C </a> <b><span style="color:red; font-weight:bold;">[NOVO]</span> </b>
 
 -ESP32 deve conversar entre o UNO(Atmega328P) através da porta serial (https://github.com/mchavesferreira/smc/tree/main/esp32_serial2)
 
