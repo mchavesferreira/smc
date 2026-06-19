@@ -1,3 +1,7 @@
+
+<img src=esp32_stm_oled.png>
+
+
 1. **STM32F411 Slave**: lê uma entrada analógica `PA0 / ADC1_IN0` e fica disponível no barramento I2C.
 2. **ESP32  Master**: solicita ao slave o valor ADC via I2C e envia o resultado pela UART.
 
