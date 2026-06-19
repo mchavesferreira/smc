@@ -652,7 +652,7 @@ STM32 - <a href=https://github.com/mchavesferreira/smc/tree/main/stm32f411/adc>A
 
 Integração STM32/ESP32
 
-<img src=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/atmega328P_oled_stm32_i2c/esp32_stm_oled.png?raw=true width=300 height=250>
+<img src=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/atmega328P_oled_stm32_i2c/esp32_stm_oled.png width=300 height=250>
 
 STM32F411 Slave: lê uma entrada analógica PA0 / ADC1_IN0 e fica disponível no barramento I2C.
 
