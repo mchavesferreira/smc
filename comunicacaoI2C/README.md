@@ -460,8 +460,25 @@ void loop() {
 </p>
 </details> 
 
+# Integração ATMEGA + STM + Oled
+
+Neste projeto, o ATmega328P atua como mestre I2C, comunicando-se com dois dispositivos no mesmo barramento:
+
+   - um display OLED SSD1306 0,96", usado para exibir os dados;
+     
+   - um STM32F411, configurado como escravo I2C, código disponível neste link responsável por realizar uma leitura analógica usando o ADC.
 
 
+https://github.com/mchavesferreira/smc/tree/main/comunicacaoI2C/atmega328P_oled_stm32_i2c/
+
+
+# Integração ESP32 + STM + Oled (I2C)
+
+https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/stm32_esp32_i2c.md
+
+STM32F411 Slave: lê uma entrada analógica PA0 / ADC1_IN0 e fica disponível no barramento I2C.
+
+ESP32 Master: solicita ao slave o valor ADC via I2C e envia o resultado pela UART.
 
 Referências:
 
