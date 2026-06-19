@@ -668,14 +668,14 @@ IFA - Avaliação de recuperação
 
 ## Orientações para Projeto 2:
 
-Aperfeiçoamento do projeto 1 ou uma nova proposta com a programação do STM32. Acrescentar novos recursos de programação e hardware; PWM, comunicação serial com ESP32 (wifi), memorização de parametros em eeprom, tela OLED I2C.
+Aperfeiçoamento do projeto 1 ou uma nova proposta com a programação do STM32. Acrescentar novos recursos de programação e hardware; PWM, comunicação serial com ESP32 (wifi), modificação de de parametros através da pagina web embarcada no ESP32, tela OLED I2C, comunicação com STM32.
 
 ### Projeto em AVR C Microcontrolador STM32 + esp32 + ATMEGA328p 
 
 
 Entregar em formato relatório resumido texto contendo introdução teórica sobre a variável (sensor) utilizada e referências; e enviar por email ou neste canal (suap) também o código fonte.
 
--Utilize o stm32f411ceu6 (stm32 black pill) no papel de um conversor AD I2C (exemplo de código: https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/stm32_esp32_i2c.md)
+-Utilize o stm32f411ceu6 (stm32 black pill) no papel de um conversor AD I2C (exemplo de código: https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/stm32_esp32_i2c.md) (opcional Blue Pill)
 
 -Utilize este exemplo para comunicar entre  <a href=https://github.com/mchavesferreira/smc/blob/main/comunicacaoI2C/atmega328P_oled_stm32_i2c/> ATmega328P + OLED SSD1306 + STM32F411 via I2C </a> <b><span style="color:red; font-weight:bold;">[NOVO]</span> </b>
 
